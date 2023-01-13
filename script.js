@@ -38,7 +38,7 @@
 // let ourCurrentPlanet = 'earth'
 // let currentUserName
 
-// Data types.
+//  ###################### Data Types ######################
 
 // alert(1 / 0)
 
@@ -68,7 +68,7 @@
 // alert(`${typeof 'foo'}`)
 // alert(`${typeof true}`)
 
-// Ineraction.
+//  ###################### Interaction ######################
 // You already know alert, It is modal
 
 // Prompt. Don't forget to use the let to store the result. Returns null if cancelled is pressed.
@@ -79,6 +79,53 @@
 // let isBoss = confirm('Are you the boss?: ');
 // alert(`${isBoss}`);
 
+//  ###################### F- String ######################
+// let myName = prompt('What is your name?: ')
+// alert(`${myName}`)
 
-let myName = prompt('What is your name?: ')
-alert(`${myName}`)
+// String conversion
+
+// let item = true
+// alert(String(item))
+
+//  ###################### Type COnversion ######################
+
+// Automatic conversion
+// alert('6' / '2')
+
+// Explicit conversion is required when we read a value from a string based form that requires a number
+// let num = '123'
+// alert(Number(num))
+
+// Numerica conversion rule. Undefined becomes NaN. Null becomes 0 and true or false becomees 1 and 0.
+//  Values that are empty becomes false otherwise become true
+
+//  ###################### Maths ######################
+
+// let x = 5
+// let y = 3
+// alert(x - y)
+
+// let x = 1, y = 7
+// alert(x * y)
+
+// Returns the remainder
+// alert(5 % 2)
+
+// Returns true
+// alert(10 % 2 == 0)
+
+
+//  ###################### String concatation ######################
+
+
+// let s = 'Hello'
+// let x = 'World!'
+
+// alert(s + ' ,' + x)
+
+// If any of the operands are a string then the other will be converted to a string too
+// alert('1' + 5 + 5)
+// A more complex example, if math infront of string it will apply the math first and then the string
+// alert(2 + 2 + '1')
+
