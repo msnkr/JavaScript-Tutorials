@@ -121,11 +121,131 @@
 
 // let s = 'Hello'
 // let x = 'World!'
-
 // alert(s + ' ,' + x)
 
+// Binarty +
 // If any of the operands are a string then the other will be converted to a string too
 // alert('1' + 5 + 5)
 // A more complex example, if math infront of string it will apply the math first and then the string
 // alert(2 + 2 + '1')
+
+//  Unary +
+// If used by itself, can convert to numbers
+// let x = 1
+// alert( typeof +x) 
+
+// let y = -2
+// alert(typeof +y)
+// alert(+true)
+
+// Example
+// let oranges = '2'
+// let apples = '3'
+// alert(apples + oranges)
+
+// If you want to convert them to numbers, you need to sum them.
+// alert(+oranges + +apples)
+// Unary pluses take a higher precedence than the add sign
+// JavaScript applies bodmas but is called the precedence tool
+// = is also an assigment but it takes last precedence thats why we can use it to store values.
+
+// Example
+// let a = 1
+// let b = 2
+
+// let c = (a = b + 1)
+// alert(c)
+
+// Modify in place
+// let a = 3
+// a += 4
+// a *=2
+// alert(a)
+
+// Increment and deincrement
+// let counter = 2
+// counter ++
+// counter --
+// alert(counter)
+//  Increment and deincrement only work on variables, not numbers
+// Remember, when using immedaiate postfix and prefix forms, let a = 2, alert(++a) with return 3. Whereas let a = 2, alert(a++) will return the original a
+// let a = 2
+// alert(++a)
+
+
+//  ###################### REREAD OPERATORS WITH JAVASCRIPT ######################
+
+
+// let a = prompt("First number?", 1);
+// console.log(typeof a );
+
+// let b = prompt("Second number?", 2);
+// console.log(typeof b );
+
+
+// alert(+a + +b); // 12
+// OR
+
+// let a = +prompt("First number?", 1);
+// console.log(typeof a );
+
+// let b = +prompt("Second number?", 2);
+// console.log(typeof b );
+
+
+// alert(+a + +b); // 12
+
+//  ###################### COMPARISONS ######################
+// Comparisons are similar to python except for the strict equality check.
+
+// let a = 'name', b = 'name'
+// alert(a == b)
+
+// let a = 'name'
+// let b = 'nam'
+// alert(a < b)
+
+// Comparisons of different data types
+// alert('2' > 1)
+// alert('01' == 1)
+
+// Regular equality checks have a problem.
+// alert(0 == false)
+// alert('' == false)
+//  BEcause of operands of different types are converted to numbbers. STrict equality check doesn;t convert types
+// alert(0 === true)
+// alert(0 === 0)
+
+// There is also stict inequality types.
+// alert(0 !== false)
+
+// null == 0, undefined becomes NaN
+// alert(null == undefined)
+// alert(null === undefined)
+
+// These errors will come up, to fight them, dont use comparisons with null or undefined.
+
+//  ###################### IF STATEMENT ? ######################
+// The if statement works like python, except if the condition in the parenthesis is true, then execute the block of code.
+
+// let year = prompt('In which year was ECMAScript-2015 specification published?', '')
+// if (year == 2015) {
+//     alert('You are correct')
+// }
+
+// IF statements check to see if the conditon is true or false. Did you forget about truthy and falsy?
+// '', 0, NaN, undefined, and false with always return false because they are falsy
+
+// elseif statements
+let answer = prompt('In which yeaconditionr was ECMAScript-2015 specification published?', '');
+console.log(answer);
+
+if (answer < 2015) {
+    alert('Too early');
+} else if (answer > 2015) {
+    alert('Too late');
+} else {
+    alert('You are correct');
+}
+
 
