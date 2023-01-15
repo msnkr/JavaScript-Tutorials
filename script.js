@@ -237,15 +237,50 @@
 // '', 0, NaN, undefined, and false with always return false because they are falsy
 
 // elseif statements
-let answer = prompt('In which yeaconditionr was ECMAScript-2015 specification published?', '');
-console.log(answer);
+// let answer = prompt('In which yeaconditionr was ECMAScript-2015 specification published?', '');
+// console.log(answer);
 
-if (answer < 2015) {
-    alert('Too early');
-} else if (answer > 2015) {
-    alert('Too late');
-} else {
-    alert('You are correct');
-}
+// if (answer < 2015) {
+//     alert('Too early');
+// } else if (answer > 2015) {
+//     alert('Too late');
+// } else {
+//     alert('You are correct');
+// }
 
+//  Conditional operator ?
+// let result = condition ? value1 : value2;
 
+// let accessAllowed = (10 < 18) ? true : false;
+// alert(accessAllowed)
+
+//  Multiple ?
+// let age = prompt('What is your age? ', 18)
+// let message = (age < 3) ? 'Hi Baby' :
+//     (age < 18) ? 'Hello' : 
+//     (age == 18) ? 'You are old enough' :
+//     (age < 100) ? 'Greetings' :
+//     'What an unusual age';
+// alert(message)
+
+// ? to replace if. Not recommended
+// let company = prompt('Which company created JavsScript?: ');
+// (company == 'Netscape') ?
+//     alert('Right') : alert('Wrong');
+
+// let a = 10;
+// let b = 0;
+// let result;
+
+// (a + b < 4) ? result = 'Below' : result = 'Over';
+// alert(result)
+
+let login = prompt('Who: ');
+let message;
+
+(login == 'Employee') ? message = 'Welcome' :
+(login == 'Director') ? message ='Greetings' :
+(login == '') ? message ='No login' :
+'';
+
+alert(message)
