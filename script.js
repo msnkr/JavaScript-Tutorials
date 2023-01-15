@@ -275,12 +275,75 @@
 // (a + b < 4) ? result = 'Below' : result = 'Over';
 // alert(result)
 
-let login = prompt('Who: ');
-let message;
+// let login = prompt('Who: ');
+// let message;
 
-(login == 'Employee') ? message = 'Welcome' :
-(login == 'Director') ? message ='Greetings' :
-(login == '') ? message ='No login' :
-'';
+// (login == 'Employee') ? message = 'Welcome' :
+// (login == 'Director') ? message ='Greetings' :
+// (login == '') ? message ='No login' :
+// '';
 
-alert(message)
+// alert(message)
+
+//  ###################### LOGICAL OPERATORS ######################
+// OR returns the first truthy value and stops
+
+
+// let hour = 14
+// if (hour > 18 || hour < 8) {
+//     alert('The office is closed')   
+// } else {
+//     alert('The office is open')
+// }
+
+// let hour = 12
+// let isWeekend = true
+// if (hour < 8 || hour > 18 || isWeekend) {
+//     alert('The office is closed. ')
+// }
+
+// If all variables were falsy, anonymous would show up.
+// let firstName = ''
+// let secondName = ''
+// let lastName = ''
+// alert (firstName || lastName || secondName || 'Anon')
+
+// Getting the first truthy value from the list
+// let firstName = ''
+// let secondName = ''
+// let lastName = 'anon'
+
+// alert (firstName || lastName || secondName)
+
+
+// AND finds the first false value and stops
+
+// alert(1 && 2 && 3) returns the last value because they are all truthy
+// alert(1 && 2 && null && 4)  retyrns the first falsy
+
+let age = 87
+
+if (age >= 14 && age <= 90) {
+    alert(age)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
