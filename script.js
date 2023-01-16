@@ -321,19 +321,33 @@
 // alert(1 && 2 && 3) returns the last value because they are all truthy
 // alert(1 && 2 && null && 4)  retyrns the first falsy
 
-let age = 87
+// let age = 22
+// if (age > 14 && age < 90) {
+//     alert(age)
+// }
 
-if (age >= 14 && age <= 90) {
-    alert(age)
+// let age = 32
+// if (!(age >= 14 && age <= 90)) {
+//     alert(age)
+// } else {
+//     alert(`The age is ${age}`)
+// }
+
+let login = prompt('What is your username?: ').toLowerCase();
+if (login == 'admin') {
+    let password = prompt(`Welcome ${login}. Enter your password: `).toLowerCase();
+    if (password == null || password == '') {
+        alert('Cancelled');
+    } else if (password == 'themaster') {
+        alert('Welcome')
+    } else {
+        alert('I don\'t know you. ');
+    }
+} else if (login == null) {
+    alert('Cancelled')
+} else {
+    alert('I don\'t know you');
 }
-
-
-
-
-
-
-
-
 
 
 
