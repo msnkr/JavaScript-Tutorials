@@ -321,97 +321,18 @@
 // alert(1 && 2 && 3) returns the last value because they are all truthy
 // alert(1 && 2 && null && 4)  retyrns the first falsy
 
-// let age = 87
-// if (age >= 14 && age <= 90) {
-//     alert(age)
-// }2
+let age = 87
 
-// true || alert('Not printed')
-// false || alert('Printed')
-
-// let login = prompt('What is your username?: ').toLowerCase()
-// if (login == 'admin') {
-//     let password = prompt(`Welcome ${login}. What is your password?: `).toLowerCase()
-//     if (password == 'themaster') {
-//         alert('Password Correct')
-//     } else if (password == null && password == undefined) {
-//         alert('Cancelled')
-//     }   else {
-//         alert('Wrong password')
-//     }
-// } else if (login == null) {
-//     alert('Cancelled')
-// } else {
-//     alert('I don\'t know you. ')
-// }
-
-
-//  ###################### LOOPS ######################
-// While loops
-
-// let count = 1
-// while (count <= 3) {
-//     console.log(count);
-//     count ++
-// }
-
-// Do while loops 
-// let count = 1
-
-// do {
-//     alert(count);
-//     count ++
-// } while (count <= 3);
-
-// Do the body first, then run the while loop
-
-// for statement works like this for (begin ; condition ; step)
-
-// for (let index = 1; index <= 3; index++) {
-//     alert(index)
-// }
-// step exexutes after every iteration of the body.
-// If condition, run body, run step,
-
-// We can remove the begin part and step part
-// let x = 1
-
-// for (; x <= 3; ) {
-//     alert(x);
-//     x++;
-// }
-// Break stattements
-
-// let sum = 0;
-
-// while (true) {
-//     let value = +prompt('Enter a value')
-//     if (value == '') {
-//         break;
-//     }
-//     sum += value
-// }
-// alert(sum)
-
-// continue statements
-
-// for (let index = 1; index < 10; index++) {
-//     if (index % 2 == 0) {
-//         continue
-//     }
-//     alert(index)
-// }
-
-// labels: 
-outer: for (let index = 1; index < 10; index++) {
-    for (let i = 1; i < 10; i++) {
-        let input = prompt(`${index} ${i}`);
-        if (input == '') {
-            break outer;
-        }
-    }
+if (age >= 14 && age <= 90) {
+    alert(age)
 }
-alert('Done')
+
+
+
+
+
+
+
 
 
 
