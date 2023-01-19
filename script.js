@@ -379,22 +379,34 @@
 
 // labels for break/continue
 
-labels: 
-for (let index = 0; index <= 3; index++) {
-    for (let j = 0; j <= 3; j++) {
-        let input = prompt(`${index}${j}`)
-        if (!input) {
-            break labels;
-        }
+// labels: 
+// for (let index = 0; index <= 3; index++) {
+//     for (let j = 0; j <= 3; j++) {
+//         let input = prompt(`${index}${j}`)
+//         if (!input) {
+//             break labels;
+//         }
+//     }
+// }
+
+// alert('done')
+
+// for (let index = 0; index <= 10; index++) {
+//     if (index % 2 != 0) {
+//         continue
+//     }
+//     alert(index)
+// }
+
+// for (let i = 0; i < 3; i++) {
+//   alert( `number ${i}!` );
+// }
+
+while (true) {
+    if (condition) {
+        
     }
 }
-
-alert('done')
-
-
-
-
-
 
 
 
