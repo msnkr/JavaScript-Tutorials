@@ -321,11 +321,11 @@
 // alert(1 && 2 && 3) returns the last value because they are all truthy
 // alert(1 && 2 && null && 4)  retyrns the first falsy
 
-let age = 87
+// let age = 87
 
-if (age >= 14 && age <= 90) {
-    alert(age)
-}
+// if (age >= 14 && age <= 90) {
+//     alert(age)
+// }
 
 
 
