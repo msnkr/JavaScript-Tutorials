@@ -134,12 +134,12 @@
 // alert(1 && 2 && 3) returns the last value because they are all truthy
 // alert(1 && 2 && null && 4)  retyrns the first falsy
 
-let age = 87
+// let age = 87
 
-if (age >= 14 && age <= 90) {
-    alert(age)
-}
- 5
+// if (age >= 14 && age <= 90) {
+//     alert(age)
+// }
+//  5
 // let y = 3
 // alert(x - y)
 
@@ -358,29 +358,105 @@ if (age >= 14 && age <= 90) {
 // alert(1 && 2 && 3) returns the last value because they are all truthy
 // alert(1 && 2 && null && 4)  retyrns the first falsy
 
-let age = 87
+// let age = 87
 
-if (age >= 14 && age <= 90) {
-    alert(age)
-}
-
-
+// if (age >= 14 && age <= 90) {
+//     alert(age)
+// }
 
 
+// let i = 0
+
+// while (i < 3) {
+//     alert(`Number ${i}!`);
+//     i++;
+// }
+
+// loopbreak:
+
+// while (true) {
+//     let input = +prompt('Enter a number greater than 100: ');
+//     if (input > 100) {
+//          break loopbreak;
+//     } else if (!input && input == ' ') {
+//         alert('Please try again')
+//     }
+// }
+// let num;
+// do {
+//   num = prompt("Enter a number greater than 100?", 0);
+// } while (num <= 100 && num);
+
+// let n = 1
+
+// while (n < 10) {
+//     if (n % n !== 0) {
+//         alert(n);
+//         n++;
+//     }
+// }
+
+// Try again this one above
 
 
+// switch/case are equity sensitive 
+// let x = 10
 
+// switch (x) {
+//     case 3:
+//         alert('Too small');
+//         break;
+//     case 10:
+//         alert('Just right');
+//         break;
+//     case 22:
+//         alert('toooobig');
+//         break;
+//     default:
+//         alert('Hmmm, Its none')
+//         break;
+// }
 
+// let browser = prompt('Enter browser').toLowerCase()
 
+// if (browser == 'edge') {
+//     alert('You\'ve got the Edge')
+// } else if (browser == 'firefox'
+//     || browser == 'opera'
+//     || browser == 'safari'){
+//     alert('We\'ve got that too')
+// } else {
+//     alert('Hope this page looks okay. ')
+// }
 
+// let browser = prompt('Enter browser').toLowerCase()
+// switch (browser) {
+//     case 'edge':
+//         alert('You\'ve got the Edge');
+//         break;
+//     case 'safari':
+//     case 'opera':
+//     case 'firefox':
+//         alert('We\'ve got those too');
+//         break;
+//     default:
+//         alert('We hope this page looks okay.')
+//         break;
+// }
 
+// let a = +prompt('a? ', '')
 
-
-
-
-
-
-
-
-
-
+// switch (a) {
+//     case 0:
+//         alert(0);
+//         break;
+//     case 1:
+//         alert(1);
+//         break;
+//     case 2:
+//     case 3:
+//         alert( '2,3' );
+//         break;
+//     default:
+//         break;
+// }
