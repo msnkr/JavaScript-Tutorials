@@ -537,3 +537,92 @@
 //     default:
 //         break;
 // }
+
+//  ###################### FUNCTIONS ######################
+
+// function helloMessage() {
+//     alert('Hello World!')
+// }
+
+// helloMessage()
+
+// Variables inside a function are only available in that function
+
+// function HelloWorld () {
+//     let message = 'Hello World!';
+//     alert(message)
+// }
+
+// HelloWorld()
+// alert(message)
+
+// A function can read a outer variable
+// let message = 'World!'
+
+// function outerVar() {
+//     alert(`Hello ${message}`)
+// }
+
+// outerVar()
+
+// A function can read a outer variable and modify it
+// let newName = 'john'
+
+// function editVar () {
+//     newName = 'bob'
+//     let message = 'Hello ' + newName
+//     alert(message)
+// }
+
+// alert(newName)
+// editVar()
+// alert(newName)
+
+// fUNCTION PARAMATERS
+
+// function sayHello(to, from) {
+//     alert(`Hello ${to}: \nFrom ${from}`)
+// }
+
+// sayHello('John', 'Mikyle')
+// sayHello('Steve', 'Mikyle')
+
+// function showMessag(from, text) {
+//     alert(`*${from}*`)
+// }
+// let from = 'Anne';
+
+// showMessag(from, 'Hello');
+// alert(from)
+
+// Arguments and paramaters
+// If no argment is passed, it will use the default. 
+
+
+// function showMessage(from, text='There is no text') {
+//     alert(`From: ${from} \nText: ${text}`);
+// }
+
+// showMessage('Anne', 'Hello there')
+
+// Or
+
+// function showMessage (text) {
+//     if (text === undefined);
+//     text = 'Default message';
+//     alert(text)
+// }
+
+// showMessage()
+
+// Or
+
+// function showMessage (text) {
+//     text = text || 'Default Message';
+//     alert(text)
+// }
+
+// showMessage()
+
+// Returning a value 
+
