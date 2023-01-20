@@ -372,6 +372,83 @@
 //     i++;
 // }
 
+
+
+//  ###################### LOOPS ######################
+// While loop
+// While the condition is truthy, continue to the body
+
+// let i = 1
+
+// while (i <= 3) {
+//     alert(i);
+//     i++;
+// }
+
+// Do while loops
+// The loop will first execute the do, then check the condition
+
+// let i = 1
+
+// do {
+//     alert(i)
+//     i ++;
+// } while (i <= 3);
+
+// For loop
+// For loop has a begin, a condition, a biody and step
+
+// for (let index = 1; index <=3 ; index++) {
+//     alert(index)
+// }
+
+
+// Breaking the loop
+// let sum = 0 
+
+// while (true) {
+//     let value = +prompt('Enter a number: ');
+//     if (!value) {
+//         break;
+//     }
+//     sum += value;
+// }
+// alert(sum)
+
+// Continue statemment. Skips code if condtions are met
+// let x = 1
+// for (; x <= 10; x++) {
+//     if (x % 2 == 0) {
+//         continue
+//     };
+//     alert(x)
+// }
+
+// labels for break/continue
+
+// labels: 
+// for (let index = 0; index <= 3; index++) {
+//     for (let j = 0; j <= 3; j++) {
+//         let input = prompt(`${index}${j}`)
+//         if (!input) {
+//             break labels;
+//         }
+//     }
+// }
+
+// alert('done')
+
+// for (let index = 0; index <= 10; index++) {
+//     if (index % 2 != 0) {
+//         continue
+//     }
+//     alert(index)
+// }
+
+// for (let i = 0; i < 3; i++) {
+//   alert( `number ${i}!` );
+// }
+
 // loopbreak:
 
 // while (true) {
