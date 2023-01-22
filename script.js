@@ -626,3 +626,82 @@
 
 // Returning a value 
 
+// function returnValue() {
+//     let username = 'Mikyle'
+//     return username
+// }
+
+// alert(returnValue())
+
+// function returnSum(a ,b) {
+//     return a + b
+// }
+
+// let sum = returnSum(1, 3)
+// alert(sum)
+
+// function checkAge(age) {
+//     if (age >= 18) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+
+// let age = prompt('How old are you?: ', 18)
+
+// if (checkAge(age)) {
+//     alert('You are of age to vote. ')
+// } else {
+//     alert('You cannot vote yet. ')
+// }
+
+// If a function doesn't return a value, the value will become undefined
+// function undefinedValue() {
+//     return;
+// }
+
+// if (undefinedValue() == undefined) {
+//     alert('value is undefined')
+// }
+
+// It is recommended to use local variables in a function for cleaner code.
+// It is easier to understand a function that gets variables instead of getting outer variables.
+
+// function checkAge(age) {
+//     if (age >= 18) {
+//         return true;
+//     } else {
+//         return confirm('Did your parents allow you?: ')
+//     }
+// }
+
+// let ageConfirm = checkAge(19)
+// alert(ageConfirm)
+
+// function checkAge(age) {
+//     return (age >= 18) ? true : confirm('Do you have persmission?: ');
+// }
+
+// alert(checkAge(16))
+
+// function checkAge(age) {
+//     return (age >= 18) || confirm('Do you have persmission?: ');
+// }
+
+// alert(checkAge(12))
+
+// function min(a, b) {
+//     return (a < b) ? a: b;
+// }
+
+// alert(min(9, -7))
+
+function pow(x, n) {
+     for (let index = n; index < array.length; index++) {
+        const element = array[index];
+        
+     }
+}
+
+alert(pow(3, 2))
