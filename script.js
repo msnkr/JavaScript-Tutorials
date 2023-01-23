@@ -740,13 +740,104 @@
 // ask('Do you agree?: ', showOk, showCancel)
 
 // OR
-function ask(question, yes, no) {
-   if (confirm(question)) yes()
-   else no();
-}
+// function ask(question, yes, no) {
+//    if (confirm(question)) yes()
+//    else no();
+// }
 
-ask(
-   'Do you agree?: ',
-   function() {alert('You agree');},
-   function() {alert('You dont agree: ');}
-)
+// ask(
+//    'Do you agree?: ',
+//    function() {alert('You agree');},
+//    function() {alert('You dont agree: ');}
+// )
+
+//  ###################### FUNCTION EXPRESSION VS FUNCTION DECLARATION######################
+// Function declaration can be run anywhere. JavaScript first initializes all the global functions
+
+// sayHi('John')
+
+// function sayHi(name) {
+//    alert(`Hello ${name}`)
+// }
+
+// Function expressions are created when the execution flow reaches them
+
+// let age = prompt('What is your age?: ', 18)
+// let welcome
+
+// if (age >= 18) {
+//    welcome = function () {
+//       alert('Hello');
+//    }
+// } else {
+//    welcome = function () {
+//       alert('Greetings')
+//    }
+// }
+// welcome()
+
+// OR
+
+// let age = prompt('What is your age?: ', 18)
+// let welcome = (age >= 18) ?
+//    function() {alert('Hello'); }:
+//    function() {alert('Greetings'); };
+
+// welcome()
+
+//  ###################### ARROW FUNCTIONS, THE BASICS ######################
+
+// let sum = function (a, b) {
+//    return a + b
+// }
+
+// alert(sum(1, 3))
+// Is the same as
+
+// let sum = (a, b) => a + b
+// alert(sum(1, 2))
+
+// If we have one argument, no parenthesis need to be present
+// let double = n => n * 2
+
+// alert(double(3))
+
+// If there are no argumtns, parenthesis must still be there
+// let sayHi = () => alert('Hi')
+
+// sayHi()
+
+// Arrow functions can be used the same way as function expressions
+// let age = prompt('What is your age?: ', 19)
+// let welcome = (age >= 18) ?
+//    () => alert('Hello') :
+//    () => alert('Greetings');
+
+// welcome()
+// Multiline arrow functions.
+// Sometimes we need more complex function with multiple expressions and statements. We can enclode those in curly braces. They require a return value
+
+// let sum = (a, b) => {
+//    let result = a + b;
+//    return result
+// }
+
+// alert(sum(2, 4))
+
+// Arrow funcrions are handy for one liners and simple tasks
+
+// function ask(question, yes, no) {
+//    if (confirm(question)) yes();
+//    else no()
+// }
+
+// ask('Do you agree?: ',
+// function() {alert('You agree. '); },
+// function() {alert('You do not agree...');}
+// )
+
+let ask = (confirm('Do you agree?')) ? 
+   () => alert('You agree') :
+   () => alert('You dont agree');
+
+ask()
