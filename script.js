@@ -697,11 +697,56 @@
 
 // alert(min(9, -7))
 
-function pow(x, n) {
-     for (let index = n; index < array.length; index++) {
-        const element = array[index];
-        
-     }
+// function letters () {
+//    let letter = 'letterLoop';
+//    for(let index = 0; index < letter.length; index++) {
+//       console.log(letter.charAt(index));
+//    }
+// }
+
+// letters()
+
+//  ###################### FUNCTION EXPRESSION ######################
+
+// function sayHi() {
+//    alert('Hi');
+// }
+
+// sayHi()
+// //  let greeting = sayHi
+// //  greeting()
+
+// let sayHi = function() {
+//    alert('Hi')
+// }
+
+// sayHi()
+
+// Callback functions
+
+// function ask(question, yes, no) {
+//    if (confirm(question)) yes()
+//    else no();
+// }
+
+// function showOk() {
+//    alert('You agree ')
+// }
+
+// function showCancel(){
+//    alert('You dont agree')
+// }
+
+// ask('Do you agree?: ', showOk, showCancel)
+
+// OR
+function ask(question, yes, no) {
+   if (confirm(question)) yes()
+   else no();
 }
 
-alert(pow(3, 2))
+ask(
+   'Do you agree?: ',
+   function() {alert('You agree');},
+   function() {alert('You dont agree: ');}
+)
