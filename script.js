@@ -836,8 +836,146 @@
 // function() {alert('You do not agree...');}
 // )
 
-let ask = (confirm('Do you agree?')) ? 
-   () => alert('You agree') :
-   () => alert('You dont agree');
+// let ask = (confirm('Do you agree?')) ? 
+//    () => alert('You agree') :
+//    () => alert('You dont agree');
 
-ask()
+// ask()
+
+//  ###################### STYLE GUIDE ######################
+
+// function pow(x, n) {
+//   let result=1;
+  
+//   for (let i = 0;i < n;i++) {
+//    result*=x;
+//    }
+//    return result;
+// }
+
+// let x = prompt("x?", ''), n=prompt("n?", '');
+// if (n<=0) {
+//   alert(`Power ${n} is not supported, please enter an integer number greater than zero`);
+//    } else {
+//   alert( pow(x,n) );
+// }
+
+//  ###################### TESTING ######################
+// Read testing with mocha.
+
+//  ###################### OBJECTS ######################
+
+// let user = new Object() key value pair
+
+// let user = {
+//    'name': 'John',
+//    'age': 31,
+// }
+
+// alert(`User 1 is ${user.name}. He is ${user.age} years old. `)
+// user.isAdmin = true
+// alert(user.isAdmin)
+
+// // Remove property
+// delete(user.age)
+// alert(user.age)
+
+// We can also add multiword keys. WHen working with multiword keys, use the brackets. JS won't understand user.likes birds
+// let user = {
+//    'name': 'John',
+//    'age': 31,
+//    'Likes birds': true,
+// };
+
+// alert(`User 1 is ${user.name}. He is ${user.age} years old. Likes birds?: ${user['Likes birds']}`)
+
+// Square brackers also provide a way to obtain the result of any expression. Like from a variable
+
+// let user = {
+//    'name': 'Mikyle',
+//    'age': 31,
+// };
+
+// let test = prompt('What is the new name?: ', name);
+// alert( user[test] )
+
+// let user = {
+//    'name': 'peelkop',
+//    'age': 'peelage',
+// }
+
+// let otherName = prompt('Which info to get?: ')
+// alert( user[otherName] )
+
+// We can user square brackers when creating a onject key.
+// let fruits = prompt('Add a fruit');
+
+// let bag = {
+//    [fruits]: 5,
+// }
+// alert( bag.apple )
+
+// This looks nicer
+// let fruit = prompt('What fruit do you want to add?: ')
+
+// let bag = {}
+// bag['fruit'] = 5
+// alert(bag['fruit'])
+
+// shorthand version
+// function makeUser(name, age) {
+//    return {
+//       name,
+//       age
+//    };
+// };
+
+// let user = makeUser('Mikyle', 31)
+// alert( user.name )
+
+// You can use the normak version and shorthand together.
+// function makeUser(name, age) {
+//    return {
+//       name,
+//       age: 31
+//    };
+// };
+
+// let user = makeUser('mikyle')
+// alert( user.age )
+
+// There are no loimitations to variable names, you can also used reserved words in objects
+
+// let weirdVariables = {}
+// weirdVariables['for'] = 1;
+// weirdVariables['in'] = 2;
+
+// alert( 'for ' + weirdVariables['for'] + ' in ' + weirdVariables['in'] ) 
+
+// The in keyword.
+// The syntax is : "key" in object
+
+// let names = {}
+// names['name'] = 'mikyle'
+
+// alert( 'name' in names ) // Will return true
+// alert( 'ag' in names ) // WIll return false 
+// You can use undefined, but this in property is to find a udefined property
+
+// The for in loop is to loop through all propeties of an object.
+
+function makeUser(name, age, isAdmin) {
+   return {
+      name,
+      age,
+      isAdmin,
+   };
+};
+
+let user = makeUser('Mikyle', 31, true);
+// alert( user['isAdmin'] )
+
+for (const key in user) {
+   // alert(key);
+   alert(user[key]);
+}
