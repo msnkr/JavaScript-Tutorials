@@ -964,18 +964,87 @@
 
 // The for in loop is to loop through all propeties of an object.
 
-function makeUser(name, age, isAdmin) {
-   return {
-      name,
-      age,
-      isAdmin,
+// function makeUser(name, age, isAdmin) {
+//    return {
+//       name,
+//       age,
+//       isAdmin,
+//    };
+// };
+
+// let user = makeUser('Mikyle', 31, true);
+// // alert( user['isAdmin'] )
+
+// for (let prop in user) {
+//    alert(user[prop]);
+// }
+
+// Objects are ordered in a special fashion
+
+// let codes = {
+//    '49': 'germany',
+//    '27': 'south africa',
+//    '44': 'Uk',
+// }
+
+// for (let prop in codes) {
+//    alert( prop )
+// }
+
+// You can cheat this by changing the numbers into strings.
+
+// let codes = {
+//    '+49': 'germany',
+//    '+27': 'south africa',
+//    '+44': 'Uk',
+// }
+
+// for (let prop in codes) {
+//    alert( codes[props] )
+// }
+
+// let user = {}
+// user.name = 'John'
+// user.surname = 'Smith'
+// user['name'] = 'Pete'
+// delete user.name
+
+// for (let prop in user) {
+//    alert( user[prop] )
+// }
+
+// Tests REREAD THE TESTS SECTION
+
+// let salaries = {
+//    'John': 100,
+//    'Smith': 160,
+//    'Pete': 130,
+// };
+
+// let result = 0;
+// for (let property in salaries) {
+//    result += salaries[property];
+// };
+
+// alert(result)
+
+
+let menu = {
+   'width': 200,
+   'height': 300,
+   'title': 'My Menu'
+};
+
+function multipleNumericObj(menu) {
+   for (let property in menu) {
+      if (menu[property] === (+menu[property])) {
+         menu[property] = menu[property] * 2;
+      };
    };
 };
 
-let user = makeUser('Mikyle', 31, true);
-// alert( user['isAdmin'] )
+multipleNumericObj(menu);
 
-for (const key in user) {
-   // alert(key);
-   alert(user[key]);
+for (let property in menu) {
+   alert(menu[property])
 }
