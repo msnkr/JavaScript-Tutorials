@@ -1134,4 +1134,73 @@
 //  ###################### This ######################
 // Method examples
 
+// let user = {
+//    name: 'John',
+//    age: 30,
+// };
 
+// user.sayHi = function () {
+//    alert( 'Hello World! ')
+// };
+
+// for (let key in user) {
+//    console.log( user[key] );
+// };
+
+// user.sayHi()
+
+// Here we used a function expression to create a function and assign it to the propperty sayHi of the object.
+// Then we call it as user.sayHi. THe user can now speak. 
+// The function that is the property of the ibject is called a method. 
+// So here we have the method sayHi() and the object is user. 
+
+// The shorthand.
+// let user = {
+//    name: 'John',
+//    age: 31,
+//    sayHi: function () {
+//       alert( 'Hello World!' )
+//    }
+// };
+
+// user.sayHi()
+
+//  Even shorthand we can omit the word function
+// let user = {
+//    name: 'John',
+//    age: 31,
+//    sayHi() {
+//       alert ( 'Hello Wolrd!' )
+//    }
+// };
+
+// user.sayHi()
+
+// This in methods
+// It is common that an object method needs to access the information stored in the object to do its job.
+// For instance, sayHi may need the name of the user.
+
+// let user = {
+//    name: 'John',
+//    age: 31,
+//    sayHi() {
+//       alert( this.name )
+//    }
+// }
+
+// user.sayHi()
+
+// It is possible to use user.name but this method is unreliable because user = admin and this can change.
+// Example
+
+// let user = {
+//    name: 'John',
+//    age: 31,
+//    sayHi() {
+//       alert( user.name )
+//    }
+// }
+
+// let admin = user;
+// user = null;
+// admin.sayHi()
