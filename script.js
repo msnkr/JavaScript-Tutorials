@@ -1029,22 +1029,109 @@
 // alert(result)
 
 
-let menu = {
-   'width': 200,
-   'height': 300,
-   'title': 'My Menu'
-};
+// let menu = {
+//    'width': 200,
+//    'height': 300,
+//    'title': 'My Menu'
+// };
 
-function multipleNumericObj(menu) {
-   for (let property in menu) {
-      if (menu[property] === (+menu[property])) {
-         menu[property] = menu[property] * 2;
-      };
-   };
-};
+// function multipleNumericObj(menu) {
+//    for (let property in menu) {
+//       if (menu[property] === (+menu[property])) {
+//          menu[property] = menu[property] * 2;
+//       };
+//    };
+// };
 
-multipleNumericObj(menu);
+// multipleNumericObj(menu);
 
-for (let property in menu) {
-   alert(menu[property])
-}
+// for (let property in menu) {
+//    alert(menu[property])
+// }
+
+//  ###################### OBJECTS AND REFERENCES ######################
+
+// let user = {'name': 'John'}
+// let admin = user
+
+// admin['name'] = 'Pete'
+// alert(user['name'])
+
+
+
+// Cloning and merging object.assign
+
+// let user = {
+//    'name': 'John',
+//    'age': 30,
+// }
+
+// let clone = {}
+
+// for (let key in user) {
+//    clone[key] = user[key];
+// }
+
+// clone['name'] = 'Pete'
+
+// alert( user['name'] )
+// alert( clone['name'] )
+
+// We can also use the object assign method
+// The syntax is Object.assign(dest, source1, source2, ..)
+// This copies all the sources to the destination
+
+// let user = { name: 'John' };
+// let persmission1 = { canView: true };
+// let permission2 = { canEdit: true };
+
+// Object.assign(user, persmission1, permission2)
+
+// alert( user.canView )
+// alert( user.canEdit )
+
+// If the copied property already exists, it overwrites it.
+// let user = { name: 'John' };
+// Object.assign(user, { name: 'Pete' });
+
+// alert( user.name );
+
+// We can also use Object.assign to do simple object cloning.
+
+// let user = { name: 'John' };
+// let clone = Object.assign( {}, user )
+
+// alert( clone.name )
+
+
+// Nested cloning.
+// let user = {
+//    name: 'John',
+//    age: 30,
+//    sizes: {
+//       height: '180cm',
+//       weight: '80kg',
+//    }
+// };
+
+
+// let clone = Object.assign({}, user);
+// alert ( user.sizes === clone.sizes ); // returns the same object
+
+
+// alert( user.sizes.height );
+// clone.sizes.height = '182cm';
+// alert( user.sizes.height ); // Clone and user share the same object
+
+// To fix this error, we can use the structuredClone(object) method
+// let clone = structuredClone(user);
+// alert( user.sizes === clone.sizes ); //returns false, different object
+
+// alert( user.sizes.height );
+// clone.sizes.height = '182';
+// alert( user.sizes.height )
+
+//  ###################### This ######################
+// Method examples
+
+
