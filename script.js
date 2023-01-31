@@ -1204,3 +1204,31 @@
 // let admin = user;
 // user = null;
 // admin.sayHi()
+
+// let nameA = {name: 'John'}
+// let nameB = {name: 'Mike'}
+
+// function sayHi() {
+//     alert( this.name );
+// }
+
+// nameA.f = sayHi;
+// nameB.f = sayHi;
+
+// nameA.f()
+// nameB.f()
+
+// If there is a this in a function, it expects to be called in a object context.
+
+// function makeUser () {
+//     return {
+//         name: 'John',
+//         ref: this,
+//     };
+// };
+
+// let user = makeUser;
+// alert( user.ref.name )
+
+
+
