@@ -1236,25 +1236,24 @@
 
 // Calculator with this
 
-// let calculator = {
+let calculator = {
+    
+    numA: 10,
+    numB: 12,
 
-//     sum() {
-//     return alert( +this.numA + +this.numB );
-//     },
+    sum() {
+        return this.numA + this.numB;
+    },
 
-//     mul() {
-//         return alert( +this.numA * +this.numB )
-//     },
-//     read() {
-//         this.numA = prompt( 'A?' );
-//         this.numB = prompt( 'B?' );
-//     },
-// };
+    mul() {
+        return this.numA * this.numB;
+    }
+};
 
-// let cal = calculator;
-// cal.read();
-// cal.sum()
-// cal.mul()
+let cal = calculator;
+console.log(cal.sum());
+console.log(cal.mul());
+
 
 // Chaining.
 
