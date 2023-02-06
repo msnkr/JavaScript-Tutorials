@@ -1223,10 +1223,38 @@
 // function makeUser () {
 //     return {
 //         name: 'John',
-//         ref: this,
+//         ref () {
+//             return this
+//         }
 //     };
 // };
 
-// let user = makeUser;
-// alert( user.ref.name )
+
+// let user = makeUser();
+
+// alert(user.ref().name)
+
+// Calculator with this
+
+// let calculator = {
+
+//     sum() {
+//     return alert( +this.numA + +this.numB );
+//     },
+
+//     mul() {
+//         return alert( +this.numA * +this.numB )
+//     },
+//     read() {
+//         this.numA = prompt( 'A?' );
+//         this.numB = prompt( 'B?' );
+//     },
+// };
+
+// let cal = calculator;
+// cal.read();
+// cal.sum()
+// cal.mul()
+
+// Chaining.
 
