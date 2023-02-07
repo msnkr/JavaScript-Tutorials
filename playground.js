@@ -17,5 +17,5 @@
 document.getElementById('button-2').onclick = changeRyu;
 
 function changeRyu() {
-    document.getElementById('ryu-1').src = 'ryu-2.jpg'
+    document.getElementById('ryu-2').src = 'ryu-1.jpg'
 };
