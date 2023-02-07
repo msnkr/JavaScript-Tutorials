@@ -1135,125 +1135,90 @@
 // Method examples
 
 // let user = {
-//    name: 'John',
-//    age: 30,
+//     name: 'John',
+//     age: 31,
 // };
 
-// user.sayHi = function () {
-//    alert( 'Hello World! ')
-// };
+// // user.sayHi = function () {
+// //     console.log(`${this.name} says hello`);
+// // };
 
-// for (let key in user) {
-//    console.log( user[key] );
-// };
+// function sayHi() {
+//     console.log(`${this.name} says hello`);
+// }
 
-// user.sayHi()
+// user.sayHi = sayHi;
+// user.sayHi();
 
-// Here we used a function expression to create a function and assign it to the propperty sayHi of the object.
-// Then we call it as user.sayHi. THe user can now speak. 
-// The function that is the property of the ibject is called a method. 
-// So here we have the method sayHi() and the object is user. 
+// Method shorthands.
 
-// The shorthand.
 // let user = {
-//    name: 'John',
-//    age: 31,
-//    sayHi: function () {
-//       alert( 'Hello World!' )
-//    }
-// };
-
-// user.sayHi()
-
-//  Even shorthand we can omit the word function
-// let user = {
-//    name: 'John',
-//    age: 31,
-//    sayHi() {
-//       alert ( 'Hello Wolrd!' )
-//    }
+//     sayHi() {
+//         console.log('Hello');
+//     }
 // };
 
 // user.sayHi()
 
 // This in methods
-// It is common that an object method needs to access the information stored in the object to do its job.
-// For instance, sayHi may need the name of the user.
+// It’s common that an object method needs to access the information stored in the object to do its job.
 
 // let user = {
-//    name: 'John',
-//    age: 31,
-//    sayHi() {
-//       alert( this.name )
-//    }
-// }
+//     name: 'Mike',
 
-// user.sayHi()
-
-// It is possible to use user.name but this method is unreliable because user = admin and this can change.
-// Example
-
-// let user = {
-//    name: 'John',
-//    age: 31,
-//    sayHi() {
-//       alert( user.name )
-//    }
-// }
-
-// let admin = user;
-// user = null;
-// admin.sayHi()
-
-// let nameA = {name: 'John'}
-// let nameB = {name: 'Mike'}
-
-// function sayHi() {
-//     alert( this.name );
-// }
-
-// nameA.f = sayHi;
-// nameB.f = sayHi;
-
-// nameA.f()
-// nameB.f()
-
-// If there is a this in a function, it expects to be called in a object context.
-
-// function makeUser () {
-//     return {
-//         name: 'John',
-//         ref () {
-//             return this
-//         }
-//     };
+//     sayHi() {
+//         console.log(this.name);
+//     }
 // };
 
+// user.sayHi();
 
-// let user = makeUser();
+// let userA = {name: 'John'};
+// let userB = {name: 'Mike'};
 
-// alert(user.ref().name)
+// function sayHi () {
+//     console.log(`Hello. My name is ${this.name}`);
+// };
 
-// Calculator with this
+// userA.sayHi = sayHi;
+// userB.sayHi = sayHi;
 
-let calculator = {
-    
-    numA: 10,
-    numB: 12,
+// userA.sayHi();
+// userB.sayHi();
 
-    sum() {
-        return this.numA + this.numB;
+// let calculator = {
+//     a:  +22,
+//     b:  +33,
+
+//     sum() {
+//         return this.a + this.b;
+//     },
+
+//     mul() {
+//         return this.a * this.b;
+//     },
+// };
+
+// let cal = calculator;
+// console.log( cal.sum() );
+// console.log( cal.mul() );
+
+let ladder = {
+    step: 0,
+    up() {
+        this.step++;
+        return this
     },
 
-    mul() {
-        return this.numA * this.numB;
+    down() {
+        this.step--;
+        return this
+    },
+
+    showstep: function() {
+        console.log(this.step);
     }
 };
 
-let cal = calculator;
-console.log(cal.sum());
-console.log(cal.mul());
-
-
-// Chaining.
-
+let l = ladder;
+l.up().up().showstep()
