@@ -14,8 +14,29 @@
 // console.log(y);
 
 
-document.getElementById('button-2').onclick = changeRyu;
+// document.getElementById('button-2').onclick = changeRyu;
 
-function changeRyu() {
-    document.getElementById('ryu-2').src = 'ryu-1.jpg'
-};
+// function changeRyu() {
+//     document.getElementById('ryu-2').src = 'ryu-1.jpg'
+// };
+
+// elem = document.getElementById('hello-there');
+// elem.innerHTML = 'test';
+// elem = document.getElementById('change-color');
+// elem.style.backgroundColor = 'red';
+
+
+
+// document.getElementById('random-button').onclick = changeColor;
+
+// function changeColor () {
+//     document.getElementById('change-color').style.color = 'cyan';
+// };
+
+document.getElementById('hide-button').onclick = function hideText() {
+    document.getElementById('hide-text').style.visibility = 'hidden';
+}
+
+document.getElementById('show-button').onclick = function hideText() {
+    document.getElementById('hide-text').style.visibility = 'visible';
+}
