@@ -34,4 +34,4 @@ var name = 'mikyle';
 var firstLetter = name.slice(0,1);
 var lastLetter = name.slice(1, name.length);
 
-console.log(`${firstLetter.toUpperCase()}${lastLetter}`);
+console.log(firstLetter.toUpperCase() + lastLetter);
