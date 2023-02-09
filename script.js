@@ -1249,7 +1249,12 @@ let ladder = {
      },
 
      readSteps() {
-        console.log(step);
+        console.log(this.step);
      },
 };
 
+let lad = ladder;
+lad.stepUp()
+lad.stepUp()
+lad.stepUp()
+lad.readSteps();
