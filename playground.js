@@ -33,10 +33,12 @@
 //     document.getElementById('change-color').style.color = 'cyan';
 // };
 
-document.getElementById('hide-button').onclick = function hideText() {
-    document.getElementById('hide-text').style.visibility = 'hidden';
-}
+// document.getElementById('hide-button').onclick = function hideText() {
+//     document.getElementById('hide-text').style.visibility = 'hidden';
+// }
 
-document.getElementById('show-button').onclick = function hideText() {
-    document.getElementById('hide-text').style.visibility = 'visible';
-}
+// document.getElementById('show-button').onclick = function hideText() {
+//     document.getElementById('hide-text').style.visibility = 'visible';
+// }
+
+document.getElementById('animation-start').style.backgroundColor = 'yellow'

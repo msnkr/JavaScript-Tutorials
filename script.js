@@ -1203,22 +1203,53 @@
 // console.log( cal.sum() );
 // console.log( cal.mul() );
 
+// let ladder = {
+//     step: 0,
+//     up() {
+//         this.step++;
+//         return this
+//     },
+
+//     down() {
+//         this.step--;
+//         return this
+//     },
+
+//     showstep: function() {
+//         console.log(this.step);
+//     }
+// };
+
+// let l = ladder;
+// l.up().up().showstep()
+
+// let id = 0
+// let user = {
+//     id
+// };
+
+// function whoClicked() {
+//     return this.id += 1;
+// };
+
+// user.click = whoClicked;
+// alert( Boolean(user.click()) )
+// alert( user.id )
+
+
 let ladder = {
-    step: 0,
-    up() {
-        this.step++;
-        return this
-    },
+     step: 0,
 
-    down() {
-        this.step--;
-        return this
-    },
+    stepUp() {
+        this.step ++
+     },
 
-    showstep: function() {
-        console.log(this.step);
-    }
+     stepDown() {
+        this.step--
+     },
+
+     readSteps() {
+        console.log(step);
+     },
 };
 
-let l = ladder;
-l.up().up().showstep()
