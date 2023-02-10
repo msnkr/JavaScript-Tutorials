@@ -1285,10 +1285,59 @@
 // let user = new User('jack');
 // console.log(user.name);
 
-function User(name) {
-   this.name = name
-   this.isAdmin = false
-};
+// function User(name) {
+//    this.name = name
+//    this.isAdmin = false
+// };
 
-let user = new User('Mikyle');
-console.log(user.name);
+// let user = new User('Mikyle');
+// console.log(user.name);
+
+//  ###################### CONSTRUCTORS ######################
+
+// function User(name) {
+//    this.name = name
+//    this.isAdmin = false
+// };
+
+// let user = new User('Mikyle')
+// let admin = new User('John')
+
+// console.log(user.name);
+// console.log(user.isAdmin);
+// console.log(admin.name);
+// console.log(admin.isAdmin);
+// console.log(admin);
+
+
+// Methods in constructor.
+// function User(name) {
+//    this.name = name;
+
+//    this.sayHi = function() {
+//       console.log(`${this.name} says hellooooo...`);
+//    }
+// };
+// let user = new User('Mikyle');
+// user.sayHi();
+
+function Calculator() {
+
+   this.read = function() {
+      this.numA = 10;
+      this.numB = 20;
+   }
+
+   this.sum = function () {
+      console.log(this.numA + this.numB);
+   }
+
+   this.mul = function() {
+      console.log(this.numA * this.numB);
+   }
+}
+
+let calculator = new Calculator();
+calculator.read();
+calculator.sum();
+calculator.mul();
