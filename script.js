@@ -1237,24 +1237,58 @@
 // alert( user.id )
 
 
-let ladder = {
-     step: 0,
+// let ladder = {
+//      step: 0,
 
-    stepUp() {
-        this.step ++
-     },
+//     stepUp() {
+//         this.step ++;
+//         return this;
+//      },
 
-     stepDown() {
-        this.step--
-     },
+//      stepDown() {
+//         this.step--;
+//         return this;
+//      },
 
-     readSteps() {
-        console.log(this.step);
-     },
+//      readSteps() {
+//         console.log(this.step);
+//         return this;
+//      },
+// };
+
+// let lad = ladder;
+
+// lad.stepUp().stepUp().readSteps().stepDown().stepUp().stepDown().readSteps();
+
+// let calculator = {
+//    numA: 10,
+//    numB: 12,
+
+//    sum() {
+//       console.log(this.numA + this.numB);
+//    },
+
+//    mul() {
+//       console.log(this.numA * this.numB);
+//    }
+// };
+
+// let cal = calculator;
+// cal.sum()
+// cal.mul()
+
+// function User(name) {
+//    this.name = name
+//    this.isAdmin = false
+// };
+
+// let user = new User('jack');
+// console.log(user.name);
+
+function User(name) {
+   this.name = name
+   this.isAdmin = false
 };
 
-let lad = ladder;
-lad.stepUp()
-lad.stepUp()
-lad.stepUp()
-lad.readSteps();
+let user = new User('Mikyle');
+console.log(user.name);
