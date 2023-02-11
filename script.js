@@ -1321,23 +1321,49 @@
 // let user = new User('Mikyle');
 // user.sayHi();
 
-function Calculator() {
+// function Calculator() {
 
-   this.read = function() {
-      this.numA = 10;
-      this.numB = 20;
-   }
+//    this.read = function() {
+//       this.numA = 10;
+//       this.numB = 20;
+//    }
 
-   this.sum = function () {
-      console.log(this.numA + this.numB);
-   }
+//    this.sum = function () {
+//       console.log(this.numA + this.numB);
+//    }
 
-   this.mul = function() {
-      console.log(this.numA * this.numB);
-   }
-}
+//    this.mul = function() {
+//       console.log(this.numA * this.numB);
+//    }
+// }
 
-let calculator = new Calculator();
-calculator.read();
-calculator.sum();
-calculator.mul();
+// let calculator = new Calculator();
+// calculator.read();
+// calculator.sum();
+// calculator.mul();
+
+// function Accumulator(value) {
+//    this.value = +value;
+
+//    this.read = function() {
+//       this.value += +prompt('Enter a number')
+//    }
+// };
+
+// let accumulator = new Accumulator(20);
+// accumulator.read()
+// accumulator.read()
+// accumulator.read()
+// accumulator.read()
+
+// alert( accumulator.value )
+
+//  ###################### CHAINING  ######################
+
+let user = {
+   name: 'Mikyle',
+   age: 31,
+   address: 'Fucken shit'
+};
+
+console.log(user.address ? user.address.street : null);
