@@ -120,3 +120,18 @@ SLICE
 //     move();
 //     putBeeper();
 // }
+
+
+// function getMilk(monies) {
+//     let price = 1.5;
+//     console.log( Math.floor(monies / price) );
+// }
+
+// getMilk(5)
+
+function calculateBmi(weight, height) {
+    bmi =( weight / height ** 2);
+    return bmi;
+}
+
+console.log( Math.floor(calculateBmi(65, 1.8)) );
