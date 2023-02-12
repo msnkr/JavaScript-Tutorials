@@ -30,8 +30,93 @@ SLICE
 // console.log(slicedMessage);
 
 
-var name = 'mikyle';
-var firstLetter = name.slice(0,1);
-var lastLetter = name.slice(1, name.length);
+// var name = 'miKyLe';
+// var firstLetter = name.slice(0,1);
+// var lastLetter = name.slice(1, name.length);
 
-console.log(firstLetter.toUpperCase() + lastLetter);
+// console.log(firstLetter.toUpperCase() + lastLetter.toLowerCase());
+
+// console.log(3 + 5 * 2);
+// console.log((3 + 5 )* 2);
+
+// dogAge = 5;
+// dogToHumanAge = ((dogAge - 2) * 4) + 21;
+
+// console.log(dogToHumanAge);
+
+// function main() {
+//     moveRobot();
+//     turnLeft();
+//     moveRobot();
+//  }
+
+
+//  function moveRobot() {
+//     move();
+//     move();
+//     move();
+//     move();
+// }
+
+// function main() {
+//     putBeeper();
+//     putBeeperAgain();
+// }
+
+// function putBeeper5Times() {
+//     move();
+//     turnLeft();
+//     move();
+//     turnRight();
+//     putBeeper();
+// }
+
+// function putBeeperAgain() {
+//     putBeeper5Times();
+//     putBeeper5Times();
+//     putBeeper5Times();
+//     putBeeper5Times();
+// }
+
+// function main() {
+//     firstRow();
+//     secondRow();
+//     firstRow();
+//     secondRow();
+//     lastRow();
+// }
+
+// function firstRow() {
+//     putBeeper();
+//     move();
+//     move();
+//     putBeeper();
+//     move();
+//     move();
+//     putBeeper();
+//     turnLeft();
+//     move();
+//     turnLeft();
+// }
+
+// function secondRow() {
+//     move();
+//     putBeeper();
+//     move();
+//     move();
+//     putBeeper();
+//     move();
+//     turnRight();
+//     move();
+//     turnRight();
+// }
+
+// function lastRow() {
+//     putBeeper();
+//     move();
+//     move();
+//     putBeeper();
+//     move();
+//     move();
+//     putBeeper();
+// }
