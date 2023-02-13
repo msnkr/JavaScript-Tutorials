@@ -129,9 +129,15 @@ SLICE
 
 // getMilk(5)
 
-function calculateBmi(weight, height) {
-    bmi =( weight / height ** 2);
-    return bmi;
-}
 
-console.log( Math.floor(calculateBmi(65, 1.8)) );
+// console.log(Math.pow(4, 3));
+// console.log(Math.round(5 / 1.5));
+// console.log(5 % 1.5);
+
+// function bmiCalculator(weight, height) {
+//     bmi = weight / Math.pow(height, 2);
+//     return Math.round(bmi);
+// }
+
+// console.log( bmiCalculator( 65, 1.8 ) );
+
