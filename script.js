@@ -1359,11 +1359,12 @@
 // alert( accumulator.value )
 
 //  ###################### CHAINING  ######################
+// If there is no address then it will return undefined. But if we go further in for the street when there is no address, it will return an error.
+let user = {};
 
-let user = {
-   name: 'Mikyle',
-   age: 31,
-   address: 'Fucken shit'
-};
+// console.log(user.address.street);
+// console.log(user.address ? user.address.street ? user.address.street.name : 'No street' : 'no street name');
 
-console.log(user.address ? user.address.street : null);
+// A better way to return without error is by using &&
+
+console.log(user.address && user.address.street && user.address.street.name); // returns undefined instead of an error. 
