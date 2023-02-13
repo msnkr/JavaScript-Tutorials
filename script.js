@@ -1360,11 +1360,59 @@
 
 //  ###################### CHAINING  ######################
 // If there is no address then it will return undefined. But if we go further in for the street when there is no address, it will return an error.
-let user = {};
+// let user = {};
 
 // console.log(user.address.street);
 // console.log(user.address ? user.address.street ? user.address.street.name : 'No street' : 'no street name');
 
 // A better way to return without error is by using &&
 
-console.log(user.address && user.address.street && user.address.street.name); // returns undefined instead of an error. 
+// console.log(user.address && user.address.street && user.address.street.name); // returns undefined instead of an error. 
+
+// Optional chaining. 
+// Optional chainingh ?. stops if the value before the dot is undefined or null and returns undefined.
+
+// let user = {
+//     address: {
+//         street: 'Kensington'
+//     }
+// };
+
+// console.log(user?.address?.street); // If address and street are found then will return street
+// Else
+
+// let user = {};
+
+// console.log(user?.address?.street); // Will return the first instance of undefined. 
+
+// This will work even if the user object doesn't exist but it must atleast be declared otherwise you will get an error. 
+
+// let user = null;
+
+// console.log(user?.address?.street);
+
+// Don't overuse chaining, should only be used whrn its okay to accept undefined.
+// let user = {};
+
+// console.log(user.address?.street);
+
+// ?. immediatly short-circuits if the variable on the left if it doesn't exist. 
+
+// Other vairiant of ?. that you might use is ?.[]
+// To see if properties of an object exist. 
+
+// let user = {
+//     name: 'John',
+//     age: 31,
+// }
+
+// let key = 'isAdmin'
+
+// console.log(user?.[key]);
+
+//  ###################### SYMBOLS  ######################
+
+// let key1 = Symbol('id');
+// let key2 = Symbol('id');
+
+// console.log(key1 == key2); 
