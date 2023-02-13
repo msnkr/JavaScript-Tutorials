@@ -140,4 +140,20 @@ SLICE
 // }
 
 // console.log( bmiCalculator( 65, 1.8 ) );
+// console.log(5 % 3);
 
+function firstName(firstName) {
+    firstNameSlice = firstName.slice(0,1);
+    firstNameCap = firstNameSlice.toUpperCase();
+    restOfName = firstName.slice(1, firstName.length);
+    return firstNameCap + restOfName;
+}
+
+function lastName(lastName) {
+    lastNameSlice = lastName.slice(0,1);
+    lastNameCap = lastNameSlice.toUpperCase();
+    restOfLastName = lastName.slice(1, lastName.length);
+    return lastNameCap + restOfLastName;
+}
+
+console.log( firstName('mikyle') + ' ' + lastName('kruger') );
