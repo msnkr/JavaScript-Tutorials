@@ -1411,8 +1411,92 @@
 // console.log(user?.[key]);
 
 //  ###################### SYMBOLS  ######################
+// Sybols don't auto convert to string. You have to explicitly convert them to string using toString().
 
 // let key1 = Symbol('id');
 // let key2 = Symbol('id');
 
 // console.log(key1 == key2); 
+
+// let user = {
+//     name: 'John',
+// }
+
+// let id = Symbol("id");
+// user.id = 1;
+
+// console.log( user.id )
+
+// // The benefit of using Symbol is that user belongs to another code base. It would be unsafe to add fields to them because they might affect pre-defgined behaviour in that codebase. 
+// // You can also add another field into user that won't conflict with the code because it is not the same.
+
+// user.id = "Their value"
+// console.log( user.id )
+
+
+// If we want to use String in an object literal. We have to use it with brackets.
+// let id = Symbol("Id")
+// let user = {
+//     name: "John",
+//     [id] : 123,
+// };
+
+// console.log(user[id]);
+// Thats because we need the value from the variable. Not the key.
+// Symbols are skipped in by for and in
+
+// let id = Symbol("id")
+// let user = {
+//     name: "John",
+//     [id]: 123,
+// };
+
+// for (const key in user) {
+//     console.log( key );
+// }   
+// console.log( user[id] );
+// console.log( user.name );
+
+// Object.assign copies both properties and symbol
+
+// let id = Symbol("Id")
+// let user = {
+//     name: "John",
+//     [id]: 123,
+// };
+
+// let admin = Object.assign(user, {});
+
+// console.log(admin[id]);
+
+// Symbol objects will always be different. They cannot be overwritten because each one is created seperately. To access a global symbol you can use symbol.for("key").
+
+// let symbol1 = Symbol("symbol1")
+// let symbol2 = Symbol("symbol1")
+
+// console.log(symbol1 === symbol2);
+
+// let newSymbol1 = Symbol.for("symbol")
+// let newSymbol2 = Symbol.for("symbol")
+
+// console.log(newSymbol1 === newSymbol2)
+
+// You can use Symbol.keyfor(sym) to return the name of the global symbol.
+// let name = Symbol.for("name");
+// let sym = Symbol.for("sym");
+
+// console.log( Symbol.keyFor(name) );
+// console.log( Symbol.keyFor(sym) );
+
+// key for only works with global symbols else it will returned undefined.
+// But all symbols have a description property. 
+
+// GLOBAL SSYMBOL IS FOR
+
+// let localSymbol = Symbol('name1');
+// let globalSymbol = Symbol.for("name2")
+
+// // console.log( Symbol.keyFor(localSymbol) );
+// console.log( Symbol.keyFor(globalSymbol) );
+
+// console.log( localSymbol.description );

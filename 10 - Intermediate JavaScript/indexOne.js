@@ -11,7 +11,7 @@
 //     console.log(`${name1} and ${name2} score: ${percentage}%. You go together like oil and water. `);
 // }
 
-// let year = 2035;
+// let year = 2096;
 
 // if (year % 4 == 0) {
 //     console.log('Leap Year')
