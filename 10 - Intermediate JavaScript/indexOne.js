@@ -11,7 +11,7 @@
 //     console.log(`${name1} and ${name2} score: ${percentage}%. You go together like oil and water. `);
 // }
 
-// let year = 2096;
+// let year = 2024;
 
 // if (year % 4 == 0) {
 //     console.log('Leap Year')
@@ -20,3 +20,41 @@
 // }  else {
 //     console.log('Not a leap year.');
 // }
+
+// let guestList = ["mikyle", "kashia", "lara", "marcus", "Brandon", "Selene"];
+// let yourName = "mikyle";
+
+// if (guestList.includes(yourName)) {
+//     console.log(`Welcome ${yourName}.`);
+// }   else {
+//     console.log(`Go away, ${yourName}.`)
+// }
+
+let output = [];
+let count = 1;
+
+function fizzBuzz() {
+    while (count <= 100) {
+        if (count % 15 == 0) {
+            output.push('Fizzbuzz');
+        }  else if (count % 5 == 0 ) {
+            output.push('Buzz');
+        } else if (count % 3 == 0) {
+            output.push('Fizz');
+        } else {
+            output.push(count)
+        }
+        count++;
+    }
+    console.log(output);
+};
+
+
+fizzBuzz();
+
+
+// let people = ["mikyle", "kashia", "lara", "marcus", "Brandon", "Selene"];
+// let randomNum = Math.random() * people.length;
+
+// let personPaying = people[Math.floor(randomNum)];
+// console.log( personPaying );
