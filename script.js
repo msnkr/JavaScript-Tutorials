@@ -1500,9 +1500,3 @@
 // console.log( Symbol.keyFor(globalSymbol) );
 
 // console.log( localSymbol.description );
-
-function sayHi() {
-    console.log('Hello');
-};
-
-setInterval(sayHi, 4000)
