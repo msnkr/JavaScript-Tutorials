@@ -73,3 +73,13 @@
 //     };
 // }
 
+
+setInterval(sayHello, 1000)
+
+let timer = 10;
+function sayHello() {
+    if (timer != 0) {
+        console.log(timer);
+        timer--;
+    }
+};
