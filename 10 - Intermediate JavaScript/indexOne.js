@@ -74,12 +74,16 @@
 // }
 
 
-setInterval(sayHello, 1000)
+// const minutes = 
+// setInterval(sayHello, 1000)
 
-let timer = 10;
-function sayHello() {
-    if (timer != 0) {
-        console.log(timer);
-        timer--;
-    }
-};
+// let timer = 10;
+// function sayHello() {
+//     if (timer != 0) {
+//         console.log(timer);
+//         timer--;
+//     }
+// };
+
+// console.log( Math.floor(300/60) );
+console.log( Math.floor(5/60) );
