@@ -86,4 +86,21 @@
 // };
 
 // console.log( Math.floor(300/60) );
-console.log( Math.floor(5/60) );
+// console.log( Math.floor(5/60) );
+
+function fibonacciSeq(n) {
+    if (n == 1 ) {
+        output = [0];
+    } else if (n == 2) {
+        output = [0, 1];
+    } else {
+        output = [0, 1];
+        for (let index = 0; index < n - 2; index++) {
+            output.push( output[output.length - 1] + output[output.length - 2] )
+        }
+    }
+    return output;
+}
+
+output = fibonacciSeq(10);
+console.log(output);
