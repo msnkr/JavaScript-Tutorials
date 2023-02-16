@@ -30,27 +30,27 @@
 //     console.log(`Go away, ${yourName}.`)
 // }
 
-let output = [];
-let count = 1;
+// let output = [];
+// let count = 1;
 
-function fizzBuzz() {
-    while (count <= 100) {
-        if (count % 15 == 0) {
-            output.push('Fizzbuzz');
-        }  else if (count % 5 == 0 ) {
-            output.push('Buzz');
-        } else if (count % 3 == 0) {
-            output.push('Fizz');
-        } else {
-            output.push(count)
-        }
-        count++;
-    }
-    console.log(output);
-};
+// function fizzBuzz() {
+//     while (count <= 100) {
+//         if (count % 15 == 0) {
+//             output.push('Fizzbuzz');
+//         }  else if (count % 5 == 0 ) {
+//             output.push('Buzz');
+//         } else if (count % 3 == 0) {
+//             output.push('Fizz');
+//         } else {
+//             output.push(count)
+//         }
+//         count++;
+//     }
+//     console.log(output);
+// };
 
 
-fizzBuzz();
+// fizzBuzz();
 
 
 // let people = ["mikyle", "kashia", "lara", "marcus", "Brandon", "Selene"];
@@ -58,3 +58,17 @@ fizzBuzz();
 
 // let personPaying = people[Math.floor(randomNum)];
 // console.log( personPaying );
+
+// let bottles = 99;
+// function beerSong() {
+//     console.log(`${bottles} bottles of beer on the wall, ${bottles} bottles of beer.`);
+//     bottles--;
+//     console.log(`Take one down and pass it around, ${bottles} bottles of beer on the wall.`);
+// };
+
+// while (bottles > 0) {
+//     beerSong();
+//     if (bottles == 0) {
+//         console.log(`No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.`)
+//     };
+// }
