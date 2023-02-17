@@ -1,16 +1,17 @@
 /*
-function
-convert minutes to seconds, countdown seconds, cancel countdown when seconds == 0
+find a way to countdown seconds
 */
 
+let seconds = Math.round(25 * 60) - 1; 
+
 function countDown() {
-    let seconds = Math.floor(25*60);
-    while (seconds > 0) {
-        console.log(seconds)
+    if (seconds != 0) {
+        console.log(seconds);
         seconds--;
+    } else {
+        clearInterval(x)
     }
-}
+};
 
-setInterval(countDown, 1000)
 
-// console.log(25*60);
+x = setInterval(countDown, 1000, seconds)
