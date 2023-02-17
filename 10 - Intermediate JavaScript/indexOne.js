@@ -73,32 +73,19 @@
 //     };
 // }
 
-
-// const minutes = 300/60;
-// setInterval(sayHello, 1000)
-
-// let timer = 10;
-// function countFiveMinutes() {
-//     if (timer != 0) {
-//         console.log(timer);
-//         timer--;
-//     }
-// };
-
-
-// function fibonacciSeq(n) {
-//     if (n == 1 ) {
+// function fabonacciGenerator(n) {
+//     if (n == 1) {
 //         output = [0];
 //     } else if (n == 2) {
 //         output = [0, 1];
 //     } else {
 //         output = [0, 1];
-//         for (let index = 0; index < n - 2; index++) {
-//             output.push( output[output.length - 1] + output[output.length - 2] )
+//         for (let index = 0; index < n -2 ; index++) {  
+//             output.push( output[output.length - 1] + output[output.length - 2]);
 //         }
 //     }
 //     return output;
 // }
 
-// output = fibonacciSeq(10);
-// console.log(output);
+// output = fabonacciGenerator;
+// console.log( output(10) );
