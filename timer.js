@@ -22,13 +22,15 @@ function countDown() {
     }
 };
 
-if (count % 2 == 0) {
-    seconds = 5// Math.round(25 * 60) -1;
-    x = setInterval(countDown, 1000, seconds)
-} else if (count == 6) {
-    seconds =10// Math.round(30 * 60) -1;
-    x = setInterval(countDown, 1000, seconds)
-} else {
-    seconds =2// Math.round(5 * 60) -1;
-    x = setInterval(countDown, 1000, seconds)
-};
+while ( count < 7) {
+    if (count % 2 == 0) {
+        seconds = 5 // Math.round(25 * 60) -1;
+        x = setInterval(countDown, 1000, seconds)
+    } else if (count == 6) {
+        seconds =10 // Math.round(30 * 60) -1;
+        x = setInterval(countDown, 1000, seconds)
+    } else {
+        seconds =2 // Math.round(5 * 60) -1;
+        x = setInterval(countDown, 1000, seconds)
+    };
+}
