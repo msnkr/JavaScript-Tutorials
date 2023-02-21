@@ -3,4 +3,22 @@ function randomNumDiceChanger() {
     return randomNum;
 }
 
+let player1 = randomNumDiceChanger();
+let player2 = randomNumDiceChanger();
 
+
+document.querySelector(".img1").setAttribute("src",
+ "/12 - Boss Challenge Level 1/Dicee Challenge - Starting Files/Dicee Challenge - Starting Files/images/dice" + player1 + ".png")
+document.querySelector(".img2").setAttribute("src", 
+"/12 - Boss Challenge Level 1/Dicee Challenge - Starting Files/Dicee Challenge - Starting Files/images/dice" + player2 + ".png")
+
+if (player1 == player2) {
+    document.querySelector("h1").textContent = "It\'s a draw.";
+    // console.log("draw")
+} else if (player1 > player2) {
+    document.querySelector("h1").textContent = "Player 1 wins";
+    // console.log("p1")
+} else {
+    document.querySelector("h1").textContent = "Player 2 wins";
+    // console.log("p2")
+}
