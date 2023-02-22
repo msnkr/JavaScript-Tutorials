@@ -14,23 +14,26 @@ let count = 0
 
 function countDown() {
     if (seconds != 0) {
-        console.log(seconds);
+        // console.log(seconds);
         seconds--;
     } else {
         clearInterval(x)
         count++;
+        runAgain();
     }
 };
 
-while ( count < 7) {
+function runAgain() {
     if (count % 2 == 0) {
-        seconds = 5 // Math.round(25 * 60) -1;
+        seconds = 10 // Math.round(25 * 60) -1;
         x = setInterval(countDown, 1000, seconds)
     } else if (count == 6) {
-        seconds =10 // Math.round(30 * 60) -1;
+        seconds =20 // Math.round(30 * 60) -1;
         x = setInterval(countDown, 1000, seconds)
     } else {
-        seconds =2 // Math.round(5 * 60) -1;
+        seconds =5 // Math.round(5 * 60) -1;
         x = setInterval(countDown, 1000, seconds)
-    };
-}
+    }
+};
+
+runAgain();
