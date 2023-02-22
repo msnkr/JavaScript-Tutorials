@@ -7,10 +7,8 @@ let player1 = randomNumDiceChanger();
 let player2 = randomNumDiceChanger();
 
 
-document.querySelector(".img1").setAttribute("src",
- "/12 - Boss Challenge Level 1/Dicee Challenge - Starting Files/Dicee Challenge - Starting Files/images/dice" + player1 + ".png")
-document.querySelector(".img2").setAttribute("src", 
-"/12 - Boss Challenge Level 1/Dicee Challenge - Starting Files/Dicee Challenge - Starting Files/images/dice" + player2 + ".png")
+document.querySelector(".img1").setAttribute("src", "images/dice" + player1 + ".png")
+document.querySelector(".img2").setAttribute("src", "images/dice" + player2 + ".png")
 
 if (player1 == player2) {
     document.querySelector("h1").textContent = "It\'s a draw.";
