@@ -2,6 +2,7 @@
 //     alert("I got clicked")
 // })
 
+
 for (let index = 0; index < document.querySelectorAll(".drum").length; index++) {
     document.querySelectorAll(".drum")[index].addEventListener("click", function() {
 
@@ -40,4 +41,8 @@ for (let index = 0; index < document.querySelectorAll(".drum").length; index++) 
         }
     })
 }
+
+document,addEventListener("keydown", function(event) {
+    expression = event.key;
+});
 
