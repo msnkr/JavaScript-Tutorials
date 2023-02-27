@@ -14,7 +14,7 @@ let count = 0
 
 function countDown() {
     if (seconds != 0) {
-        // console.log(seconds);
+        console.log( Math.floor(seconds / 60) );
         seconds--;
     } else {
         clearInterval(x)
@@ -24,15 +24,17 @@ function countDown() {
 };
 
 function runAgain() {
-    if (count % 2 == 0) {
-        seconds = 10 // Math.round(25 * 60) -1;
-        x = setInterval(countDown, 1000, seconds)
-    } else if (count == 6) {
-        seconds =20 // Math.round(30 * 60) -1;
-        x = setInterval(countDown, 1000, seconds)
-    } else {
-        seconds =5 // Math.round(5 * 60) -1;
-        x = setInterval(countDown, 1000, seconds)
+    if (count <= 6 ) {
+        if (count == 6) {
+            seconds = Math.floor(30 * 60) -1;
+            x = setInterval(countDown, 1000, seconds)
+        } else if (count % 2 == 0) {
+            seconds = Math.floor(25 * 60) -1;
+            x = setInterval(countDown, 1000, seconds)
+        } else {
+            seconds = Math.floor(5 * 60) -1;
+            x = setInterval(countDown, 1000, seconds)
+        }
     }
 };
 
