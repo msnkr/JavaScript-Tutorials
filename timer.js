@@ -5,16 +5,12 @@ find a way to countdown seconds
 convbert time to minutes and seconds.
 */
 
-const studyTime = Math.round(25 * 60) -1;
-const smallBreak = Math.round(5* 60) -1;
-const longBreak = Math.round(30 * 60) -1;
-
 let seconds;
 let count = 0
 
 function countDown() {
     if (seconds != 0) {
-        console.log( Math.floor(seconds / 60) );
+        console.log(`${ Math.floor(seconds / 60) } : ${seconds}`);
         seconds--;
     } else {
         clearInterval(x)
