@@ -1,17 +1,32 @@
 :root {
-    --var: (--font, 'Fira Code', monospace);
+    --font: 'Fira Code', monospace;
+    --colorBlue: #4E6E81;
+    --colorBrown: #F9DBBB;
+    ---colorRed: #FF0303;
+    --colorDarkGrey: #2E3840;
 }
 
 #pomodoro-header {
     font-family: var(--font);
     font-style: bold;
+    color: var(--colorBrown);
 }
 
 #pomodoro-timer {
     font-family: var(--font);
     font-style: normal;
+    color: var(--colorBrown);
 }
 
 body {
-    background-color: aliceblue;
+    background-color: var(--colorBlue);
+}
+
+#start-timer, #stop-timer {
+    color: var(--colorBrown) !important;
+    background-color: var(--colorDarkGrey) !important;
+}
+
+#main {
+    margin-top: 20% !important;
 }
