@@ -1,0 +1,17 @@
+:root {
+    --var: (--font, 'Fira Code', monospace);
+}
+
+#pomodoro-header {
+    font-family: var(--font);
+    font-style: bold;
+}
+
+#pomodoro-timer {
+    font-family: var(--font);
+    font-style: normal;
+}
+
+body {
+    background-color: aliceblue;
+}

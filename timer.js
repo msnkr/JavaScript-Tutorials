@@ -10,7 +10,7 @@ let count = 0
 
 function countDown() {
     if (seconds != 0) {
-        console.log(`${ Math.floor(seconds / 60) } : ${seconds}`);
+        document.querySelector("#pomodoro-timer").innerHTML = `${ Math.floor(seconds / 60) }:${seconds % 60}`;
         seconds--;
     } else {
         clearInterval(x)
@@ -34,4 +34,8 @@ function runAgain() {
     }
 };
 
-runAgain();
+document.querySelector("#start-timer").addEventListener("click", runAgain);
+document.querySelector("#stop-timer").addEventListener("click", function() {
+    clearInterval(x)
+    document.querySelector("#pomodoro-timer").innerHTML = "00:00";
+});
