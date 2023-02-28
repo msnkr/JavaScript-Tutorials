@@ -11,8 +11,13 @@ let tic = [];
 
 function countDown() {
     if (seconds != 0) {
-        document.querySelector("#pomodoro-timer").innerHTML = `${ Math.floor(seconds / 60) }:${seconds % 60}`;
-        seconds--;
+        if (seconds <= 9) {
+            document.querySelector("#pomodoro-timer").innerHTML = `${Math.floor(seconds / 60) }:0${seconds % 60}`;
+            seconds--;
+        } else {
+            document.querySelector("#pomodoro-timer").innerHTML = `${ Math.floor(seconds / 60) }:${seconds % 60}`;
+            seconds--;
+        }
     } else {
         clearInterval(x)
         count++;
@@ -23,19 +28,22 @@ function countDown() {
 function runAgain() {
     if (count <= 7 ) {
         if (count == 7) {
-            seconds = 20 //Math.floor(30 * 60) -1;
+            seconds = Math.floor(30 * 60) -1;
             tic += "🛏️"
             document.querySelector("#tics").innerHTML = tic;
+            document.querySelector("#pomodoro-timer").style.backgroundColor = "aliceblue"
             x = setInterval(countDown, 1000, seconds)
         } else if (count % 2 == 0) {
-            seconds = 10 //Math.floor(25 * 60) -1;
+            seconds = Math.floor(25 * 60) -1;
             tic += "✔️"
             document.querySelector("#tics").innerHTML = tic;
+            document.querySelector("#pomodoro-timer").style.backgroundColor = "red"
             x = setInterval(countDown, 1000, seconds)
         } else {
-            seconds = 5 //Math.floor(5 * 60) -1;
+            seconds = Math.floor(5 * 60) -1;
             tic += "⭕"
             document.querySelector("#tics").innerHTML = tic;
+            document.querySelector("#pomodoro-timers").style.backgroundColor = "green"
             x = setInterval(countDown, 1000, seconds);
         }
     }
@@ -48,5 +56,5 @@ document.querySelector("#stop-timer").addEventListener("click", function() {
     count = 0;
     tic = [];
     document.querySelector("#tics").innerHTML = "";
-
+    document.querySelector("#pomodoro-timer").style.backgroundColor = ""
 });
