@@ -1,0 +1,9 @@
+.big-title {
+    font-size: 10rem;
+    color: red;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.margin-50 {
+    margin: 50px;
+}
