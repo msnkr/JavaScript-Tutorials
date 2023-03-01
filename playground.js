@@ -18,7 +18,18 @@
 
 // function changeRyu() {
 //     document.getElementById('ryu-2').src = 'ryu-1.jpg'
+//     setInterval(function() {
+//     document.getElementById('ryu-1').src = 'ryu-2.jpg'
+//     }, 100)
 // };
+
+
+document.querySelector("#button-2").addEventListener("click", function() {
+    document.querySelector("#ryu-2").src = "ryu-1.jpg"
+    setTimeout(function() {
+    document.querySelector("#ryu-2").src = "ryu-2.jpg"
+    }, 100)
+})
 
 // elem = document.getElementById('hello-there');
 // elem.innerHTML = 'test';
@@ -41,4 +52,5 @@
 //     document.getElementById('hide-text').style.visibility = 'visible';
 // }
 
-document.getElementById('animation-start').style.backgroundColor = 'yellow'
+// document.getElementById('animation-start').style.backgroundColor = 'yellow'
+
