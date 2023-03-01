@@ -32,18 +32,21 @@ function runAgain() {
             tic += "🛏️"
             document.querySelector("#tics").innerHTML = tic;
             document.querySelector("#pomodoro-timer").style.backgroundColor = "aliceblue"
+            document.querySelector("#pomodoro-header").innerHTML = "30 Minute Break Time"
             x = setInterval(countDown, 1000, seconds)
         } else if (count % 2 == 0) {
             seconds = Math.floor(25 * 60) -1;
             tic += "✔️"
             document.querySelector("#tics").innerHTML = tic;
             document.querySelector("#pomodoro-timer").style.backgroundColor = "red"
+            document.querySelector("#pomodoro-header").innerHTML = "25 Minute Study Time"
             x = setInterval(countDown, 1000, seconds)
         } else {
             seconds = Math.floor(5 * 60) -1;
             tic += "⭕"
             document.querySelector("#tics").innerHTML = tic;
             document.querySelector("#pomodoro-timers").style.backgroundColor = "green"
+            document.querySelector("#pomodoro-header").innerHTML = "5 Minute Break"
             x = setInterval(countDown, 1000, seconds);
         }
     }
@@ -57,4 +60,5 @@ document.querySelector("#stop-timer").addEventListener("click", function() {
     tic = [];
     document.querySelector("#tics").innerHTML = "";
     document.querySelector("#pomodoro-timer").style.backgroundColor = ""
+    document.querySelector("#pomodoro-header").innerHTML = "Pomodoro Timer" 
 });
