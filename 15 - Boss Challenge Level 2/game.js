@@ -27,6 +27,7 @@ $(randomColorHex).on("click", randomColorSelected);
 $(".btn").on("click", function() {
     userChosenColor = this.id;
     userChosenPattern.push(userChosenColor);
+    randomSequence();
 })
 
 console.log(userChosenPattern)
