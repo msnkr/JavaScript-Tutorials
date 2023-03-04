@@ -1,33 +1,27 @@
-// alert("Hello World")
-// alert($("h1"))
-
-// Variables
-let buttonColors = ["red", "green", "blue", "yellow"];
-let randomChosenColor = buttonColors[randomSequence()];
+let randomColor = nextSequence();
+let buttonColors = ["red", "blue", "green", "yellow"];
+let randomChosenColor = buttonColors[randomColor];
 let gamePattern = [];
-let addColorToPattern = gamePattern.push(randomChosenColor);
-let randomColorHex = "#" + randomChosenColor;
-let userChosenPattern = [];
+userClickedPattern = [];
+
 
 // Functions
-function randomSequence() {
-    let randomNumber = Math.random() * 4;
-    return Math.floor(randomNumber);
+function nextSequence() {
+    return  Math.floor( Math.random() * 4 );
 };
 
-function randomColorSelected() {
-    $(randomColorHex).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
-    var randomSound = new Audio("sounds/" + randomChosenColor + ".mp3");
-    randomSound.play();
-};
+function playSound(userChosenColor) {
+    var audio = new Audio("sounds/" + userChosenColor + ".mp3");
+    audio.play();
+}
+
+gamePattern.push(randomChosenColor);
 
 
-// Events
-$(randomColorHex).on("click", randomColorSelected);
+// Events 
 $(".btn").on("click", function() {
-    userChosenColor = this.id;
-    userChosenPattern.push(userChosenColor);
-    randomSequence();
-})
-
-console.log(userChosenPattern)
+    $(this).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+    userChosenColor = $(this).attr("id");
+    userClickedPattern.push(userChosenColor);
+    playSound(userChosenColor);
+});
