@@ -1,8 +1,9 @@
-let randomNum = nextSequence();
+let randomNum;
+let randomChosenColor;
 let buttonColors = ["red", "blue", "green", "yellow"];
-let randomChosenColor = buttonColors[randomNum];
 let gamePattern = [];
 let userCLickedPattern = [];
+let level = 0;
 
 
 /*
@@ -16,8 +17,9 @@ function playSound(id) {
 
 // Generate random number
 function nextSequence() {
-    return Math.floor( Math.random() * 4 );
-
+    randomNum = Math.floor( Math.random() * 4 );
+    level ++;
+    return randomNum
 };
 
 // Generate animation for buttons
@@ -27,14 +29,12 @@ function animateFlash(id) {
 
 // add pressed class
 function animatePress(id) {
-    $(`#${id}`).addClass("pressed");
+    id = $(`#${id}`);
+    id.addClass("pressed");
+    setTimeout(function() {
+        id.removeClass("pressed");
+    }, 100)
 };
-
-gamePattern.push(randomChosenColor);
-animateFlash(randomChosenColor);
-playSound(randomChosenColor);
-
-
 
 /*
 EVENTS
@@ -42,6 +42,17 @@ EVENTS
 $(".btn").on("click", function() {
     userChosenColor = $(this).attr("id");
     userCLickedPattern.push(userChosenColor);
-    playSound(userChosenColor);   
-    setTimeout(gamePattern, 1000, userChosenColor)
+    playSound(userChosenColor);  
+    animatePress(userChosenColor); 
 });
+
+$("body").on("keypress", function(event) {
+    if (event.key == "a") {
+        randomNum = nextSequence();
+        randomChosenColor = buttonColors[randomNum];
+        $("h1").text(`Level: ${level}`);
+        gamePattern.push(randomChosenColor);
+        animateFlash(randomChosenColor);
+        playSound(randomChosenColor);
+    }
+})    
