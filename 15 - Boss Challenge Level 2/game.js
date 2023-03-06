@@ -7,6 +7,11 @@ function playSound(id) {
     audio.play();
 };
 
+function animationClick(id) {
+    id = $(this).attr("id")
+    id.fadeIn
+}
+
 // Events
 $(".btn").on("click", function() {
     id = $(this).attr("id")
