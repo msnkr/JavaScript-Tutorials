@@ -1,7 +1,17 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
+const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
+
+
+// Functions
+
+// Check if email is valid
+function isValidEmail(email) {
+    const filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+    return String(email).search (filter) != -1;
+};
 
 // Show input error message
 function showError(input, message) {
@@ -28,6 +38,8 @@ form.addEventListener("submit",function(event) {
 
     if( email.value === "" ){
         showError(email, "Email is invalid");
+    } else if (!isValidEmail(email.value)) {
+        showError(email, "Email is not valid")
     } else {
         showSuccess(email);
     };
