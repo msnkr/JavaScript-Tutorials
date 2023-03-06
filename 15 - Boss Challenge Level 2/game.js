@@ -1,20 +1,47 @@
+let randomNum = nextSequence();
+let buttonColors = ["red", "blue", "green", "yellow"];
+let randomChosenColor = buttonColors[randomNum];
+let gamePattern = [];
+let userCLickedPattern = [];
+
+
 /*
-Functions
+FUNCTIONS
 */
 // Play sound when clicked
 function playSound(id) {
-    var audio = new Audio(`sounds/${id}.mp3`);
+    let audio = new Audio(`sounds/${id}.mp3`);
     audio.play();
 };
 
-function animationClick(id) {
-    id = $(this).attr("id")
-    id.fadeIn
-}
+// Generate random number
+function nextSequence() {
+    return Math.floor( Math.random() * 4 );
 
-// Events
+};
+
+// Generate animation for buttons
+function animateFlash(id) {
+    $(`#${id}`).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+};
+
+// add pressed class
+function animatePress(id) {
+    $(`#${id}`).addClass("pressed");
+};
+
+gamePattern.push(randomChosenColor);
+animateFlash(randomChosenColor);
+playSound(randomChosenColor);
+
+
+
+/*
+EVENTS
+*/
 $(".btn").on("click", function() {
-    id = $(this).attr("id")
-    animationClick(id);
-    playSound(id);
-})
+    userChosenColor = $(this).attr("id");
+    userCLickedPattern.push(userChosenColor);
+    playSound(userChosenColor);   
+    setTimeout(gamePattern, 1000, userChosenColor)
+});
