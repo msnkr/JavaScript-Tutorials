@@ -5,7 +5,9 @@ const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 
 
-// Functions
+/*
+Functions
+*/
 
 // Check if email is valid
 function isValidEmail(email) {
@@ -27,7 +29,10 @@ function showSuccess(input) {
     formControl.className = "form-control success";
 };
 
-// Events
+/*
+Events
+*/
+
 form.addEventListener("submit",function(event) {
     event.preventDefault();
     if( username.value === "" ){
