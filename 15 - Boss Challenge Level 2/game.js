@@ -33,26 +33,32 @@ function animatePress(id) {
     id.addClass("pressed");
     setTimeout(function() {
         id.removeClass("pressed");
-    }, 100)
+    }, 100);
 };
+
+/*
+randomNum = nextSequence();
+randomChosenColor = buttonColors[randomNum];
+userCLickedPattern.push(userChosenColor);
+gamePattern.push(randomChosenColor);
+animateFlash(randomChosenColor);
+playSound(randomChosenColor);
+playSound(userChosenColor);  
+animatePress(userChosenColor); 
+*/
 
 /*
 EVENTS
 */
 $(".btn").on("click", function() {
     userChosenColor = $(this).attr("id");
-    userCLickedPattern.push(userChosenColor);
-    playSound(userChosenColor);  
-    animatePress(userChosenColor); 
+
 });
 
 $("body").on("keypress", function(event) {
     if (event.key == "a") {
-        randomNum = nextSequence();
-        randomChosenColor = buttonColors[randomNum];
+
         $("h1").text(`Level: ${level}`);
-        gamePattern.push(randomChosenColor);
-        animateFlash(randomChosenColor);
-        playSound(randomChosenColor);
+
     }
-})    
+});
