@@ -18,8 +18,12 @@ function playSound(id) {
 // Generate random number
 function nextSequence() {
     randomNum = Math.floor( Math.random() * 4 );
+    randomChosenColor = buttonColors[randomNum];
+    gamePattern.push(randomChosenColor);
+    playSound(randomChosenColor);
+    animateFlash(randomChosenColor);
     level ++;
-    return randomNum
+    $("h1").text(`Level: ${level}`);
 };
 
 // Generate animation for buttons
@@ -36,29 +40,35 @@ function animatePress(id) {
     }, 100);
 };
 
+// Match user input vs game pattern
+function checkAnswer(level) {
+    currentAnswer = userCLickedPattern[level];
+    if (currentAnswer == gamePattern[level]) {
+        console.log("Theuy match")
+    }
+};
+
+
 /*
-randomNum = nextSequence();
-randomChosenColor = buttonColors[randomNum];
-userCLickedPattern.push(userChosenColor);
-gamePattern.push(randomChosenColor);
-animateFlash(randomChosenColor);
-playSound(randomChosenColor);
-playSound(userChosenColor);  
-animatePress(userChosenColor); 
 */
+
 
 /*
 EVENTS
 */
 $(".btn").on("click", function() {
     userChosenColor = $(this).attr("id");
+    userCLickedPattern.push(userChosenColor);
+    playSound(userChosenColor);  
+    animatePress(userChosenColor); 
+    setTimeout(nextSequence, 1000);
 
 });
 
-$("body").on("keypress", function(event) {
-    if (event.key == "a") {
-
-        $("h1").text(`Level: ${level}`);
-
-    }
-});
+if (level === 0) {
+    $("body").on("keypress", function(event) {
+        if (event.key == "a") {
+            nextSequence();
+        }
+    });
+};
