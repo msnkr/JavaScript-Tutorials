@@ -41,10 +41,10 @@ function animatePress(id) {
 };
 
 // Match user input vs game pattern
-function checkAnswer(level) {
-    currentAnswer = userCLickedPattern[level];
-    if (currentAnswer == gamePattern[level]) {
-        console.log("Theuy match")
+function checkAnswer() {
+    for (let index = 0; index < gamePattern.length; index++) {
+        console.log(gamePattern[index]);
+        console.log(userCLickedPattern[index]);
     }
 };
 
@@ -61,11 +61,12 @@ $(".btn").on("click", function() {
     userCLickedPattern.push(userChosenColor);
     playSound(userChosenColor);  
     animatePress(userChosenColor); 
+    checkAnswer();
     setTimeout(nextSequence, 1000);
-
 });
 
-if (level === 0) {
+
+if (level == 0) {
     $("body").on("keypress", function(event) {
         if (event.key == "a") {
             nextSequence();
