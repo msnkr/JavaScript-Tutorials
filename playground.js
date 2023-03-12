@@ -65,18 +65,32 @@
 // }
 
 
-elem = document.querySelectorAll("#ryu-2")[1];
+// elem = document.querySelectorAll("#ryu-2")[1];
 
-document.querySelector("#punch-button-1").addEventListener("click", function() {
-    elem.src = "ryu-1.jpg"
-    setTimeout(function() {
-    elem.src = "ryu-2.jpg"
-    }, 100)
+// document.querySelector("#punch-button-1").addEventListener("click", function() {
+//     elem.src = "ryu-1.jpg"
+//     setTimeout(function() {
+//     elem.src = "ryu-2.jpg"
+//     }, 100)
+// })
+
+// document.querySelector("#punch-button-2").addEventListener("click", function() {
+//     elem.src = "ryu-3.jpg"
+//     setTimeout(function() {
+//     elem.src = "ryu-2.jpg"
+//     }, 100)
+// })
+
+// let arr = [1, 2, 3, 4];
+
+// arr2 = arr.forEach(element => {
+//     console.log(element * 2);
+// });
+
+let arr = [1, 2, 3, 4];
+
+let arr2 = arr.map( e => {
+    return e + 1;
 })
 
-document.querySelector("#punch-button-2").addEventListener("click", function() {
-    elem.src = "ryu-3.jpg"
-    setTimeout(function() {
-    elem.src = "ryu-2.jpg"
-    }, 100)
-})
+console.log(arr2);
