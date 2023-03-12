@@ -87,10 +87,14 @@
 //     console.log(element * 2);
 // });
 
-let arr = [1, 2, 3, 4];
+// let arr = [1, 2, 3, 4];
 
-let arr2 = arr.map( e => {
-    return e + 1;
-})
+// let arr2 = arr.map( e => {
+//     return e + 1;
+// })
 
-console.log(arr2);
+// console.log(arr2);
+
+// let arr = [0, 1 , 2, 3, 4, 1];
+
+// console.log(arr.length)
