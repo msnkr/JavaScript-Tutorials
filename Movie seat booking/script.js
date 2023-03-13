@@ -7,19 +7,20 @@ let ticketPrice = +movieSelect.value;
 
 populateUi();
 
+
 // FUNCTIONS
-// Get movie data and populate UI
+// Get movie data from local storage and populate UI
 function populateUi() {
-    let selectedSeats = JSON.parse( localStorage.getItem("selectedSeats") );
+    let selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+    
     if (selectedSeats !== null && selectedSeats.length > 0) {
         seats.forEach((seat, index) => {
-            if (selectedSeats.indexOf(index) > -1) {
+            if (selectedSeats.indexOf(index) > 1) {
                 seat.classList.add("selected");
             }
         })
     }
-}
-
+};
 
 // Save movie data
 function setMovieData(movieIndex, moviePrice) {
@@ -40,6 +41,7 @@ function updateSelectedCount() {
 
     total.innerText = selectedSeatsCount * ticketPrice;
 };
+
 
 // EVENTS
 // Movie select event
