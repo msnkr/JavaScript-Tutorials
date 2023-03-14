@@ -23,7 +23,6 @@ function populateUi() {
             }
         })
     }
-    console.log(movieSelect.options[movieSelect.selectedIndex].value);
     updateSelectedCount();
 };
 
