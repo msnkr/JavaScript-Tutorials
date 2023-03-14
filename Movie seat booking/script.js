@@ -13,13 +13,18 @@ populateUi();
 function populateUi() {
     let selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
     
+    let selectedMovie = JSON.parse(localStorage.getItem('movieName'));
+    let selectedMoviePrice = JSON.parse(localStorage.getItem('moviePrice'));
+
     if (selectedSeats !== null && selectedSeats.length > 0) {
         seats.forEach((seat, index) => {
-            if (selectedSeats.indexOf(index) > 1) {
+            if (selectedSeats.indexOf(index) > -1) {
                 seat.classList.add("selected");
             }
         })
     }
+    console.log(movieSelect.options[movieSelect.selectedIndex].value);
+    updateSelectedCount();
 };
 
 // Save movie data
@@ -34,14 +39,12 @@ function updateSelectedCount() {
 
     let seatIndex = [...selectedSeats].map( seat =>  [...seats].indexOf(seat));
     localStorage.setItem("selectedSeats", JSON.stringify(seatIndex));
-    
-
     let selectedSeatsCount = selectedSeats.length;
+
     count.innerText = selectedSeatsCount;
 
     total.innerText = selectedSeatsCount * ticketPrice;
 };
-
 
 // EVENTS
 // Movie select event
