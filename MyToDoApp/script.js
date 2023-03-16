@@ -1,7 +1,7 @@
 let searchBox = document.getElementById("search");
 let submitButton = document.getElementById("add-btn");
 // let cancelButton = document.getElementById("cancel-btn");
-let task = document.getElementById("task");
+let task = document.getElementById("tasks");
 let taskArr = [];
 
 
@@ -10,8 +10,8 @@ let taskArr = [];
 function addTask(item) {
     task.innerHTML = `
     <div class="task">
-        <h2>${item}</h2>
-        <button class=""></button>
+        <h3>${item}</h3>
+        <button class=""><i class="fa fa-times" aria-hidden="true"></i></button>
     </div>
     `
 }
@@ -23,6 +23,8 @@ submitButton.addEventListener("click", e => {
     e.preventDefault();
     
     addTask(searchBox.value);
+    searchBox.value = "";
+    
 })
 
 // cancelButton.addEventListener("click", e => {
