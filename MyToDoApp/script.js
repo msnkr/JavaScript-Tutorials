@@ -1,33 +1,23 @@
 let searchBox = document.getElementById("search");
 let submitButton = document.getElementById("add-btn");
-// let cancelButton = document.getElementById("cancel-btn");
+let cancelButton = document.getElementById("cancel-btn");
 let task = document.getElementById("tasks");
 let taskArr = [];
 
-
 // Functions
-// Add task to html
-function addTask(item) {
-    task.innerHTML = `
-    <div class="task">
-        <h3>${item}</h3>
-        <button class=""><i class="fa fa-times" aria-hidden="true"></i></button>
-    </div>
-    `
+function allItemsInArr() {
+    console.log(taskArr)
+    taskArr.forEach((x, i) => {
+        task.innerHTML = `<div><h3>${i + 1}: ${x}</h3></div>`
+    })
 }
-
-// Remove task from html
-
+// display all items in array
+// remove items in array
 // Events
 submitButton.addEventListener("click", e => {
     e.preventDefault();
-    
-    addTask(searchBox.value);
-    searchBox.value = "";
-    
+
+    taskArr.push(searchBox.value);
+    allItemsInArr()
+    searchBox.value.innerHTML = "";
 })
-
-// cancelButton.addEventListener("click", e => {
-//     e.preventDefault();
-
-// })
