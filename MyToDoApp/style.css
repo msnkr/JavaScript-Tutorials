@@ -23,6 +23,7 @@ button.cancel-btn {
     border: none;
     color: red;
     justify-content: center;
+    margin-left: 10px;
 }
 
 .tasks {
