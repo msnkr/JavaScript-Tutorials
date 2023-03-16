@@ -47,4 +47,7 @@ function searchMeals(e) {
 
 // Events
 submit.addEventListener("submit", searchMeals);
-    
+
+mealsEl.addEventListener("click", e => {
+    let newMealId = e.composedPath.
+})
