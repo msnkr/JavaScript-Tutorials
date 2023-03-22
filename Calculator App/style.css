@@ -10,7 +10,7 @@ body {
 
 .screen {
     background-color: white;
-    width: 30%;
+    width: 20%;
     height: 10%;
     margin-bottom: 20px;
     border: black 2px solid;
@@ -27,7 +27,15 @@ body {
 }
 
 .number, .symbol {
+    cursor: pointer;
     display: inline;
     margin: 20px;
     border-radius: 50px;
 }
+
+.pressed {
+    background-color: palevioletred;
+    padding: 0 20px;
+    color: white;
+}
+
