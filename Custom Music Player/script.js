@@ -1,4 +1,5 @@
 let musicContainer = document.getElementById("music-container"),
+<<<<<<< HEAD
     title = document.getElementById("title"),
     progressContainer = document.getElementById("progress-container"),
     audio = document.getElementById("audio"),
@@ -79,6 +80,54 @@ function setProgress(e) {
 }
 
 // Events
+=======
+    progressContainer = document.getElementById("progress-container"),
+    progress = document.getElementById("progress"),
+
+    audio = document.querySelector("audio"),
+    cover = document.getElementById("cover"),
+
+    playBtn = document.getElementById("play"),
+    prevBtn = document.getElementById("prev"),
+    nextBtn = document.getElementById("next");
+
+
+let songs = ["ukelele", "hey", "summer"];
+let songIndex = 2;
+
+
+
+// Functions
+
+// Next song
+
+
+// pause song
+function pauseSong() {
+    musicContainer.classList.remove("play");
+
+    audio.pause();
+    playBtn.querySelector("i.fa").classList.add("fa-play");
+    playBtn.querySelector("i.fa").classList.remove("fa-pause");
+}
+
+// play song
+function playSong() {
+    let song = songs[songIndex];
+
+    title.innerText = song;
+    musicContainer.classList.add("play");
+    audio.src = `music/${song}.mp3`;
+    cover.src = `images/${song}.jpg`;
+
+    playBtn.querySelector("i.fa").classList.remove("fa-play");
+    playBtn.querySelector("i.fa").classList.add("fa-pause");
+}
+
+
+// Events
+// Play song or pause song event
+>>>>>>> 339bc423e71b4bd1584e646f222b4ee607a0f2c0
 playBtn.addEventListener("click", () => {
     let isPlaying = musicContainer.classList.contains("play");
 
@@ -89,6 +138,7 @@ playBtn.addEventListener("click", () => {
     }
 })
 
+<<<<<<< HEAD
 // Change song
 prevBtn.addEventListener("click", prevSong);
 nextBtn.addEventListener("click", nextSong);
@@ -103,3 +153,7 @@ progressContainer.addEventListener("click", setProgress);
 audio.addEventListener("ended", nextSong);
 
 
+=======
+nextBtn.addEventListener("click", nextSong);
+
+>>>>>>> 339bc423e71b4bd1584e646f222b4ee607a0f2c0

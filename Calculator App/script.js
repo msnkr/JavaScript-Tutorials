@@ -8,8 +8,21 @@ let secondNum = "";
 
 
 // Functions
-// Add number to screen
 
+// Get the first Number
+function firstNumber(number) {
+    screen.innerText = number;
+    return +number;
+}
+
+// // get symbol and add
+// function secondNumber(e) {
+//     screen.innerHTML = "";
+//     secondNum += e.target.textContent;   
+//     console.log(secondNum)
+// }
+
+// Add number to screen
 function showToScreen(x) {
     screen.innerHTML = x;
 }
@@ -19,7 +32,7 @@ function addAnimation(x) {
 }
 
 function add(numA, numB) {
-    return numA + numB;
+     console.log(numA + numB);
 }
 
 function subtract(numA, numB) {
@@ -37,15 +50,7 @@ function multiply(numA, numB) {
 // Events
 container.addEventListener("click", e => {
     if (e.target.classList.contains("number")) {
-        btnPressed = e.target;
-        btnPressed.classList.add("pressed")
-        firstNum += btnPressed.textContent;
-        setInterval(addAnimation, 100, btnPressed);
-        showToScreen(+firstNum)
-    } else if (e.target.classList.contains("symbol")) {
-        symPressed = e.target;
-        symPressed.classList.add("pressed")
-        setInterval(addAnimation, 100, symPressed);
-        screen.innerHTML = "";
+        firstNum += e.target.textContent;
+        firstNumber(firstNum);
     }
 })
