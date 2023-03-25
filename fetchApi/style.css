@@ -14,10 +14,12 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 input {
     margin: 20px 0;
+    font-size: 16px;
 }
 
 input:focus {
@@ -28,11 +30,13 @@ input:focus {
     height: 100px;
     text-align: start;
 }
+
 button{
     color: white;
     font-size: 16px;
     border: 0;
     border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .get-text {
@@ -47,7 +51,11 @@ button{
     background-color: darkseagreen;
 }
 
-.btn-submit {
+.submit-btn {
     background-color: violet;
-    margin-bottom: 20px;
+    margin: 20px 0;
+}
+
+.output {
+    padding: 50px;
 }

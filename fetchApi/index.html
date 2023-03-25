@@ -15,13 +15,13 @@
         <button class="get-api-data" id="get-api-data">Get API Data</button>
     </div>
 
-    <div class="input-container">
-        <input type="text" id="test-title" placeholder="Test Title">
-        <input type="text" id="test-body" placeholder="Test Body">
-        <button type="submit" class="btn-submit" id="submit-btn">Submit</button>
-    </div>
+    <form id="add-post" class="input-container">
+        <input type="text" placeholder="Post Title" id="title">
+        <textarea id="body" placeholder="Post Body" cols="30" rows="10"></textarea>
+        <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+    </form>
 
-    <div id="get-text-output"></div>
+    <div id="output"></div>
 <script src="script.js"></script>    
 </body>
 </html>
