@@ -8,6 +8,7 @@ let swapBtn = document.getElementById("swap");
 let rateElem = document.getElementById("rate");
 
 
+
 // Functions
 function calculate() {
     let currencyOne = rateOne.value;
@@ -17,8 +18,9 @@ function calculate() {
     .then(res => res.json())
     .then(data => {
         let rate = data.conversion_rates[currencyTwo];
-        rateElem.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`
+        rateElem.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
         amountTwo.value = (amountOne * rate).toFixed(2);
+        console.log(amountTwo.value)
     });
 }
 
