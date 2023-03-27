@@ -10,6 +10,16 @@ let rateElem = document.getElementById("rate");
 
 
 // Functions
+function swapCurrency() {
+    let rateThree = rateTwo.value;
+    rateTwo.value = rateOne.value;
+    rateOne.value = rateThree;
+
+    calculate();
+
+}
+
+
 function calculate() {
     let currencyOne = rateOne.value;
     let currencyTwo = rateTwo.value;
@@ -19,8 +29,8 @@ function calculate() {
     .then(data => {
         let rate = data.conversion_rates[currencyTwo];
         rateElem.innerText = `1 ${currencyOne} = ${rate} ${currencyTwo}`;
-        amountTwo.value = (amountOne * rate).toFixed(2);
-        console.log(amountTwo.value)
+        amountTwo.value = 0;
+        amountTwo.value = (amountOne.value * rate).toFixed(2);
     });
 }
 
@@ -29,5 +39,6 @@ rateOne.addEventListener("change", calculate);
 rateTwo.addEventListener("change", calculate);
 amountOne.addEventListener("input", calculate);
 amountTwo.addEventListener("input", calculate);
+swapBtn.addEventListener("click", swapCurrency);
 
 calculate();
