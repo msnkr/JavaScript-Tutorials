@@ -2,23 +2,28 @@ let weatherCelcius = document.getElementById("weather-celcius");
 let weatherTime = document.getElementById("weather-time");
 
 
+let weatherData = [];
+getWeatherData();
+
 // Functions
-function getWeatherData() {
-    fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m")
-    .then(res => res.json())
-    .then(data => {
+// Display each item in data
 
-        let temperature = data.hourly.temperature_2m;
-        let time = data.hourly.time;
+// Unpack the data
+// function unpackData(defaultData = weatherData) {
 
-        let output = "";
-        temperature.forEach((element, index) => {
-            let t = time[index]
-            output += `<div><p> ${element} ${t} </p></div>`
-        });
-        weatherCelcius.innerHTML = output
-    });
+//     // let weather = weatherData.temperature_2m[0];
+//     // let time = weatherData.time[0];
+//     // console.log(weather, time);
+//     console.log(weatherData[0].temperature_2m[0]);
+// }
+
+async function getWeatherData() {
+
+    let weather = await fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m");
+    let data = await weather.json();
+
+    weatherData.push(data.hourly);
+    // unpackData();
 }
 
-getWeatherData();
 // Events
