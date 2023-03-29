@@ -1,21 +1,39 @@
+
+// Crawl hackernews
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+
+//     await page.goto("https://news.ycombinator.com/");
+
+//     posts = await page.evaluate(() => Array.from( document.querySelectorAll(".titleline"), (e) => ({
+
+//         title: e.querySelector("a").textContent,
+//         link: e.querySelector("a").href,
+//     })))
+
+//     console.log(posts);
+
+//     await browser.close();
+// };
+
+// run();
+
 const puppeteer = require("puppeteer");
 
 async function run() {
+
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    page.setDefaultTimeout(50000)
-    await page.goto("https://github.com/msnkr/friendly-system");
+    await page.goto("https://en.wikipedia.org/wiki/Machine_learning");
 
-    // posts = await page.evaluate(() => Array.from( document.querySelectorAll(".titleline"), (e) => ({
+    const para = await page.evaluate(() => document.body.innerHTML;);
+    console.log(para);
+    
 
-    //     title: e.querySelector("a").textContent,
-    //     link: e.querySelector("a").href,
-    // })))
-
-    // console.log(posts);
-    page.setDefaultTimeout(50000)
-    await page.screenshot({ path: "blueRice.png", fullPage: true })
 
     await browser.close();
 };
