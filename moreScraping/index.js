@@ -3,7 +3,7 @@ const puppeteer = require("puppeteer");
 async function run() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto("https://freemeteo.co.za/weather/johannesburg/7-days/list/?gid=993800&language=english");
+    await page.goto("https://www.theweathernetwork.com/za/weather/gauteng/johannesburg");
 
     // const weather = await page.evaluate(() => Array.from(document.querySelectorAll("tr"), (e) => ({
     //     date: e.querySelector(".small").textContent,
@@ -12,7 +12,7 @@ async function run() {
 
     // console.log(weather);
 
-    const title = await page.content();
+    const title = await page.evaluate(document.title);
     console.log(title);
 
     await browser.close();
