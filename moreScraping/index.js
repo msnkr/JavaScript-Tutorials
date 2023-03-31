@@ -82,15 +82,17 @@ async function run() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto("https://www.scrapethissite.com/pages/forms/");
+    // await page.goto("https://www.scrapethissite.com/pages/forms/");
 
-    let team = await page.evaluate(() => Array.from(document.querySelectorAll(".table.team"), (e) => ({
-        name: e.querySelector("tr.team .name").textContent,
-        // wins: e.querySelector("wins").textContent,
-    })))
+    // const name = await page.evaluate( () => Array.from( document.querySelectorAll("tbody tr.team"), (e) => ({
+    //     name: e.querySelector("td.name").textContent,
+    //     wins: e.querySelector("td.wins").textContent,
+    // }) ) )
 
-    console.log(team);
+    await page.goto("https://twitter.com/");
 
+    const title = await page.evaluate(() => document.title)
+    console.log(title);
     await browser.close();
 };
 
