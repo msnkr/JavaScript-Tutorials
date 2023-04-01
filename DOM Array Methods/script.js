@@ -12,6 +12,7 @@ getRandomUser();
 getRandomUser();
 getRandomUser();
 
+// Functions
 // Fetch random user and add money
 async function getRandomUser() {
 
@@ -25,6 +26,15 @@ async function getRandomUser() {
         money: Math.floor( Math.random() * 1000000 ),
     };
     addData(newUser);
+}
+
+
+// Double money using map function
+function doubleMoney() {
+    data = data.map(user => {
+        return { ...user, money:user.money * 2 };
+    })
+    updateDom();
 }
 
 // Add new user data to data array
@@ -49,11 +59,19 @@ function updateDom(providedData = data) {
     })
 }
 
+// Sort by richest using sort method
+function sortByRichest() {
+    data.sort( (a, b) => b.money - a.money );
+
+    updateDom();
+}
+
 // Format money as a currency - taken from stackoverflow
 function formatMoney(money) {
     return "$" + money.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
 
 // Events
-
 addUserBtn.addEventListener("click", getRandomUser);
+doubleBtn.addEventListener("click", doubleMoney);
+sortBtn.addEventListener("click", sortByRichest);

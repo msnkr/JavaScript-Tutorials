@@ -89,7 +89,7 @@ async function run() {
     //     wins: e.querySelector("td.wins").textContent,
     // }) ) )
 
-    await page.goto("https://twitter.com/");
+    await page.goto("https://www.imdb.com/chart/top");
 
     const title = await page.evaluate(() => document.title)
     console.log(title);
