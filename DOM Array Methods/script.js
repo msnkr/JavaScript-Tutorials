@@ -59,6 +59,13 @@ function updateDom(providedData = data) {
     })
 }
 
+// Use the filter method to show only millionaires
+function filerMillionaires() {
+    data = data.filter(item => {
+        console.log(item["money"]);
+    })
+}
+
 // Sort by richest using sort method
 function sortByRichest() {
     data.sort( (a, b) => b.money - a.money );
@@ -75,3 +82,4 @@ function formatMoney(money) {
 addUserBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
 sortBtn.addEventListener("click", sortByRichest);
+showMillionairesBtn.addEventListener("click", filerMillionaires);
