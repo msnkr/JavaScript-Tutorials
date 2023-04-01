@@ -91,8 +91,13 @@ async function run() {
 
     await page.goto("https://www.imdb.com/chart/top");
 
-    const title = await page.evaluate(() => document.title)
-    console.log(title);
+    let movies = await page.evaluate(() => Array.from(document.querySelectorAll("tbody.lister-list tr"), (e) => ({
+        movieName: e.querySelector(".titleColumn a").innerHTML,
+        movieRating: e.querySelector("td.ratingColumn Strong").innerHTML,
+    })));
+
+    movies.forEach( (name, index) => console.log(`${index}: ${name.movieName} | Rating: ${name.movieRating}`));
+
     await browser.close();
 };
 
