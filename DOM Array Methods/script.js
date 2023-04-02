@@ -61,9 +61,9 @@ function updateDom(providedData = data) {
 
 // Use the filter method to show only millionaires
 function filerMillionaires() {
-    data = data.filter(item => {
-        console.log(item["money"]);
-    })
+    data = data.filter( a => a.money > 1000000);
+
+    updateDom();
 }
 
 // Sort by richest using sort method
@@ -71,6 +71,15 @@ function sortByRichest() {
     data.sort( (a, b) => b.money - a.money );
 
     updateDom();
+}
+
+// Calculate total using reduce method
+function calculateWealth() {
+    let wealth = data.reduce((acc, item) => acc + item.money, 0);
+
+    const wealthEL = document.createElement("div");
+    wealthEL.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(wealth)}</strong></h3>`
+    main.appendChild(wealthEL);
 }
 
 // Format money as a currency - taken from stackoverflow
@@ -83,3 +92,4 @@ addUserBtn.addEventListener("click", getRandomUser);
 doubleBtn.addEventListener("click", doubleMoney);
 sortBtn.addEventListener("click", sortByRichest);
 showMillionairesBtn.addEventListener("click", filerMillionaires);
+calculateWealthBtn.addEventListener("click", calculateWealth);
