@@ -89,7 +89,7 @@ async function run() {
     //     wins: e.querySelector("td.wins").textContent,
     // }) ) )
 
-    await page.goto("https://www.imdb.com/chart/top");
+    await page.goto("https://www.imdb.com/chart/tvmeter/?ref_=nv_tvv_mptv");
 
     let movies = await page.evaluate(() => Array.from(document.querySelectorAll("tbody.lister-list tr"), (e) => ({
         movieName: e.querySelector(".titleColumn a").innerHTML,
@@ -97,6 +97,7 @@ async function run() {
     })));
 
     movies.forEach( (name, index) => console.log(`${index}: ${name.movieName} | Rating: ${name.movieRating}`));
+
 
     await browser.close();
 };
