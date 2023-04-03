@@ -75,12 +75,12 @@
 
 // run();
 
-const puppeteer = require("puppeteer");
+// const puppeteer = require("puppeteer");
 
-async function run() {
+// async function run() {
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
 
     // await page.goto("https://www.scrapethissite.com/pages/forms/");
 
@@ -89,17 +89,17 @@ async function run() {
     //     wins: e.querySelector("td.wins").textContent,
     // }) ) )
 
-    await page.goto("https://www.imdb.com/chart/tvmeter/?ref_=nv_tvv_mptv");
+//     await page.goto("https://www.imdb.com/chart/tvmeter/?ref_=nv_tvv_mptv");
 
-    let movies = await page.evaluate(() => Array.from(document.querySelectorAll("tbody.lister-list tr"), (e) => ({
-        movieName: e.querySelector(".titleColumn a").innerHTML,
-        movieRating: e.querySelector("td.ratingColumn Strong").innerHTML,
-    })));
+//     let movies = await page.evaluate(() => Array.from(document.querySelectorAll("tbody.lister-list tr"), (e) => ({
+//         movieName: e.querySelector(".titleColumn a").innerHTML,
+//         movieRating: e.querySelector("td.ratingColumn Strong").innerHTML,
+//     })));
 
-    movies.forEach( (name, index) => console.log(`${index}: ${name.movieName} | Rating: ${name.movieRating}`));
+//     movies.forEach( (name, index) => console.log(`${index}: ${name.movieName} | Rating: ${name.movieRating}`));
 
 
-    await browser.close();
-};
+//     await browser.close();
+// };
 
-run();
+// run();
