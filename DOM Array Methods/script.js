@@ -28,15 +28,6 @@ async function getRandomUser() {
     addData(newUser);
 }
 
-
-// Double money using map function
-function doubleMoney() {
-    data = data.map(user => {
-        return { ...user, money:user.money * 2 };
-    })
-    updateDom();
-}
-
 // Add new user data to data array
 function addData(obj) {
 
@@ -57,6 +48,14 @@ function updateDom(providedData = data) {
 
         main.appendChild(element)
     })
+}
+
+// Double money using map function
+function doubleMoney() {
+    data = data.map(user => {
+        return { ...user, money:user.money * 2 };
+    })
+    updateDom();
 }
 
 // Use the filter method to show only millionaires

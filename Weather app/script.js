@@ -1,29 +1,37 @@
-let weatherCelcius = document.getElementById("weather-celcius");
-let weatherTime = document.getElementById("weather-time");
+const apiKey = "888fc6acf8d5a7a7b9e51209de4178cc"
+// const main = document.getElementById("main");
 
 
-let weatherData = [];
-getWeatherData();
+function updateDom(temp, skies) {
 
-// Functions
-// Display each item in data
+    main.innerHTML = `<h2>${temp}°C</h2>`
+    
 
-// Unpack the data
-// function unpackData(defaultData = weatherData) {
-
-//     // let weather = weatherData.temperature_2m[0];
-//     // let time = weatherData.time[0];
-//     // console.log(weather, time);
-//     console.log(weatherData[0].temperature_2m[0]);
-// }
-
-async function getWeatherData() {
-
-    let weather = await fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m");
-    let data = await weather.json();
-
-    weatherData.push(data.hourly);
-    // unpackData();
 }
 
-// Events
+
+
+async function getWeather(lat, lon) {
+
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`);
+    const data = await res.json();
+
+    let weatherTemp = data.main.temp;
+    let weatherDescription = data.weather[0].main;
+    
+    updateDom(weatherTemp, weatherDescription);
+}
+
+async function getCodes() {
+
+    const res = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=Johannesburg&limit=5&appid=${apiKey}`);
+    const data = await res.json()
+
+    const lat = data[0].lat;
+    const lon = data[0].lon;
+
+    getWeather(lat, lon);
+
+};
+
+getCodes();
