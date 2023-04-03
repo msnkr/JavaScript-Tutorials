@@ -1,4 +1,4 @@
-const apiKey = "888fc6acf8d5a7a7b9e51209de4178cc"
+const apiKey = ""
 // const main = document.getElementById("main");
 
 
