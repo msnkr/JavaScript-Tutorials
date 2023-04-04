@@ -1,11 +1,15 @@
-const apiKey = ""
-// const main = document.getElementById("main");
+const apiKey = "888fc6acf8d5a7a7b9e51209de4178cc"
+const main = document.getElementById("main");
+const weatherSkies = document.getElementById("weather-skies");
+const weatherCelcius = document.getElementById("weather-celcius");
+let img = document.getElementById("current-temp")
 
 
 function updateDom(temp, skies) {
 
-    main.innerHTML = `<h2>${temp}°C</h2>`
-    
+    weatherSkies.innerHTML = skies;
+    weatherCelcius.innerHTML = temp;
+    img.src = `images/${skies}.png`
 
 }
 
