@@ -1,16 +1,17 @@
-const apiKey = "888fc6acf8d5a7a7b9e51209de4178cc"
+const apiKey = ""
 const main = document.getElementById("main");
 const weatherSkies = document.getElementById("weather-skies");
 const weatherCelcius = document.getElementById("weather-celcius");
-let img = document.getElementById("current-temp")
+let img = document.getElementById("current-temp");
+let descriptionWeather = document.getElementById("description");
 
 
-function updateDom(temp, skies) {
+function updateDom(temp, skies, description) {
 
     weatherSkies.innerHTML = skies;
     weatherCelcius.innerHTML = temp;
-    img.src = `images/${skies}.png`
-
+    img.src = `images/${skies}.png`;
+    descriptionWeather.innerHTML = description;
 }
 
 
@@ -22,8 +23,9 @@ async function getWeather(lat, lon) {
 
     let weatherTemp = data.main.temp;
     let weatherDescription = data.weather[0].main;
+    let description = data.weather[0].description
     
-    updateDom(weatherTemp, weatherDescription);
+    updateDom(weatherTemp, weatherDescription, description);
 }
 
 async function getCodes() {
