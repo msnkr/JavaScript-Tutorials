@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <title>My To Do App</title>
 <body>
-    <div class="flex">
-        <form class="flex">
-            <input type="text" placeholder="Enter a To Do" id="search">
-            <button class="add-btn" id="add-btn"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>
-        </form>
+    <h1>My ToDo App</h1>
+
+    <div class="main-container">
+        <div class="input-item" id="input-item">
+           <label for="input">Add a ToDo</label>
+           <input type="text"  placeholder="Add A Todo" class="submit-item" id="submit-item">
+           <button type="submit" class="item-submit" id="item-submit">Add</button>
+        </div>
+
+        <div class="list-item" id="list-item">
+            <ul>
+
+            </ul>
+        </div>
     </div>
-    <div class="tasks flex" id="tasks"></div>
     <script src="script.js"></script>
 </body>
 </html>

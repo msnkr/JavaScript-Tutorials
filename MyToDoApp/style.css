@@ -7,35 +7,34 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    font-size: 2rem;
+    height: 80vh;
+    margin: 0;
+    background-color: antiquewhite;
 }
 
-button.add-btn {
-    background: transparent;
+
+.input-item {
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.input-item input {
+    margin: 0 12px;
     border: none;
-    color: green;
-    justify-content: center;
 }
 
-button.cancel-btn {
-    background: transparent;
-    border: none;
-    color: red;
-    justify-content: center;
-    margin-left: 10px;
+.list-item {
+    font-size: 30px;
 }
 
-.tasks {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.list-item ul {
+    list-style-type: none;
+    text-align: center;
 }
 
-.hidden {
-    opacity: 0;
-}
-
-.unhide {
-    opacity: 1;
+button {
+    background-color: transparent;
+    border-color: cornflowerblue;
+    border-radius: 4px;
+    padding: 4px 8px;
 }
