@@ -13,6 +13,7 @@ function updateDom(temp, skies, description) {
     weatherCelcius.innerHTML = temp;
     img.src = `images/${skies}.png`;
     descriptionWeather.innerHTML = description;
+
 }
 
 
@@ -39,6 +40,7 @@ async function getWeather(lat, lon) {
     let weatherDescription = data.weather[0].main;
     let description = data.weather[0].description
 
+    console.log(data);
     getTimeForDom();
     updateDom(weatherTemp, weatherDescription, description);
 }
