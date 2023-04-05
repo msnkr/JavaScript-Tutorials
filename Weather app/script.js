@@ -4,6 +4,7 @@ const weatherSkies = document.getElementById("weather-skies");
 const weatherCelcius = document.getElementById("weather-celcius");
 let img = document.getElementById("current-temp");
 let descriptionWeather = document.getElementById("description");
+let container = document.getElementById("container");
 
 
 function updateDom(temp, skies, description) {
@@ -16,7 +17,16 @@ function updateDom(temp, skies, description) {
 
 
 function getTimeForDom() {
-
+    let date = new Date;
+    let time = date.getHours();
+    
+    if (time <= 6) {
+        container.classList.remove("during-day")
+        container.classList.add("during-night")
+    } else {
+        container.classList.remove("during-night")
+        container.classList.add("during-day")
+    };
 }
 
 
@@ -28,7 +38,8 @@ async function getWeather(lat, lon) {
     let weatherTemp = data.main.temp;
     let weatherDescription = data.weather[0].main;
     let description = data.weather[0].description
-    console.log(data);
+
+    getTimeForDom();
     updateDom(weatherTemp, weatherDescription, description);
 }
 
@@ -44,5 +55,4 @@ async function getCodes() {
 
 };
 
-getTimeForDom();
 getCodes();
