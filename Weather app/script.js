@@ -15,6 +15,10 @@ function updateDom(temp, skies, description) {
 }
 
 
+function getTimeForDom() {
+
+}
+
 
 async function getWeather(lat, lon) {
 
@@ -24,7 +28,7 @@ async function getWeather(lat, lon) {
     let weatherTemp = data.main.temp;
     let weatherDescription = data.weather[0].main;
     let description = data.weather[0].description
-    
+    console.log(data);
     updateDom(weatherTemp, weatherDescription, description);
 }
 
@@ -40,4 +44,5 @@ async function getCodes() {
 
 };
 
+getTimeForDom();
 getCodes();
