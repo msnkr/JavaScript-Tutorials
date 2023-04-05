@@ -13,21 +13,23 @@ function updateDom(temp, skies, description) {
     weatherCelcius.innerHTML = temp;
     img.src = `images/${skies}.png`;
     descriptionWeather.innerHTML = description;
-
+    
 }
 
 
 function getTimeForDom() {
     let date = new Date;
     let time = date.getHours();
-    
-    if (time <= 6) {
-        container.classList.remove("during-day")
-        container.classList.add("during-night")
+
+    if (time < 6) {
+        document.body.classList.add("during-night")
+        container.classList.remove("during-day");
+        container.classList.add("during-night");
     } else {
-        container.classList.remove("during-night")
-        container.classList.add("during-day")
-    };
+        document.body.classList.add("during-day")
+        container.classList.remove("during-night");
+        container.classList.add("during-day");
+    }
 }
 
 
@@ -40,7 +42,6 @@ async function getWeather(lat, lon) {
     let weatherDescription = data.weather[0].main;
     let description = data.weather[0].description
 
-    console.log(data);
     getTimeForDom();
     updateDom(weatherTemp, weatherDescription, description);
 }
