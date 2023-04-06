@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <title>My To Do App</title>
 <body>
-    <h1>My ToDo App</h1>
-
     <div class="main-container">
-        <div class="input-item" id="input-item">
-           <label for="input">Add a ToDo</label>
-           <input type="text"  placeholder="Add A Todo" class="submit-item" id="submit-item">
-           <button type="submit" class="item-submit" id="item-submit">Add</button>
+
+        <h1>My ToDo App</h1>
+        <div class="input-section">
+            <label> Add Your To Do Here: </label>
+            <div class="input-box-container">
+                <input type="text" placeholder="Add Your To Do Here " id="text-input" class="text-input">
+                <button type="submit" class="submit-btn" id="submit-btn">Add</button>
+            </div>
         </div>
 
-        <div class="list-item" id="list-item">
-            <ul>
+        <div class="list-section">
+            <ul id="items">
 
             </ul>
         </div>
+
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,9 +1,26 @@
-let input = document.getElementById("item-submit");
+let textInput = document.getElementById("text-input");
+let submitBtn = document.getElementById("submit-btn");
+let listItems = document.getElementById("items");
+// let cancelItem = document.getElementById("cancel");
 
-// create list item with input value
-function getSubmitValue() {
+// Functions
+//Add to list
+function addToList(toDo) {
+    listItems.innerHTML += `<li>${toDo}</li>`
 }
-
+// remove from list
+function removeFromList(toDo) {
+    this.innerHTML = "";
+}
+// Clean the screen
+// Add to local storage
 
 // Events
-input.addEventListener("click", getSubmitValue);
+//get input
+submitBtn.addEventListener("click", e => {
+   addToList(textInput.value);
+})
+// remove input
+// cancelItem.addEventListener("click", e => {
+//     removeFromList(e.target)
+// })

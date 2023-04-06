@@ -10,7 +10,7 @@ let container = document.getElementById("container");
 function updateDom(temp, skies, description) {
 
     weatherSkies.innerHTML = skies;
-    weatherCelcius.innerHTML = temp;
+    weatherCelcius.innerHTML = `${temp}°C`;
     img.src = `images/${skies}.png`;
     descriptionWeather.innerHTML = description;
     
@@ -38,10 +38,11 @@ async function getWeather(lat, lon) {
     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`);
     const data = await res.json();
 
-    let weatherTemp = data.main.temp;
+    let weatherTemp = data.main.temp_max;
     let weatherDescription = data.weather[0].main;
     let description = data.weather[0].description
 
+    console.log(data);
     getTimeForDom();
     updateDom(weatherTemp, weatherDescription, description);
 }
