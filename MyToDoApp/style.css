@@ -54,5 +54,13 @@ h1 {
     color: #fff;
 }
 
+.cancel-btn {
+    background-color: transparent;
+    color: #fff;
+    border-color: var(--color-four);
+    border-radius: 8px;
+}
 
-
+.cancel-btn i {
+    color: #fff;
+}
