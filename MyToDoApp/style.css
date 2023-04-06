@@ -25,6 +25,11 @@ body {
 
 h1 {
     font-size: 60px;
+    margin: 0;
+}
+
+small {
+    margin-bottom: 50px;
 }
 
 .input-section {
@@ -49,9 +54,13 @@ h1 {
     list-style-type: none;
 }
 
-.list-section ul li i {
+.list-section ul li {
     margin: 3px 10px;
     color: #fff;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-four);
+    margin-bottom: 20px;
+    border-width: inherit;
 }
 
 .cancel-btn {
@@ -59,8 +68,4 @@ h1 {
     color: #fff;
     border-color: var(--color-four);
     border-radius: 8px;
-}
-
-.cancel-btn i {
-    color: #fff;
 }
