@@ -14,6 +14,5 @@ var password = document.getElementById("password").value;
 let submitBtn = document.getElementById("submit-btn");
 let smallTag = document.getElementById("small-tag");
 
-submitBtn.addEventListener("click", () => console.log("hello"))
 
 
