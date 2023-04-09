@@ -1,4 +1,4 @@
-const apiKey = ""
+const apiKey = "888fc6acf8d5a7a7b9e51209de4178cc"
 const main = document.getElementById("main");
 const weatherSkies = document.getElementById("weather-skies");
 const weatherCelcius = document.getElementById("weather-celcius");
@@ -20,6 +20,7 @@ function updateDom(temp, skies, description) {
 function getTimeForDom() {
     let date = new Date;
     let time = date.getHours();
+    console.log(time)
 
     if (time < 6) {
         document.body.classList.add("during-night")
