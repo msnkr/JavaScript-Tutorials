@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     position: relative;
     background-color: darkslateblue;
     color: grey;
@@ -31,13 +31,18 @@ body {
     justify-content: center;
 }
 
-small.hidden {
+small.hide {
     visibility: hidden;
 }
 
-small.show {
+small.incorrect {
     visibility: visible;
     color: red;
+}
+
+small.correct {
+    visibility: visible;
+    color: green;
 }
 
 .username-container label, .password-container label {
