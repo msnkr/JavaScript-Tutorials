@@ -4,35 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Simple Login</title>
+    <title>Landing Page</title>
 </head>
 <body>
 
-    <div class="main">
 
-        <h1>Sign In Here</h1>
+    <nav class="navbar">
+        <ul class="ul" id="ul">
+            <li class="list-items" id="list-items">Home</li>
+            <li class="list-items" id="list-items">Blog</li>
+            <li class="list-items" id="list-items">Portfolio</li>
+            <li class="list-items" id="list-items">Contact</li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+
+
+        <div class="front-page-main">
+            <h1>Welcome to my landing page</h1>
+            <div class="front-page-p">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, iure delectus? Praesentium, quo! Voluptatum dolore iure, doloribus et soluta aperiam provident tempore fugit praesentium dolores ipsum perferendis, veritatis debitis, eveniet dignissimos magni corporis ab quidem labore! Nulla et, tenetur eius ipsa aut commodi repudiandae, corporis, vitae recusandae saepe laudantium aliquid?</p>
+            </div>
+            <button class="sign-up" id="sign-up">Sign Up</button>
+
+            <h1>This is what we do</h1>
+            <div class="front-page-p">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, iure delectus? Praesentium, quo! Voluptatum dolore iure, doloribus et soluta aperiam provident tempore fugit praesentium dolores ipsum perferendis, veritatis debitis, eveniet dignissimos magni corporis ab quidem labore! Nulla et, tenetur eius ipsa aut commodi repudiandae, corporis, vitae recusandae saepe laudantium aliquid?</p>
+            </div>
+        </div>
+
         <div class="form-main">
 
-            <form class="form-main">
-
-                <div class="username-container">
-                    <label for="username">Username</label>
-                    <input type="text" name="usernamme" id="username" placeholder="Username">
+            <form>
+                <label for="username">Username</label>
+                <div class="form-control">
+                    <input type="text" name="username" id="text-input" class="text-input" placeholder="Username">
                 </div>
-                <div class="username-container">
-                    <label for="password">Password</label>
-                    <input class="password-container" type="password" name="password" id="password" placeholder="Password">
+                <label for="password">Password</label>
+                <div class="form-control">
+                    <input type="password" name="password id="text-input-p" class="text-input-p" placeholder="Password">
                 </div>
-                <small class="small-tag hide">Error</small>
-                <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
 
+                <button class="submit-user" id="submit-user">Submit</button>
             </form>
 
         </div>
-    </div>
 
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
