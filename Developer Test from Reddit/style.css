@@ -23,6 +23,7 @@ body {
 }
 
 .navbar {
+    width: 80%;
     border-bottom: 1px solid #F4EEE0;
 }
 
@@ -40,13 +41,23 @@ body {
 }
 
 .front-page-main button.sign-up {
+    cursor: pointer;
     align-items: center;
+    font-size: 16px;
     justify-content: center;
+    padding: 6px 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
-/* .form-main.hidden {
+
+.form-main.hidden {
     visibility: hidden;
-} */
+}
 
 .form-main {
     position: absolute;
@@ -54,10 +65,15 @@ body {
     padding: 20px 40px;
     border-radius: 5px;
     color: var(--secondary-color);
+    text-align: center;
 }
 
 .form-main .form-control {
     margin: 10px 0;
+}
+
+.form-main .label {
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 .form-main .form-control .text-input {
