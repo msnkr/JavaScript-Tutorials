@@ -43,3 +43,26 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* .form-main.hidden {
+    visibility: hidden;
+} */
+
+.form-main {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 5px;
+    color: var(--secondary-color);
+}
+
+.form-main .form-control {
+    margin: 10px 0;
+}
+
+.form-main .form-control .text-input {
+    border-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    padding: 5px;
+    font-size: 12px;
+}
