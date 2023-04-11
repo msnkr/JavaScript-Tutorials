@@ -23,7 +23,7 @@ body {
 }
 
 .navbar {
-    width: 80%;
+    width: 100%;
     border-bottom: 1px solid #F4EEE0;
 }
 
@@ -62,7 +62,7 @@ body {
 .form-main {
     position: absolute;
     background-color: #fff;
-    padding: 20px 40px;
+    padding: 20px 100px;
     border-radius: 5px;
     color: var(--secondary-color);
     text-align: center;
@@ -73,7 +73,7 @@ body {
 }
 
 .form-main .label {
-    border-bottom: 1px solid var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .form-main .form-control .text-input {
@@ -81,4 +81,18 @@ body {
     border: 1px solid var(--secondary-color);
     padding: 5px;
     font-size: 12px;
+    width: 100%;
+}
+
+.form-main .cancel-btn {
+   cursor: pointer;
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin-right: 6px;
+   margin-top: 6px;
+   background-color: transparent;
+   border: none;
+   color: #393646;
+   font-size: 18px;
 }
