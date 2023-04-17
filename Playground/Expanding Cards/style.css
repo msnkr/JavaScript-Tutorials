@@ -13,20 +13,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
-    position: relative;
+    height: 100vh;
 }
 
 .panels {
+    cursor: pointer;
     position: relative;
-    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 800px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
-
-.panels p {
+.panels h3 {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    color: white;
-    font-size: 18px;
+    color: #fff;
+    font-size: 28px;
+    opacity: 0;
 }
+.panels.active {
+    width: 800px;
+    transition: 1s ease-in;
+}
+
+
+.panels.active h3 {
+    opacity: 1;
+}
+
