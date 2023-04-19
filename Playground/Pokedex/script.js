@@ -8,17 +8,14 @@ let pokemonData = [];
 
 // Update the dom
 function updateDom(image, name, type) {
-    documentTitle = document.createElement("h3");
-    documentTitle.innerHTML = name;
-    container.appendChild(documentTitle)
+    let output = document.createElement("div");
+    
+    output.innerHTML = `<h2 class="title">${name}</h2>
+    <img src="${image}" alt="" class="image:">
+    <h4 class="type">${type}</h4>`;
 
-    documentImage = document.createElement("img");
-    documentImage.src = image;
-    container.appendChild(documentImage)
-
-    documentType = document.createElement("h4");
-    documentType.innerHTML = type;
-    container.appendChild(documentType)
+    output.classList.add("pokemon")
+    container.appendChild(output);
 }
 
 // Get one single pokemon and add to the dom

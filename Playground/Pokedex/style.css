@@ -1,0 +1,62 @@
+:root {
+    --bulbasaur: #89C893;
+    --charmander: #FFE26F;
+    --squirtle: #55A3AB;
+    --cream: #EFEFEF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bulbasaur);
+    color: var(--cream);
+}
+
+h1 {
+    text-align: center;
+    color: var(--cream);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon-container {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    max-width: 90%;
+}
+
+.pokemon {
+    cursor: pointer;
+    width: 250px;
+    margin: 10px;
+    /* padding: 10px; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: var(--squirtle);
+    color: var(--charmander);
+}
+
+.title {
+    border-bottom: 3px solid var(--cream);
+    padding-bottom: 30px;
+}
+
+.type {
+    border-top: 3px solid var(--cream);
+    padding-top: 30px;
+}
+
