@@ -10,6 +10,7 @@
 }
 
 body {
+    font-family: monospace;
     background-color: var(--bulbasaur);
     color: var(--cream);
 }
@@ -37,26 +38,29 @@ h1 {
 }
 
 .pokemon {
-    cursor: pointer;
     width: 250px;
     margin: 10px;
-    /* padding: 10px; */
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
+    border: 2px solid var(--squirtle);
     border-radius: 20px;
     background-color: var(--squirtle);
     color: var(--charmander);
+    padding: 20px;
 }
 
 .title {
     border-bottom: 3px solid var(--cream);
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+
 }
 
 .type {
     border-top: 3px solid var(--cream);
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
+.image {
+    cursor: pointer;
+}
