@@ -4,6 +4,7 @@ let pokemonName = document.getElementById("pokemon-title");
 let pokemonImage = document.getElementById("pokemon-image");
 let pokemonType = document.getElementById("pokemon-type");
 let container = document.getElementById("pokemon-container")
+let modal = document.getElementById("modal")
 let pokemonData = [];
 
 // FUNCTIONS
@@ -12,7 +13,8 @@ let pokemonData = [];
 // Get the individgual pokemon stats
 async function callSinglePokemon(item) {
     let singlePokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${item.textContent}`);
-    let singlePokemonData = await singlePokemon.json()
+    let singlePokemonData = await singlePokemon.json();
+    modal.classList.add("active")
 }
 
 // Update the dom
