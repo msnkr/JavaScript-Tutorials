@@ -6,6 +6,15 @@ let pokemonType = document.getElementById("pokemon-type");
 let container = document.getElementById("pokemon-container")
 let pokemonData = [];
 
+// FUNCTIONS
+
+
+// Get the individgual pokemon stats
+async function callSinglePokemon(item) {
+    let singlePokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${item.textContent}`);
+    let singlePokemonData = await singlePokemon.json()
+}
+
 // Update the dom
 function updateDom(image, name, type) {
     let output = document.createElement("div");
@@ -40,3 +49,11 @@ async function getPokemonList() {
 }
 
 getPokemonList();
+
+
+// EVENT LISTENERS
+container.addEventListener("click", e => {
+    if (e.target.classList.contains("title")) {
+        callSinglePokemon(e.target);
+    }
+})
