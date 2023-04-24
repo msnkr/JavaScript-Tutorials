@@ -103,3 +103,22 @@
 
 // run();
 
+const puppeteer = require("puppeteer");
+
+async function run() {
+
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+
+    await page.goto("https://www.scrapethissite.com/pages/");
+
+    const titles = await page.evaluate(() => document.querySelectorAll("#pages"), (e) => ({
+        title: e.querySelector(".page .page-title").textContent,
+    }))
+    
+    console.log(titles)
+    await browser.close();
+
+};
+
+run();
