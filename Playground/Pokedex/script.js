@@ -12,8 +12,6 @@ let ulModalBaseStat = document.getElementById("modal-base-stat");
 let pokemonData = [];
 
 // FUNCTIONS
-
-
 // Get the individgual pokemon stats
 async function callSinglePokemon(item) {
     let singlePokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${item.textContent}`);
@@ -29,7 +27,9 @@ async function callSinglePokemon(item) {
     for (let index = 0; index < pokemonStats.length; index++) {
         let statNum = pokemonStats[index].base_stat;
         let statName = pokemonStats[index].stat.name;
-
+        
+        // ulModalStat.innerHTML += `<li>${statName}</li>`;
+        // ulModalBaseStat.innerHTML += `<li>${statNum}</li>`;
     }
     
 }
@@ -73,6 +73,8 @@ getPokemonList();
 // EVENT LISTENERS
 container.addEventListener("click", e => {
     if (e.target.classList.contains("title")) {
+        ulModalStat.innerHTML = "";
+        ulModalBaseStat.innerHTML = "";
         callSinglePokemon(e.target);
     }
 })
