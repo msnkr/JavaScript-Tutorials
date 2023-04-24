@@ -38,6 +38,10 @@ h1 {
     max-width: 90%;
 }
 
+.pokemon-container.active {
+    opacity: 0;
+}
+
 .pokemon {
     width: 250px;
     margin: 10px;
@@ -78,6 +82,7 @@ h1 {
     background-color: var(--charmander);
     padding: 20px 50px;
     color: var(--squirtle);
+    border-radius: 20px;
 }
 
 .pokemon-modal {

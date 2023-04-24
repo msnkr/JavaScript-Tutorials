@@ -1,5 +1,3 @@
-// https://pokeapi.co/api/v2/pokemon/${number}
-
 let pokemonName = document.getElementById("pokemon-title");
 let pokemonImage = document.getElementById("pokemon-image");
 let pokemonType = document.getElementById("pokemon-type");
@@ -10,7 +8,7 @@ let singleName = document.getElementById("modal-name");
 let singleImage = document.getElementById("modal-image");
 
 let ulModalStat = document.getElementById("modal-stat");
-let ulModalBaseStat = document.getElementById("modal-stat");
+let ulModalBaseStat = document.getElementById("modal-base-stat");
 let pokemonData = [];
 
 // FUNCTIONS
@@ -21,14 +19,17 @@ async function callSinglePokemon(item) {
     let singlePokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${item.textContent}`);
     let singlePokemonData = await singlePokemon.json();
     modal.classList.add("active")
+    container.classList.add("active")
 
     singleName.innerHTML = singlePokemonData.species.name;
     singleImage.src = singlePokemonData.sprites.front_default;
 
     let pokemonStats = singlePokemonData.stats;
+
     for (let index = 0; index < pokemonStats.length; index++) {
         let statNum = pokemonStats[index].base_stat;
-        let statName = pokemonStats[index].stat.name
+        let statName = pokemonStats[index].stat.name;
+
     }
     
 }
@@ -74,4 +75,9 @@ container.addEventListener("click", e => {
     if (e.target.classList.contains("title")) {
         callSinglePokemon(e.target);
     }
+})
+
+document.body.addEventListener("click", () => {
+    modal.classList.remove("active");
+    container.classList.remove("active");
 })
