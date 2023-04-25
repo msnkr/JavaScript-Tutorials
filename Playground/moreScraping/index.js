@@ -103,22 +103,65 @@
 
 // run();
 
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+
+//     await page.goto("https://www.scrapethissite.com/pages/simple/");
+
+//     const titles = await page.evaluate(() => Array.from(document.querySelectorAll(".country"), (e) => ({
+//         countryName: e.querySelector("h3.country-name").textContent,
+//         countryCapital: e.querySelector(".country-info .country-capital").textContent,
+//     })))
+    
+    
+//     titles.forEach(e => {
+//         console.log(`The capital of ${e.countryName.trim()} is ${e.countryCapital.trim()}`);
+//     })
+
+//     await browser.close();
+
+// };
+
+// run();
+
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+//     await page.goto("https://www.scrapethissite.com/pages/forms/");
+
+//     const teams = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), (e) => ({
+//         name: e.querySelector(".name").textContent,
+//         wins: e.querySelector(".wins").textContent,
+//     })))
+
+//     teams.forEach( e => console.log(`${e.name.trim()} had ${e.wins.trim()} wins`) )
+
+//     await browser.close();
+
+// };
+
+// run();
+
 const puppeteer = require("puppeteer");
 
 async function run() {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
+    await page.goto("https://www.scrapethissite.com/pages/forms/");
 
-    await page.goto("https://www.scrapethissite.com/pages/");
-
-    const titles = await page.evaluate(() => document.querySelectorAll("#pages"), (e) => ({
-        title: e.querySelector(".page .page-title").textContent,
-    }))
     
-    console.log(titles)
+
     await browser.close();
 
 };
 
 run();
+
