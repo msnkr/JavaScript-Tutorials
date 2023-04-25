@@ -157,7 +157,12 @@ async function run() {
     const page = await browser.newPage();
     await page.goto("https://www.scrapethissite.com/pages/forms/");
 
-    
+    await page.type(".form-control", "Calgary Flames")
+    await Promise.all([
+        page.waitForNavigation(),
+        page.click("btn-primary")
+    ])
+
 
     await browser.close();
 
