@@ -149,6 +149,32 @@
 
 // run();
 
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+//     await page.goto("https://www.scrapethissite.com/pages/forms/");
+
+//     await page.type("#q", "New York Rangers");
+//     await page.click(".btn.btn-primary");
+//     await page.waitForNavigation();
+
+
+//     let name = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), e => ({
+//         clubName: e.querySelector(".name").textContent,
+//         clubWins: e.querySelector(".wins").textContent,
+//         clubYear: e.querySelector(".year").textContent,
+//     })))
+
+//     name.forEach(n => console.log(`${n.clubName.trim()}: ${n.clubWins.trim()} in ${n.clubYear.trim()}`));
+//     await browser.close();
+
+// };
+
+// run();
+
 const puppeteer = require("puppeteer");
 
 async function run() {
@@ -157,16 +183,22 @@ async function run() {
     const page = await browser.newPage();
     await page.goto("https://www.scrapethissite.com/pages/forms/");
 
-    await page.type(".form-control", "Calgary Flames")
-    await Promise.all([
-        page.waitForNavigation(),
-        page.click("btn-primary")
-    ])
+    let  pageNum = 2;
 
+    while (pageNum < 5) {
+        let years = await page.evaluate( () => Array.from(document.querySelectorAll(".team"), e => ({
+            year: e.querySelector(".year").textContent,
+        }))  )
+    
+        years.forEach( year => console.log(year.year.trim()));
+        await page.goto(`https://www.scrapethissite.com/pages/forms/page_num=${pageNum}`);
+        pageNum++;
+    }
 
     await browser.close();
 
 };
 
 run();
+
 
