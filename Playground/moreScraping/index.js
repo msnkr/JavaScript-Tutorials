@@ -181,19 +181,26 @@ async function run() {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto("https://www.scrapethissite.com/pages/forms/");
 
-    let  pageNum = 2;
+    let  pageNum = 1;
 
-    while (pageNum < 5) {
-        let years = await page.evaluate( () => Array.from(document.querySelectorAll(".team"), e => ({
-            year: e.querySelector(".year").textContent,
-        }))  )
+    while (pageNum <= 5) {
+        let url = `https://www.scrapethissite.com/pages/forms/?page_num=${pageNum}`;
+        await page.goto(url);
     
-        years.forEach( year => console.log(year.year.trim()));
-        await page.goto(`https://www.scrapethissite.com/pages/forms/page_num=${pageNum}`);
+
+        let team = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), e => ({
+            teamName: e.querySelector(".name").textContent.trim(),
+            wins: e.querySelector(".wins").textContent.trim(),
+            year: e.querySelector(".year").textContent.trim(),
+        })))
+
+        team.forEach( e => console.log(`${e.teamName}: ${e.wins}: ${e.year}`))
+        console.log("New Page");
         pageNum++;
+
     }
+
 
     await browser.close();
 
