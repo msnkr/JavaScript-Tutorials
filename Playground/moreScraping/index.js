@@ -175,37 +175,62 @@
 
 // run();
 
-const puppeteer = require("puppeteer");
+// const puppeteer = require("puppeteer");
 
-async function run() {
+// async function run() {
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
 
-    let  pageNum = 1;
+//     let  pageNum = 1;
 
-    while (pageNum <= 5) {
-        let url = `https://www.scrapethissite.com/pages/forms/?page_num=${pageNum}`;
-        await page.goto(url);
+//     while (pageNum <= 5) {
+//         let url = `https://www.scrapethissite.com/pages/forms/?page_num=${pageNum}`;
+//         await page.goto(url);
     
 
-        let team = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), e => ({
-            teamName: e.querySelector(".name").textContent.trim(),
-            wins: e.querySelector(".wins").textContent.trim(),
-            year: e.querySelector(".year").textContent.trim(),
-        })))
+//         let team = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), e => ({
+//             teamName: e.querySelector(".name").textContent.trim(),
+//             wins: e.querySelector(".wins").textContent.trim(),
+//             year: e.querySelector(".year").textContent.trim(),
+//         })))
 
-        team.forEach( e => console.log(`${e.teamName}: ${e.wins}: ${e.year}`))
-        console.log("New Page");
-        pageNum++;
+//         team.forEach( e => console.log(`${e.teamName}: ${e.wins}: ${e.year}`))
+//         console.log("New Page");
+//         pageNum++;
 
-    }
-
-
-    await browser.close();
-
-};
-
-run();
+//     }
 
 
+//     await browser.close();
+
+// };
+
+// run();
+
+
+
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+
+//     await page.goto("https://www.scrapethissite.com/pages/frames/")
+
+//     const row = await page.evaluate(() => Array.from(document.querySelectorAll(".row"), e => ({
+//         title: e.querySelector(".turtle-family-card .family-name").textContent.trim(),
+//     })))
+
+//     console.log(row);
+
+//     await browser.close();
+// }
+
+
+// run();
+
+let me = "Mikyle";
+
+console.log(me);
