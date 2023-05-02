@@ -107,4 +107,5 @@ searchBtn.addEventListener("click", e => {
     e.preventDefault();
 
     callSearchedPokemon(searchName.value);
+    searchName.value = "";
 })
