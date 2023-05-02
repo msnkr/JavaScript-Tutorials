@@ -210,27 +210,26 @@
 
 
 
-// const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer");
 
-// async function run() {
+async function run() {
 
-//     const browser = await puppeteer.launch();
-//     const page = await browser.newPage();
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
 
-//     await page.goto("https://www.scrapethissite.com/pages/frames/")
+    await page.goto("https://www.scrapethissite.com/pages/frames/")
 
-//     const row = await page.evaluate(() => Array.from(document.querySelectorAll(".row"), e => ({
-//         title: e.querySelector(".turtle-family-card .family-name").textContent.trim(),
-//     })))
+    const frame = await page.$("iframe[src='/pages/frames/?frame=i']");
+    const frameContent = await frame.contentFrame();
 
-//     console.log(row);
+    const turtleCards = await frameContent.$$(".turtle-family-card");
+    for (let index = 0; index < turtleCards.length; index++) {
+        const names = await (await turtleCards[index].getProperty("textContent")).jsonValue();
+        console.log(names.trim())
+    }
 
-//     await browser.close();
-// }
+    await browser.close();
+}
 
 
-// run();
-
-let me = "Mikyle";
-
-console.log(me);
+run();
