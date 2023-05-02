@@ -103,3 +103,133 @@
 
 // run();
 
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+
+//     await page.goto("https://www.scrapethissite.com/pages/simple/");
+
+//     const titles = await page.evaluate(() => Array.from(document.querySelectorAll(".country"), (e) => ({
+//         countryName: e.querySelector("h3.country-name").textContent,
+//         countryCapital: e.querySelector(".country-info .country-capital").textContent,
+//     })))
+    
+    
+//     titles.forEach(e => {
+//         console.log(`The capital of ${e.countryName.trim()} is ${e.countryCapital.trim()}`);
+//     })
+
+//     await browser.close();
+
+// };
+
+// run();
+
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+//     await page.goto("https://www.scrapethissite.com/pages/forms/");
+
+//     const teams = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), (e) => ({
+//         name: e.querySelector(".name").textContent,
+//         wins: e.querySelector(".wins").textContent,
+//     })))
+
+//     teams.forEach( e => console.log(`${e.name.trim()} had ${e.wins.trim()} wins`) )
+
+//     await browser.close();
+
+// };
+
+// run();
+
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+//     await page.goto("https://www.scrapethissite.com/pages/forms/");
+
+//     await page.type("#q", "New York Rangers");
+//     await page.click(".btn.btn-primary");
+//     await page.waitForNavigation();
+
+
+//     let name = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), e => ({
+//         clubName: e.querySelector(".name").textContent,
+//         clubWins: e.querySelector(".wins").textContent,
+//         clubYear: e.querySelector(".year").textContent,
+//     })))
+
+//     name.forEach(n => console.log(`${n.clubName.trim()}: ${n.clubWins.trim()} in ${n.clubYear.trim()}`));
+//     await browser.close();
+
+// };
+
+// run();
+
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+
+//     let  pageNum = 1;
+
+//     while (pageNum <= 5) {
+//         let url = `https://www.scrapethissite.com/pages/forms/?page_num=${pageNum}`;
+//         await page.goto(url);
+    
+
+//         let team = await page.evaluate(() => Array.from(document.querySelectorAll(".team"), e => ({
+//             teamName: e.querySelector(".name").textContent.trim(),
+//             wins: e.querySelector(".wins").textContent.trim(),
+//             year: e.querySelector(".year").textContent.trim(),
+//         })))
+
+//         team.forEach( e => console.log(`${e.teamName}: ${e.wins}: ${e.year}`))
+//         console.log("New Page");
+//         pageNum++;
+
+//     }
+
+
+//     await browser.close();
+
+// };
+
+// run();
+
+
+
+const puppeteer = require("puppeteer");
+
+async function run() {
+
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+
+    await page.goto("https://www.scrapethissite.com/pages/frames/")
+
+    const frame = await page.$("iframe[src='/pages/frames/?frame=i']");
+    const frameContent = await frame.contentFrame();
+
+    const turtleCards = await frameContent.$$(".turtle-family-card");
+    for (let index = 0; index < turtleCards.length; index++) {
+        const names = await (await turtleCards[index].getProperty("textContent")).jsonValue();
+        console.log(names.trim())
+    }
+
+    await browser.close();
+}
+
+
+run();
