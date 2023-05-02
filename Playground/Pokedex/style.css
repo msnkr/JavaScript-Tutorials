@@ -19,6 +19,20 @@ h1 {
     text-align: center;
     color: var(--cream);
 }
+.form-control .search-pokemon {
+    font-size: 16px;
+    border-radius: 2px;
+}
+
+.form-control .search-btn {
+    background-color: var(--charmander);
+    color: var(--squirtle);
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border-color: none;
+    font-weight: bolder;
+}
 
 .container {
     position: relative;

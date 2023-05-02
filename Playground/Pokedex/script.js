@@ -9,9 +9,28 @@ let singleImage = document.getElementById("modal-image");
 
 let ulModalStat = document.getElementById("modal-stat");
 let ulModalBaseStat = document.getElementById("modal-base-stat");
+let searchName = document.getElementById("search-pokemon");
+let searchBtn = document.getElementById("search-btn");
 let pokemonData = [];
 
 // FUNCTIONS
+// Get searched pokemons
+async function callSearchedPokemon(searchValue) {
+    searchName.innerHTML = "";
+
+    try {
+        let singlePokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${searchValue}`);
+        let singlePokemonData = await singlePokemon.json();
+        modal.classList.add("active")
+        container.classList.add("active")
+    
+        singleName.innerHTML = singlePokemonData.species.name;
+        singleImage.src = singlePokemonData.sprites.front_default;
+    } catch (error) {
+        console.log("There was an error");
+    }
+}
+
 // Get the individgual pokemon stats
 async function callSinglePokemon(item) {
     let singlePokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${item.textContent}`);
@@ -82,4 +101,10 @@ container.addEventListener("click", e => {
 document.body.addEventListener("click", () => {
     modal.classList.remove("active");
     container.classList.remove("active");
+})
+
+searchBtn.addEventListener("click", e => {
+    e.preventDefault();
+
+    callSearchedPokemon(searchName.value);
 })
