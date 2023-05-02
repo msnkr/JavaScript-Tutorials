@@ -67,6 +67,7 @@ h1 {
 }
 
 .modal {
+    opacity: 0;
     position: absolute;
     top: 50px;
     left: auto;
