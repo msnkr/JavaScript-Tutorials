@@ -210,6 +210,27 @@
 
 
 
+// const puppeteer = require("puppeteer");
+
+// async function run() {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+
+//     await page.goto("https://www.scrapethissite.com/pages/frames/")
+
+//     const frame = await page.$("iframe[src='/pages/frames/?frame=i']");
+//     const frameContent = await frame.contentFrame();
+
+
+
+//     await browser.close();
+// }
+
+
+// run();
+
+
 const puppeteer = require("puppeteer");
 
 async function run() {
@@ -217,16 +238,17 @@ async function run() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto("https://www.scrapethissite.com/pages/frames/")
+    await page.goto("https://www.scrapethissite.com/pages/simple/");
 
-    const frame = await page.$("iframe[src='/pages/frames/?frame=i']");
-    const frameContent = await frame.contentFrame();
 
-    const turtleCards = await frameContent.$$(".turtle-family-card");
-    for (let index = 0; index < turtleCards.length; index++) {
-        const names = await (await turtleCards[index].getProperty("textContent")).jsonValue();
-        console.log(names.trim())
-    }
+    const iframe = await page.$("iframe[src='/pages/frames/?frame=i']");
+    const frameContent = await iframe.contentFrame();
+
+    const turtles = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
+        turtleFam: e.querySelector(".family-name").textContent.trim(),
+    })))
+
+    console.log(turtles);
 
     await browser.close();
 }
