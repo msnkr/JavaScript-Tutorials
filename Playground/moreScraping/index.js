@@ -238,7 +238,7 @@ async function run() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto("https://www.scrapethissite.com/pages/simple/");
+    await page.goto("https://www.scrapethissite.com/pages/frames/");
 
 
     const iframe = await page.$("iframe[src='/pages/frames/?frame=i']");
@@ -246,9 +246,11 @@ async function run() {
 
     const turtles = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
         turtleFam: e.querySelector(".family-name").textContent.trim(),
+        turtleLink: e.querySelector("a").href,
     })))
 
-    console.log(turtles);
+    for (let index = 0; index < turtles.length; index++) {
+    }
 
     await browser.close();
 }
