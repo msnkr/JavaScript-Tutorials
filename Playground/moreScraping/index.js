@@ -235,8 +235,8 @@ const puppeteer = require("puppeteer");
 
 async function run() {
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+    let browser = await puppeteer.launch();
+    let page = await browser.newPage();
 
     await page.goto("https://www.scrapethissite.com/pages/frames/");
 
@@ -244,12 +244,22 @@ async function run() {
     const iframe = await page.$("iframe[src='/pages/frames/?frame=i']");
     const frameContent = await iframe.contentFrame();
 
-    const turtles = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
-        turtleFam: e.querySelector(".family-name").textContent.trim(),
-        turtleLink: e.querySelector("a").href,
+    const links = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
+        link: e.querySelector(".btn").href.trim(),
     })))
 
-    for (let index = 0; index < turtles.length; index++) {
+    for (let index = 0; index < links.length; index++) {
+        const link = links[index].link;
+
+        
+
+        turtlePage.waitForNavigation();
+
+        const h3 = page.evaluate(() => document.querySelector(".family-name"));
+        const para = page.evaluate(() => document.querySelector(".lead"));
+
+        console.log(`${h3}: ${para}`)
+
     }
 
     await browser.close();
