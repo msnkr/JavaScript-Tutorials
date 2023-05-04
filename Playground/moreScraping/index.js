@@ -196,7 +196,6 @@
 //         })))
 
 //         team.forEach( e => console.log(`${e.teamName}: ${e.wins}: ${e.year}`))
-//         console.log("New Page");
 //         pageNum++;
 
 //     }
@@ -208,62 +207,31 @@
 
 // run();
 
-
-
-// const puppeteer = require("puppeteer");
-
-// async function run() {
-
-//     const browser = await puppeteer.launch();
-//     const page = await browser.newPage();
-
-//     await page.goto("https://www.scrapethissite.com/pages/frames/")
-
-//     const frame = await page.$("iframe[src='/pages/frames/?frame=i']");
-//     const frameContent = await frame.contentFrame();
-
-
-
-//     await browser.close();
-// }
-
-
-// run();
-
-
 const puppeteer = require("puppeteer");
 
-async function run() {
+(async () => {
 
-    let browser = await puppeteer.launch();
-    let page = await browser.newPage();
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
 
     await page.goto("https://www.scrapethissite.com/pages/frames/");
 
+    const frame = await page.$("iframe[src='/pages/frames/?frame=i']")
+    const frameContent = await frame.contentFrame();
 
-    const iframe = await page.$("iframe[src='/pages/frames/?frame=i']");
-    const frameContent = await iframe.contentFrame();
-
-    const links = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
-        link: e.querySelector(".btn").href.trim(),
+    const turtleNames = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
+        link: e.querySelector("a").href,
     })))
+    
+    for (let index = 0; index < turtleNames.length; index++) {
+        const link = turtleNames[index].link;
 
-    for (let index = 0; index < links.length; index++) {
-        const link = links[index].link;
+        await page.goto(link);
+        const heading = await page.evaluate(() => document.querySelector(".family-name").textContent.trim());
+        const para = await page.evaluate(() => document.querySelector(".lead").textContent.trim());
 
-        
-
-        turtlePage.waitForNavigation();
-
-        const h3 = page.evaluate(() => document.querySelector(".family-name"));
-        const para = page.evaluate(() => document.querySelector(".lead"));
-
-        console.log(`${h3}: ${para}`)
-
+        console.log(`${heading}: ${para}`);
     }
 
-    await browser.close();
-}
-
-
-run();
+    await browser.close()
+})();
