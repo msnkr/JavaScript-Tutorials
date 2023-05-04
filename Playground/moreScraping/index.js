@@ -208,10 +208,21 @@
 // run();
 
 // const puppeteer = require("puppeteer");
+// const fs = require("fs");
+
+
+// function saveText(item) {
+//     fs.appendFile("Turtle.txt", item, (err) => {
+//         if (err) throw err;
+//     })
+
+//     console.log("Turtle is written")
+// }
+
 
 // (async () => {
 
-//     const browser = await puppeteer.launch();
+//     const browser = await puppeteer.launch({headless: "new"});
 //     const page = await browser.newPage();
 
 //     await page.goto("https://www.scrapethissite.com/pages/frames/");
@@ -230,24 +241,32 @@
 //         const heading = await page.evaluate(() => document.querySelector(".family-name").textContent.trim());
 //         const para = await page.evaluate(() => document.querySelector(".lead").textContent.trim());
 
-//         console.log(`${heading}: ${para}`);
+//         let headerAndText = `${heading}: ${para} \n`;
+//         saveText(headerAndText)
 //     }
 
 //     await browser.close()
 // })();
 
-const puppeteer = require("puppeteer");
+// const puppeteer = require("puppeteer");
 
-(async () => {
+// (async () => {
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
+//     const browser = await puppeteer.launch({headless: "new"});
+//     const page = await browser.newPage();
 
-    await page.goto("https://www.scrapethissite.com/pages/simple/");
+//     await page.goto("https://www.scrapethissite.com/pages/simple/");
 
-    const title = await page.title();
-    console.log(title);
+//     const countryData = await page.$$eval(".country", (country) => {
+//         return country.map(country => {
+//             const countryName = country.querySelector(".country-name").textContent.trim();
+//             const countryCapital = country.querySelector(".country-capital").textContent.trim();
+//             return {countryName, countryCapital}
+//         })
+//     })
 
-    browser.close();
+//     countryData.forEach(country => console.log(`${country.countryName}: ${country.countryCapital}`))
+
+//     browser.close();
     
-})();
+// })();
