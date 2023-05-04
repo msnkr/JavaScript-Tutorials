@@ -207,6 +207,35 @@
 
 // run();
 
+// const puppeteer = require("puppeteer");
+
+// (async () => {
+
+//     const browser = await puppeteer.launch();
+//     const page = await browser.newPage();
+
+//     await page.goto("https://www.scrapethissite.com/pages/frames/");
+
+//     const frame = await page.$("iframe[src='/pages/frames/?frame=i']")
+//     const frameContent = await frame.contentFrame();
+
+//     const turtleNames = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
+//         link: e.querySelector("a").href,
+//     })))
+    
+//     for (let index = 0; index < turtleNames.length; index++) {
+//         const link = turtleNames[index].link;
+
+//         await page.goto(link);
+//         const heading = await page.evaluate(() => document.querySelector(".family-name").textContent.trim());
+//         const para = await page.evaluate(() => document.querySelector(".lead").textContent.trim());
+
+//         console.log(`${heading}: ${para}`);
+//     }
+
+//     await browser.close()
+// })();
+
 const puppeteer = require("puppeteer");
 
 (async () => {
@@ -214,24 +243,11 @@ const puppeteer = require("puppeteer");
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto("https://www.scrapethissite.com/pages/frames/");
+    await page.goto("https://www.scrapethissite.com/pages/simple/");
 
-    const frame = await page.$("iframe[src='/pages/frames/?frame=i']")
-    const frameContent = await frame.contentFrame();
+    const title = await page.title();
+    console.log(title);
 
-    const turtleNames = await frameContent.evaluate(() => Array.from(document.querySelectorAll(".turtle-family-card"), e => ({
-        link: e.querySelector("a").href,
-    })))
+    browser.close();
     
-    for (let index = 0; index < turtleNames.length; index++) {
-        const link = turtleNames[index].link;
-
-        await page.goto(link);
-        const heading = await page.evaluate(() => document.querySelector(".family-name").textContent.trim());
-        const para = await page.evaluate(() => document.querySelector(".lead").textContent.trim());
-
-        console.log(`${heading}: ${para}`);
-    }
-
-    await browser.close()
 })();
