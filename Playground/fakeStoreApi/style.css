@@ -1,0 +1,14 @@
+:root {
+    --warm1: #D14D72;
+    --warm2: #FFABAB;
+    --warm3: #FCC8D1;
+    --warm4: #FEF2F4;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    display: inline-flex;
+    margin: 5px 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
