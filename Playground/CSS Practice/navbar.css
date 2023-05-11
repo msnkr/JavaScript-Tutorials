@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  justify-content: end;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.nav-ul {
+  list-style-type: none;
+}
+
+.navbar .nav-ul .nav-li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.nav-li a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 0px 20px;
+  color: #fff;
+}
+
+.nav-li a:hover {
+  color: blueviolet;
+  border-bottom: 2px solid blueviolet;
+}

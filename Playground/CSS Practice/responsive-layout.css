@@ -147,6 +147,10 @@
     justify-content: center;
   }
 
+  .color-one {
+    opacity: 0;
+  }
+
   .color-one .green {
     height: 200px;
   }
@@ -181,23 +185,23 @@
     height: 200px;
   }
 
-  .color-three .beige {
+  .color-four .beige {
     height: 200px;
   }
 
-  .color-three .chocolate {
+  .color-four .chocolate {
     height: 200px;
   }
 
-  .color-three .darkmagenta {
+  .color-four .darkmagenta {
     height: 200px;
   }
 
-  .color-three .deeppink {
+  .color-four .deeppink {
     height: 200px;
   }
 
-  .color-three .greenyellow {
+  .color-four .greenyellow {
     height: 200px;
   }
 }
