@@ -27,7 +27,7 @@
   width: 100%;
 }
 
-.color-two .yello {
+.color-two .yellow {
   background-color: yellow;
   width: 90%;
   height: 50px;
@@ -93,21 +93,111 @@
   width: 100%;
 }
 
+.color-four {
+  display: flex;
+  width: 100%;
+}
+
+.color-four .beige {
+  background-color: beige;
+  width: 90%;
+  height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.color-four .chocolate {
+  background-color: chocolate;
+  width: 90%;
+  height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.color-four .darkmagenta {
+  background-color: darkmagenta;
+  width: 90%;
+  height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.color-four .deeppink {
+  background-color: deeppink;
+  width: 90%;
+  height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.color-four .greenyellow {
+  background-color: greenyellow;
+  width: 90%;
+  height: 50px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 800px) {
   .container {
-    height: 100vh;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
     align-items: center;
     justify-content: center;
   }
-  .color-one {
-    display: block;
-  }
-  .color-two {
-    display: block;
+
+  .color-one .green {
+    height: 200px;
   }
 
-  .color-three {
-    display: block;
+  .color-one .red {
+    height: 200px;
+  }
+
+  .color-two .yellow {
+    height: 200px;
+  }
+
+  .color-two .cyan {
+    height: 200px;
+  }
+
+  .color-two .black {
+    height: 200px;
+  }
+
+  .color-three .salmon {
+    height: 200px;
+  }
+  .color-three .lightblue {
+    height: 200px;
+  }
+  .color-three .grey {
+    height: 200px;
+  }
+
+  .color-three .orange {
+    height: 200px;
+  }
+
+  .color-three .beige {
+    height: 200px;
+  }
+
+  .color-three .chocolate {
+    height: 200px;
+  }
+
+  .color-three .darkmagenta {
+    height: 200px;
+  }
+
+  .color-three .deeppink {
+    height: 200px;
+  }
+
+  .color-three .greenyellow {
+    height: 200px;
   }
 }
