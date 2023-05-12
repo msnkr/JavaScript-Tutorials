@@ -2,7 +2,7 @@
   display: flex;
   justify-content: end;
   background-color: black;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .nav-ul {
@@ -16,12 +16,24 @@
 }
 
 .nav-li a {
+  display: inline-block;
+  /* margin: 0 20px; */
   text-decoration: none;
   font-size: 18px;
-  padding: 0px 20px;
   color: #fff;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-li a:hover {
-  color: blueviolet;
+  border-bottom: 2px solid cyan;
+  animation: slide 0.8s ease-in;
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }
