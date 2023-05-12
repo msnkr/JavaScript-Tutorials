@@ -122,11 +122,6 @@ h1 {
   color: var(--squirtle);
 }
 
-.pokemon-modal li {
-  list-style: none;
-  font-size: 18px;
-}
-
 .modal.active {
   opacity: 1;
 }
