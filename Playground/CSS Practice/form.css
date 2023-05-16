@@ -4,6 +4,7 @@
   --light: #6d5d6e;
   --lightest: #f4eee0;
 }
+
 body {
   background-color: var(--light);
   font-family: "Fira Code";
@@ -12,20 +13,28 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
-  text-align: center;
+  height: 100vh;
+  text-align: start;
 }
 
 .form-control {
   background-color: var(--darkest);
-  padding: 30px 40px;
+  padding: 40px 50px;
   border-radius: 5px;
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 400px;
+}
+
+.form-control h1 {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .form-username,
 .form-password {
-  margin: 20px;
+  margin: 20px 0;
+  width: 100%;
 }
 
 input {
@@ -33,5 +42,21 @@ input {
   color: var(--light);
   display: block;
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
+  height: 40px;
+  border-radius: 4px;
+  outline: 0;
+  border: none;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--light);
+  border: none;
+  outline: 0;
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--lightest);
+  margin: 20px 0;
 }
