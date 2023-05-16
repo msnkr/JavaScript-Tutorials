@@ -2,7 +2,7 @@
 const nums = [1, 2, 3, 1];
 
 const checkNumbers = nums.map( num => {
-    return num ;
+    
 } )
 
 console.log(checkNumbers);
