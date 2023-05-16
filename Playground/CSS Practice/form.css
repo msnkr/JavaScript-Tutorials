@@ -1,0 +1,37 @@
+:root {
+  --darkest: #393646;
+  --dark: #4f4557;
+  --light: #6d5d6e;
+  --lightest: #f4eee0;
+}
+body {
+  background-color: var(--light);
+  font-family: "Fira Code";
+  color: var(--lightest);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.form-control {
+  background-color: var(--darkest);
+  padding: 30px 40px;
+  border-radius: 5px;
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-username,
+.form-password {
+  margin: 20px;
+}
+
+input {
+  background-color: var(--lightest);
+  color: var(--light);
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
