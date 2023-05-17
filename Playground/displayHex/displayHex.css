@@ -32,7 +32,7 @@
   position: relative;
   background-color: transparent;
   height: 200px;
-  width: 200px;
+  width: 400px;
   margin: 5px;
   border-radius: 5px;
 }
@@ -52,4 +52,10 @@
 
 .box:hover h1 {
   opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+  .box {
+    width: 200px;
+  }
 }
