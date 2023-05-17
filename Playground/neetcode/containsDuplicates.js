@@ -2,8 +2,5 @@
 const nums = [1, 2, 3, 4];
 // const nums = [1, 2, 3, 1];
 
-const checkNumbers = nums.map(num => {
-    
-});
-
-console.log(checkNumbers);
+// Loop through all numbers
+// 
