@@ -1,5 +1,7 @@
 const grid = document.querySelector(".grid");
 const file = document.getElementById("file-upload");
+const darkMode = document.querySelector(".fa");
+
 
 function updateDOM(content) {
     content.forEach(element => {
@@ -18,7 +20,8 @@ function splitContents(contents) {
     updateDOM(content);
 }
 
-// open the file
+
+
 file.addEventListener("change", (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
@@ -30,8 +33,3 @@ file.addEventListener("change", (event) => {
 
     reader.readAsText(file)
 })
-
-
-// Get items from file and store in array
-// Loop through each item and give it a box class, and change the background and wording to fit the box in main
-// Every fourth box, create a new box parent element
