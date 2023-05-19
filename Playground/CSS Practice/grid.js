@@ -4,5 +4,6 @@ const imgArr = ['https://plus.unsplash.com/premium_photo-1678990345290-735e9718a
 
 imgArr.forEach( img => {
     let output = document.createElement("div");
-    output.innerHTML = <img class="img" src="${img}">
+    output.innerHTML = `<img class="img" src="${img}">`;
+    gridContainer.appendChild(output);
 } )
