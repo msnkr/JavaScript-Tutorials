@@ -82,15 +82,15 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: no-repeat(4, 25%);
-  grid-gap: 10px;
+  grid-template-columns: no-repeat(2, 50%);
+  grid-gap: 20px;
 }
 
 .grid-item {
-  width: 100%;
+  display: inline-block;
   height: auto;
   position: relative;
-  top: 200px;
+  top: 350px;
 }
 
 .product-image {

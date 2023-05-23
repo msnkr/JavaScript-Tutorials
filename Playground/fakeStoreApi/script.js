@@ -5,9 +5,9 @@ const electronicsHome = document.querySelector(".grid");
 function showElectronicsHome(item) {
     let output = document.createElement("div");
     output.innerHTML = `<div class="grid-item">
-    ${item.title}
+    ${item.title}</div>
     <div class="product-image" style="background: url(${item.image}) no-repeat center center/cover"></div>
-    </div>`;
+    `;
     electronicsHome.appendChild(output);
 }
 
