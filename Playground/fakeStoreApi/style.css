@@ -72,12 +72,10 @@ body {
   font-size: 38px;
 }
 
-.electronics {
+.electronics h1 {
   position: relative;
   top: 350px;
   align-items: center;
   text-align: center;
-}
-
-.product-name {
+  font-size: 44px;
 }
