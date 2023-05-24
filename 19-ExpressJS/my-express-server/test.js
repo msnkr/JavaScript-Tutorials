@@ -3,8 +3,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/", (req, res) => res.send("Hello"));
-app.use(express.static("test.html"))
+app.use(express.static("test"))
 
 
-app.listen(port, () => console.log("Listening"))
+app.listen(port, () => console.log(`==> http://localhost:${3000}/test.html`))

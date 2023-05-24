@@ -1,0 +1,33 @@
+:root {
+  --dark-one: #374259;
+  --dark-two: #545b77;
+  --dark-three: #5c8984;
+  --light: #f2d8d8;
+}
+
+* {
+  box-sizing: 0;
+}
+
+body {
+  background-color: var(--dark-two);
+  color: var(--dark-one);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.test {
+  background-color: var(--dark-two);
+  padding: 20px 30px;
+  border-radius: 8px;
+  color: var(--light);
+}
+
+.test:hover {
+  background-color: var(--light);
+  color: var(--dark-two);
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
