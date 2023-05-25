@@ -6,4 +6,4 @@ const port = 3000;
 app.use(express.static("test"))
 
 
-app.listen(port, () => console.log(`==> http://localhost:${3000}/test.html`))
+app.listen(port, () => console.log(`==> http://localhost:${port}/test.html`))

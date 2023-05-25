@@ -17,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 80vh;
+  transition: background-color 2s ease-in-out;
 }
 
 .test {
@@ -29,5 +30,9 @@ body {
 .test:hover {
   background-color: var(--light);
   color: var(--dark-two);
-  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+  transition: background-color 2s ease-in-out, color 2s ease-in-out;
+}
+
+body.dark {
+  background-color: var(--dark-three);
 }
