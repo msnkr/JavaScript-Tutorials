@@ -1,0 +1,140 @@
+:root {
+  --dark-pruple: #3a1078;
+  --purple: #4e31aa;
+  --red: #fd8a8a;
+  --yellow: #f1f7b5;
+  --green: #ceedc7;
+  --pastel-purple: #9ea1d4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+
+.results {
+  background-image: linear-gradient(#9ea1d4, #4e31aa);
+  width: 250px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.header-result {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.circle {
+  padding: 15%;
+  margin: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(#9ea1d4, #4e31aa);
+}
+
+.circle h1 {
+  color: white;
+  font-size: 44px;
+}
+
+.circle h3 {
+  color: white;
+  font: 12px;
+}
+
+.results h2 {
+  color: white;
+}
+
+.results h3 {
+  color: white;
+}
+
+.summary {
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-summary {
+  padding: 30px;
+}
+
+.reaction {
+  background-color: var(--red);
+  width: 80%;
+  border-radius: 10px;
+  display: inline-flex;
+  margin: 1px 2px;
+  justify-content: space-between;
+}
+
+.reaction h3 {
+  padding: 10px;
+}
+
+.memory {
+  background-color: var(--yellow);
+  width: 80%;
+  border-radius: 10px;
+  display: inline-flex;
+  margin: 1px 1px;
+  justify-content: space-between;
+}
+
+.memory h3 {
+  padding: 10px;
+}
+
+.verbal {
+  background-color: var(--green);
+  width: 80%;
+  border-radius: 10px;
+  display: inline-flex;
+  margin: 1px 1px;
+  justify-content: space-between;
+}
+
+.verbal h3 {
+  padding: 10px;
+}
+
+.visual {
+  background-color: var(--pastel-purple);
+  width: 80%;
+  border-radius: 10px;
+  display: inline-flex;
+  margin: 1px 1px;
+  justify-content: space-between;
+}
+
+.visual h3 {
+  padding: 10px;
+}
+
+.btn {
+  background-color: var(--purple);
+  padding: 10px 0;
+  width: 80%;
+  border-radius: 30px;
+  margin-top: 20px;
+  color: white;
+  outline: none;
+  border: 0;
+}
