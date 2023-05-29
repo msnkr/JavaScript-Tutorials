@@ -28,6 +28,7 @@ body {
 .nav ul {
   display: flex;
   list-style: none;
+  transform: opacity 0.8s ease-in;
 }
 
 .nav li a {
