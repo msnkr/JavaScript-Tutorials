@@ -19,3 +19,9 @@ nav ul li a {
   font-size: 18px;
   text-decoration: none;
 }
+
+h2 {
+  text-align: center;
+  color: salmon;
+  margin-top: 50%;
+}

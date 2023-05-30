@@ -9,5 +9,9 @@
 </head>
 <body>
     {{>navbar}}
+    <h2>{{demo.name}} is {{demo.age}}</h2>
+    <p>{{#each demo.traits}}</p>
+    {{this}}
+    {{/each}}
 </body>
 </html>
