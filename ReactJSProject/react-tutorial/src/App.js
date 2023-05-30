@@ -1,10 +1,9 @@
 import react from "react";
 
-function App() {
-    return (<div>
-        <h1>Hello There</h1>
-        <p>This is a jsx tutorial</p>
-    </div>)
-};
+function MyButton() {
+  return (
+    <button>Submit</button>
+  )
+}
 
-export default App;
+export default MyButton;
