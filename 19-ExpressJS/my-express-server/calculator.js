@@ -14,4 +14,15 @@ app.post("/", (req, res) => {
 })
 
 
+
+app.get("/bmi", (req, res) => res.sendFile(__dirname + "/bmiCalculator.html"))
+app.post("/bmi", (req, res) => {
+    let weight = req.body.weight;
+    let height = req.body.height**2;
+
+    let result = parseFloat(weight) / parseFloat(height);
+
+    res.send(`Your BMI is ${result.toFixed(2)}`)
+})
+
 app.listen(3000, () => console.log(`http://localhost:3000`));
