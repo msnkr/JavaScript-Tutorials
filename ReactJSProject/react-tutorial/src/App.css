@@ -1,3 +1,48 @@
 body {
   background-color: lightyellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  text-align: center;
+}
+
+.button-1 {
+  font-size: 18px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid salmon;
+  color: salmon;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 100%;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+.button-1:hover {
+  color: #fff;
+  background-color: salmon;
+}
+
+.form-control {
+  margin: 20px;
+}
+
+.form-control input {
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: border 0.8s ease-in-out;
+}
+
+.form-control input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid salmon;
 }
