@@ -108,3 +108,41 @@ textarea {
   color: var(--lightest);
   font-size: 36px;
 }
+
+@media only screen and (max-width:600px) {
+  .container {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .fa-github {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  .small-text {
+    font-size: 8px;
+  }
+
+  .form-control {
+    display: block;
+    width: 300px;
+  }
+
+  .form-control .input-name-email input{
+    width: 300px;
+  }
+
+  .form-control .input-message textarea {
+    width: 103%;
+    margin-top: 20px;
+  }
+
+  .btn {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
