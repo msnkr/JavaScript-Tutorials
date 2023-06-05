@@ -27,9 +27,9 @@ body {
 
 .fa-github {
   animation-name: pulse;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in;
 }
 
 @keyframes pulse {
@@ -51,4 +51,36 @@ body {
 .container span.soon {
   color: var(--light);
   transition: color 1s ease-in-out;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  background-color: var(--lightest);
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  color: var(--darkest);
+}
+
+textarea {
+  width: 100%;
+}
+
+input:active,
+textarea:active {
+  outline: green;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: var(--lightest);
+  margin-top: 20px;
 }
