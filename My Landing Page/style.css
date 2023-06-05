@@ -25,6 +25,22 @@ body {
   position: relative;
 }
 
+.fa-github {
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pulse {
+  from {
+    color: var(--light);
+  }
+  to {
+    color: var(--lightest);
+  }
+}
+
 .container span {
   display: block;
   color: var(--lightest);
