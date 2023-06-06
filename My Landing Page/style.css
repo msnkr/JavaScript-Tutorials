@@ -109,7 +109,7 @@ textarea {
   font-size: 36px;
 }
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 600px) {
   .container {
     max-width: 300px;
     display: flex;
@@ -132,7 +132,7 @@ textarea {
     width: 300px;
   }
 
-  .form-control .input-name-email input{
+  .form-control .input-name-email input {
     width: 300px;
   }
 
@@ -144,5 +144,11 @@ textarea {
   .btn {
     margin-left: 50%;
     transform: translateX(-50%);
+  }
+
+  .container.thank-you {
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
   }
 }
