@@ -1,46 +1,24 @@
-
-let textInput = document.getElementById("text-input");
-let submitBtn = document.getElementById("submit-btn");
-let listItems = document.getElementById("items");
-let bodyCancelBtn = document.body;
+const search = document.querySelector(".add-item");
+const submitBtn = document.querySelector(".submit-btn");
+const ulContainer = document.querySelector(".item-here");
 
 
-let toDoList = [];
-// populateUi();
+// 2.Put value in list.
+let itemList = [];
 
-// Functions
-//Add to list
-function addToList(toDo) {
-    if (toDo !== "") {
-        listItems.innerHTML += `<li class="toDoItem"> ${toDo} </li>`;
-        toDoList.push(toDo)
-    }
+// Loop over list with key-value pair.
+function loopListItems(){
+    itemList.forEach(e => {
+        console.log(e);
+    })
 }
+// Display items from list on dom
 
-// remove from list
-function removeListItem(e) {
-    e.target.remove();
-}
 
-// Add to local storage
-function addToStorage(providedData = toDoList) {
-    localStorage.setItem("ListItems", JSON.stringify(providedData))
-}
+// 1.On submit-btn get the value from input.
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-// function populateUi() {
-
-// }
-
-// Events
-//get input
-submitBtn.addEventListener("click", () => {
-   addToList(textInput.value);
-   textInput.value = "";
-})
-
-// remove input
-bodyCancelBtn.addEventListener("click", e => {
-    if (e.target.classList.contains("toDoItem")) {
-        removeListItem(e)
-    }
+    itemList.push(search.value);
+    search.value = "";
 })
