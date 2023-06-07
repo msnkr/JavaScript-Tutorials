@@ -4,21 +4,19 @@ const ulContainer = document.querySelector(".item-here");
 
 
 // 2.Put value in list.
-let itemList = [];
+let itemList = ['Do washing', "Do dishes"];
 
 // Loop over list with key-value pair.
-function loopListItems(){
-    itemList.forEach(e => {
-        console.log(e);
-    })
-}
 // Display items from list on dom
+function updateDom(item) {
+    ulContainer.innerHTML += `<li>${item}</li>`
+}
 
 
 // 1.On submit-btn get the value from input.
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
 
-    itemList.push(search.value);
+    updateDom(search.value)
     search.value = "";
 })
