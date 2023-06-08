@@ -1,0 +1,13 @@
+.container {
+  align-items: center;
+  text-align: center;
+}
+
+span {
+  color: red;
+}
+
+.container img {
+  width: 200px;
+  height: 200px;
+}
