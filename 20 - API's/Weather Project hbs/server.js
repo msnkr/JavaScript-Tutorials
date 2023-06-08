@@ -11,13 +11,12 @@ app.use(express.static("public"));
 app.get("/", (req, response) => {
     
     https.get(url, res => {
-        console.log(res.statusCode);
 
         res.on("data", data => {
             const weatherData = JSON.parse(data);
 
             const weather = {
-                temp: String(weatherData.main.temp),
+                temp: Math.trunc(weatherData.main.temp),
                 desc: weatherData.weather[0].description,
                 icon: weatherData.weather[0].icon,
             };
