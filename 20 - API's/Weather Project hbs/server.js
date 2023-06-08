@@ -28,4 +28,4 @@ app.get("/", (req, response) => {
 
 app.listen(3000, () => console.log());
 
-const url = "https://api.openweathermap.org/data/2.5/weather?q=johannesburg&units=metric&appid=888fc6acf8d5a7a7b9e51209de4178cc "
+const url = "https://api.openweathermap.org/data/2.5/weather?q=johannesburg&units=metric&appid=888fc6acf8d5a7a7b9e51209de4178cc"
