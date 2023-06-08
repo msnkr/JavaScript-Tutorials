@@ -8,12 +8,18 @@ app.set("views", "views");
 
 app.use(express.static("public"));
 
-app.get("/", (req, response) => {
+app.get("/", (req, res) => {
+    res.send("Hello");
+})
+
+
+app.get("/weather", (req, response) => {
     
     https.get(url, res => {
 
         res.on("data", data => {
             const weatherData = JSON.parse(data);
+            console.log(response.statusCode);
 
             const weather = {
                 temp: Math.trunc(weatherData.main.temp),
@@ -24,6 +30,7 @@ app.get("/", (req, response) => {
         })
     })
 })
+
 
 app.listen(3000, () => console.log());
 
