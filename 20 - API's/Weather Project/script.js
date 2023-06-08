@@ -2,6 +2,7 @@ const express = require("express");
 const https = require("https");
 
 const app = express()
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
     
@@ -10,8 +11,16 @@ app.get("/", (req, res) => {
 
         response.on("data", data => {
             const weatherData = JSON.parse(data);
-            const temp = weatherData.main.temp;
-            res.send("hello there")
+            const weather = {
+                temp: String(weatherData.main.temp),
+                desc: weatherData.weather[0].description,
+                icon: weatherData.weather[0].icon,
+            };
+
+            let output = `<div style="margin-top:200px; margin-left:200px">
+                <h3 class="weather">The weather in Johannesburg is ${weather.temp}</h3> <img class="image" style=width:200px; height=200px src="http://openweathermap.org/img/w/${weather.icon}.png">  <h4 class="description" >${weather.desc}</h4>
+            </div>`
+            res.send(output);
         })
     })
 })
