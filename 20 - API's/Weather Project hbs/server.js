@@ -1,6 +1,7 @@
 const express = require("express");
 const hbs = require("hbs");
 const https = require("https");
+const bodyParser = require("body-parser");
 
 const app = express();
 app.set("view engine", "hbs");
@@ -8,12 +9,10 @@ app.set("views", "views");
 
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.send("Hello");
-})
+app.use(bodyParser.urlencoded({ extended:true }));
 
 
-app.get("/weather", (req, response) => {
+app.get("/", (req, response) => {
     
     https.get(url, res => {
 
@@ -30,6 +29,7 @@ app.get("/weather", (req, response) => {
         })
     })
 })
+
 
 
 app.listen(3000, () => console.log());

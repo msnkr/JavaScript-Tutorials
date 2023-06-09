@@ -44,3 +44,16 @@ h4 {
   width: 200px;
   height: 200px;
 }
+
+form {
+  margin-bottom: 50px;
+}
+
+label {
+  color: #fff;
+}
+
+input {
+  border-radius: 5px;
+  margin-left: 20px;
+}

@@ -9,6 +9,11 @@
 </head>
 <body>
     <div class="container">
+            <form action="/" method="post">
+                <label for="city">Enter a city: </label>
+                <input type="text" name="city" id="city">
+                <button type="submit" class="btn">Submit</button>
+            </form>
             <div class="container-two">
                 <h3>The temperature in Johannesburg is <span>{{weather.temp}}°C</span></h3>
                 <h4>{{weather.desc}}</h4>
