@@ -11,7 +11,6 @@ async function getMealData(item) {
         let meals = {
             name: jsonData.meals[index].strMeal,
             pic: jsonData.meals[index].strMealThumb,
-            instructions: jsonData.meals[index].strInstructions
         };
         
     updateDom(meals)
@@ -27,8 +26,12 @@ function updateDom(meals) {
     grid.appendChild(output);
 };
 
-function showInstructions(meal) {
-    console.log(meal)
+async function showInstructions(meal) {
+    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal}`);
+    const jsonData = await response.json();
+
+    const mealInstuction = jsonData.meals[0].strInstructions;
+    console.log(mealInstuction);
 }
 
 btn.addEventListener("click", event => {
