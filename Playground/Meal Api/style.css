@@ -53,8 +53,11 @@ body {
 .grid-items img {
   width: 100%;
   height: 100%;
-  cursor: pointer;
   border-radius: 8px;
+}
+
+.grid-items h3 {
+  cursor: pointer;
 }
 
 input:focus {

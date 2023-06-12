@@ -21,15 +21,27 @@ async function getMealData(item) {
 function updateDom(meals) {
     let output = document.createElement("div");
     output.innerHTML = `<img src=${meals.pic}>
-    <h3>${meals.name}</h3>`
+    <h3 class="meal-name">${meals.name}</h3>`
 
     output.classList.add("grid-items");
     grid.appendChild(output);
 };
+
+function showInstructions(meal) {
+    console.log(meal)
+}
 
 btn.addEventListener("click", event => {
     event.preventDefault();
 
     getMealData(search.value);
     search.value = "";
+})
+
+grid.addEventListener("click", e => {
+    e.preventDefault();
+
+    if (e.target.classList.contains("meal-name")) {
+        showInstructions(e.target.textContent);
+    }
 })
