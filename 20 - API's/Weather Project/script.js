@@ -20,10 +20,10 @@ app.post("/", (req, res) => {
             const currentTemp = weatherData.main.temp;
             const description = weatherData.weather[0].description;
             const icon = weatherData.weather[0].icon;
-            const imageUrl = `http://openweathermap.org/img/w/01n.png`
+            const imageUrl = `http://openweathermap.org/img/w/${icon}.png`
             res.write(`<h2>The current weather in ${city} is ${currentTemp} in celcius</h2>`);
             res.write(`<h3>${description}</h3>`);
-            res.write(`<img src="${imageUrl}>"`);
+            res.write(`<img style="width:200px" src="${imageUrl}">`);
             res.send()
         })
     })

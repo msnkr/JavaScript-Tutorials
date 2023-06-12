@@ -1,43 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    font-family: 'Mulish', sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-family: "Mulish", sans-serif;
 }
 
 .form-control {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 
 .form-control label {
-    display: block;
-    margin-bottom: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .form-control input {
-    padding: 4px 8px;
-    border: white;
-    height: 30px;
+  padding: 4px 8px;
+  border: white;
+  height: 30px;
 }
 
 .form-control button {
-    color: #000;
-    background-color: #fff;
-    padding: 4px 8px;
-    cursor: pointer;
-    position: absolute;
-    outline: none;
-    border-color: white;
-    height: 30px;
+  color: #000;
+  background-color: #fff;
+  padding: 4px 8px;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  border-color: white;
+  height: 30px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.grid-items {
+  padding: 40px;
+}
+
+.grid-items img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+}
