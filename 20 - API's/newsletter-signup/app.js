@@ -13,8 +13,23 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
-    console.log(name)
-    console.log(email)
+
+    const split = name.split(" ")
+    const firstName = split[0];
+    const lastName = split[1];
+    
+    let data = {
+        members: {
+            email_address: email,
+            status: "subscribed",
+            merge_fields: {
+                FNAME: firstName,
+                LNAME: lastName,
+            }
+        }
+    }
+
+    let jsonData = JSON.stringify(data);
     res.sendFile(__dirname + "/success.html")
 })
 
