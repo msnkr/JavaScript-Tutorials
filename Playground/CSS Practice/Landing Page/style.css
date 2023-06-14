@@ -76,6 +76,8 @@ body {
 .main-text {
   color: #fff;
   padding: 0 100px;
+  font-weight: bold;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .main-text h1 {
