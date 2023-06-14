@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+:root {
+  --xs-space: 8pt;
+  --s-space: 16pt;
+  --m-space: 24pt;
+  --l-space: 32pt;
+  --xl-space: 48pt;
+  --xxl-space: 80pt;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+}
+
+.container-1 .hero-banner {
+  position: relative;
+  background: url("https://images.pexels.com/photos/248195/pexels-photo-248195.jpeg?auto=compress&cs=tinysrgb&w=1600")
+    no-repeat center center/cover;
+  width: 100vw;
+  height: 600px;
+}
+
+.gradient {
+  position: absolute;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #000) repeat left
+    top;
+  width: 100vw;
+  height: 600px;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  position: absolute;
+  color: #fff;
+  top: var(--xxl-space);
+  left: var(--xxl-space);
+  margin: 0;
+  z-index: 2;
+}
+
+.main-text-1 {
+  font-size: var(--xl-space);
+}
+
+.main-text-2 {
+  font-size: var(--l-space);
+}
+
+.main-text-3 {
+  font-size: var(--m-space);
+}
