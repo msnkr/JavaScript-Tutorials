@@ -44,11 +44,13 @@ app.post("/", (req, res) => {
         } else {
             res.sendFile(__dirname + "/failire.html");
         }
-        
+
         response.on("data", data => {
             console.log(JSON.parse(data));
         })
     })
+
+    app.post("/failure", (req, res) => res.redirect("/"));
     
     request.write(jsonData)
     request.end();
