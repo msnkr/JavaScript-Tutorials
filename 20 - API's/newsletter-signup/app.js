@@ -58,6 +58,3 @@ app.post("/", (req, res) => {
 
 
 app.listen(3000, () => console.log("http://localhost:3000"))
-
-const url =  "https://us21.api.mailchimp.com/3.0/lists/34b79bbef3"
-const key = "c204bfa6ac78d24f1f4a6bd25290651e-us21"
