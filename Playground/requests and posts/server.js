@@ -10,17 +10,13 @@ app.get("/", (request, response) => {
     .then((res) => {
         const data = res.data;
 
-        const jsonData = {};
-        data.forEach(item => {
-            jsonData = {
-                title: item.title,
-                body: item.body,
-            }
-        console.log(jsonData)
+        let html = "";
+        data.forEach(post => {
+            html += `<h4>${post.title}</h4>`;
+            html += `<p>${post.body}</p>`;
         });
-
-        response.send();
-    })
+        response.send(html);
+})
 })
 
 app.listen(3000, () => console.log("Running"));

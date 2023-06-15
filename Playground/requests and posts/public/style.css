@@ -15,3 +15,11 @@ textarea {
 button {
   margin: 20px;
 }
+
+.title {
+  padding: 20px 40px;
+}
+
+.body {
+  padding: 20px 40px;
+}
