@@ -1,0 +1,17 @@
+body {
+  margin: 20px;
+}
+
+label {
+  display: block;
+  margin: 20px;
+}
+
+textarea {
+  display: block;
+  margin: 20px;
+}
+
+button {
+  margin: 20px;
+}
