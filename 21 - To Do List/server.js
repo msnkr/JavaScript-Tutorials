@@ -3,10 +3,11 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+app.use(express.static("public"));
 app.use( bodyParser.urlencoded({ extended:true }));
 app.set("view engine", "ejs");
 
-let todos = [];
+let todos = ["buy food", "eat food", "cook food"];
 
 app.get("/", (req, res) => {
 
