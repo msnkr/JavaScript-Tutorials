@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Todo List</title>
 </head>
 <body>
    
 
-    <% if (day == "Saturday" || day == "Sunday") { %>
-            <h1 style="color: lightskyblue;">Its a <%= day %>!</h1>
-    <%} else { %>
-            <h1 style="color: lightcoral;">Its a <%= day %>!</h1>
-     <% } %>
+    <h1> <%= day %> </h1>
+    <ul>
+        <li>Buy food</li>
+        <li>Cook food</li>
+        <li>Eat food</li>
+        <% todos.forEach(element => { %>
+            <li><%= element %></li>
+        <% }); %>
+    </ul>
+
+    <form action="/" method="post">
+        <label for="todo">Enter a todo item here: </label>
+        <input type="text" name="todo" id="">
+        <button type="submit">Add</button>
+    </form>
 
 </body>
 </html>  

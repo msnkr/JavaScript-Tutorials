@@ -2,26 +2,32 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
+
+app.use( bodyParser.urlencoded({ extended:true }));
 app.set("view engine", "ejs");
+
+let todos = [];
 
 app.get("/", (req, res) => {
 
     let date = new Date();
-    let currentDay = date.getDay();
 
-    var day = "";
-    var dayOfWeek = new Array(7);
-    dayOfWeek[0] = "Sunday";
-    dayOfWeek[1] = "Monday";
-    dayOfWeek[2] = "Tuesday";
-    dayOfWeek[3] = "Wednesday";
-    dayOfWeek[4] = "Thursday";
-    dayOfWeek[5] = "Friday";
-    dayOfWeek[6] = "Saturday";
+    const options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+    };
 
-    day = dayOfWeek[currentDay];
+    const day = date.toLocaleDateString("en-us", options)
 
-    res.render("index", {day});
+    res.render("index", {day, todos});
 })
 
-app.listen(3000, () => console.log("Running"))
+
+app.post("/", (request, response) => {
+    todos.push(request.body.todo);
+
+    response.redirect("/");
+})
+
+app.listen(3000, () => console.log("Running"));
