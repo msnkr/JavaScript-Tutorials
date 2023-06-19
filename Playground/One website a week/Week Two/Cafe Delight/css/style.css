@@ -43,6 +43,7 @@ body {
   text-decoration: none;
   margin: 10px;
   font-weight: bold;
+  color: #000;
 }
 
 .nav-list-item:last-child {
@@ -90,7 +91,7 @@ body {
 .container-three .top-side .new-home {
   font-family: "Grand Hotel", cursive;
   text-shadow: 0pt 8pt 20px rgba(0, 0, 0, 0.7);
-  max-width: 30%;
+  max-width: 40%;
   font-size: 32pt;
 }
 
@@ -101,28 +102,70 @@ body {
   grid-template-columns: repeat(3, 30%);
 }
 
-.card {
+.card-image {
   width: 25vw;
   height: 25vh;
-}
-
-.card-one,
-.card-two,
-.card-three {
   border-radius: 5px;
 }
 
-.card-one {
-  background: url("https://images.pexels.com/photos/1813466/pexels-photo-1813466.jpeg?auto=compress&cs=tinysrgb&w=300")
-    no-repeat center center/cover;
+.bottom-side .card-body {
+  text-align: center;
+  padding: 0 10px;
+  text-shadow: 0pt 4pt 10px rgba(0, 0, 0, 0.7);
+
 }
 
-.card-two {
-  background: url("https://images.pexels.com/photos/1024359/pexels-photo-1024359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-    no-repeat center center/cover;
+.card-one .card-image {
+  background: url("https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
 }
 
-.card-three {
-  background: url("https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-    no-repeat center center/cover;
+.card-two .card-image {
+  background: url("https://images.pexels.com/photos/1438445/pexels-photo-1438445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+
+.card-three .card-image {
+  background: url("https://images.pexels.com/photos/1833320/pexels-photo-1833320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+
+.card-four .card-image {
+  background: url("https://images.pexels.com/photos/2307221/pexels-photo-2307221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+
+.card-five .card-image {
+  background: url("https://images.pexels.com/photos/2788792/pexels-photo-2788792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+
+.card-six .card-image {
+  background: url("https://images.pexels.com/photos/2956954/pexels-photo-2956954.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+}
+
+.container-four {
+  padding: 40px;
+}
+
+.container-four .top-side .events {
+  font-family: "Grand Hotel", cursive;
+  text-shadow: 0pt 8pt 20px rgba(0, 0, 0, 0.7);
+  font-size: 26pt;
+}
+
+.event-images {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.event-image-one .image-one {
+  background: url("https://images.pexels.com/photos/16231184/pexels-photo-16231184/free-photo-of-woman-sitting-at-the-table-in-a-cafe-and-reading-a-book.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  width: 40vw;
+  height: 50vh;
+}
+
+.event-image-two .image-two {
+  background: url("https://images.pexels.com/photos/1592260/pexels-photo-1592260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  width: 40vw;
+  height: 50vh;
+}
+
+.container-four .event-images {
+  text-align: center; 
 }
