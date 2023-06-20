@@ -84,7 +84,7 @@ body {
 }
 
 .container-three .top-side .description {
-  max-width: 60%;
+  max-width: 50%;
   margin-top: 40px;
 }
 
@@ -93,6 +93,8 @@ body {
   text-shadow: 0pt 8pt 20px rgba(0, 0, 0, 0.7);
   max-width: 40%;
   font-size: 32pt;
+  padding: 70px 0;
+  text-align: center;
 }
 
 .container-three .bottom-side {
@@ -112,31 +114,36 @@ body {
   text-align: center;
   padding: 0 10px;
   text-shadow: 0pt 4pt 10px rgba(0, 0, 0, 0.7);
-
 }
 
 .card-one .card-image {
-  background: url("https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/2159065/pexels-photo-2159065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
 
 .card-two .card-image {
-  background: url("https://images.pexels.com/photos/1438445/pexels-photo-1438445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/1438445/pexels-photo-1438445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
 
 .card-three .card-image {
-  background: url("https://images.pexels.com/photos/1833320/pexels-photo-1833320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/1833320/pexels-photo-1833320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
 
 .card-four .card-image {
-  background: url("https://images.pexels.com/photos/2307221/pexels-photo-2307221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/2307221/pexels-photo-2307221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
 
 .card-five .card-image {
-  background: url("https://images.pexels.com/photos/2788792/pexels-photo-2788792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/2788792/pexels-photo-2788792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
 
 .card-six .card-image {
-  background: url("https://images.pexels.com/photos/2956954/pexels-photo-2956954.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/2956954/pexels-photo-2956954.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
 
 .container-four {
@@ -152,20 +159,60 @@ body {
 .event-images {
   display: grid;
   grid-template-columns: repeat(2, 50%);
+  width: 90vw;
 }
 
 .event-image-one .image-one {
-  background: url("https://images.pexels.com/photos/16231184/pexels-photo-16231184/free-photo-of-woman-sitting-at-the-table-in-a-cafe-and-reading-a-book.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/16231184/pexels-photo-16231184/free-photo-of-woman-sitting-at-the-table-in-a-cafe-and-reading-a-book.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
   width: 40vw;
   height: 50vh;
 }
 
 .event-image-two .image-two {
-  background: url("https://images.pexels.com/photos/1592260/pexels-photo-1592260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/1592260/pexels-photo-1592260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
   width: 40vw;
   height: 50vh;
 }
 
 .container-four .event-images {
-  text-align: center; 
+  text-align: center;
+}
+
+.container-five {
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-five h4 {
+  font-family: "Grand Hotel", cursive;
+  text-shadow: 0pt 8pt 20px rgba(0, 0, 0, 0.7);
+  font-size: 26pt;
+}
+
+.name-input input {
+  border-radius: 4px;
+  width: 50%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.email-input input {
+  border-radius: 4px;
+  width: 50%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.message textarea {
+  border-radius: 4px;
+  width: 50%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-control button {
+  align-items: center;
 }
