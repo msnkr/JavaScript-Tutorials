@@ -41,7 +41,7 @@ app.post("/compose", (req, res) => {
     title: req.body.title,
     body: req.body.body,
   }
-  res.render("/")
+  res.redirect("/")
 })
 
 app.listen(3000, function() {
