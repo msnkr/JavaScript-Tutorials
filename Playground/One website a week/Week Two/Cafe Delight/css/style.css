@@ -63,7 +63,6 @@ body {
 }
 
 .container-one .left-side p {
-  font-size: 14pt;
   margin-right: 12px;
 }
 
@@ -72,6 +71,92 @@ body {
     no-repeat center center/cover;
   width: 50vw;
   height: 50vh;
+}
+
+.container-two {
+  padding: 40px;
+}
+
+.container-two .top h1 {
+  font-size: 44pt;
+  font-family: "Grand Hotel", cursive;
+  text-shadow: 0pt 8pt 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.container-two .bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-gap: 10px;
+  border-radius: 5px;
+  width: 100%;
+  justify-content: center;
+}
+
+.bottom-grid .grid-one .grid-one-image {
+  background: url("https://images.pexels.com/photos/1656025/pexels-photo-1656025.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load")
+    no-repeat center center/cover;
+  border-radius: 5px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.grid-one-image .grid-gradient {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.grid-one-image .grid-gradient.active {
+  background-color: transparent;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.bottom-grid .grid-two .grid-two-image {
+  background: url("https://images.pexels.com/photos/3892469/pexels-photo-3892469.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+  border-radius: 5px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.grid-two-image .grid-gradient {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.grid-two-image .grid-gradient.active {
+  background-color: transparent;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.bottom-grid .grid-three .grid-three-image {
+  background: url("https://images.pexels.com/photos/302905/pexels-photo-302905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+  border-radius: 5px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.grid-three-image .grid-gradient {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.grid-three-image .grid-gradient.active {
+  background-color: transparent;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
 }
 
 .container-three {
@@ -167,6 +252,7 @@ body {
     no-repeat center center/cover;
   width: 40vw;
   height: 50vh;
+  border-radius: 5px;
 }
 
 .event-image-two .image-two {
@@ -174,6 +260,7 @@ body {
     no-repeat center center/cover;
   width: 40vw;
   height: 50vh;
+  border-radius: 5px;
 }
 
 .container-four .event-images {
@@ -184,15 +271,18 @@ body {
   width: 90%;
   align-items: center;
   justify-content: center;
+  margin-left: 50%;
 }
 
 .container-five h4 {
   font-family: "Grand Hotel", cursive;
   text-shadow: 0pt 8pt 20px rgba(0, 0, 0, 0.7);
   font-size: 26pt;
+  text-align: start;
 }
 
 .name-input input {
+  font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   width: 50%;
   margin: 5px;
@@ -200,6 +290,7 @@ body {
 }
 
 .email-input input {
+  font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   width: 50%;
   margin: 5px;
@@ -207,6 +298,7 @@ body {
 }
 
 .message textarea {
+  font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   width: 50%;
   margin: 5px;
@@ -214,5 +306,7 @@ body {
 }
 
 .form-control button {
-  align-items: center;
+  margin: 5px;
+  width: 50%;
+  padding: 5px;
 }
