@@ -111,6 +111,7 @@ body {
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
+  transition: var(--gradient-remove);
 }
 
 .grid-one-image .grid-gradient:hover {
