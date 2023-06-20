@@ -3,6 +3,10 @@
 /* font-family: 'Grand Hotel', cursive;
 font-family: 'Montserrat', sans-serif;*/
 
+:root {
+  --gradient-remove: background-color 0.8s ease-in-out;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -108,8 +112,8 @@ body {
   border-radius: 5px;
 }
 
-.grid-one-image .grid-gradient.active {
-  background-color: transparent;
+.grid-one-image .grid-gradient:hover {
+  background-color: rgba(0, 0, 0, 0);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -128,10 +132,11 @@ body {
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
+  transition: var(--gradient-remove);
 }
 
-.grid-two-image .grid-gradient.active {
-  background-color: transparent;
+.grid-two-image .grid-gradient:hover {
+  background-color: rgba(0, 0, 0, 0);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -150,10 +155,80 @@ body {
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
+  transition: var(--gradient-remove);
 }
 
-.grid-three-image .grid-gradient.active {
-  background-color: transparent;
+.grid-three-image .grid-gradient:hover {
+  background-color: rgba(0, 0, 0, 0);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.bottom-grid .grid-four .grid-four-image {
+  background: url("https://images.pexels.com/photos/1657343/pexels-photo-1657343.jpeg?auto=compress&cs=tinysrgb&w=300")
+    no-repeat center center/cover;
+  border-radius: 5px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.grid-four-image .grid-gradient {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+  transition: var(--gradient-remove);
+}
+
+.grid-four-image .grid-gradient:hover {
+  background-color: rgba(0, 0, 0, 0);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.bottom-grid .grid-five .grid-five-image {
+  background: url("https://images.pexels.com/photos/789327/pexels-photo-789327.jpeg?auto=compress&cs=tinysrgb&w=300")
+    no-repeat center center/cover;
+  border-radius: 5px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.grid-five-image .grid-gradient {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+  transition: var(--gradient-remove);
+}
+
+.grid-five-image .grid-gradient:hover {
+  background-color: rgba(0, 0, 0, 0);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+}
+
+.bottom-grid .grid-six .grid-six-image {
+  background: url("https://images.pexels.com/photos/15698207/pexels-photo-15698207/free-photo-of-crepes-with-blueberries-and-strawberries-topped-with-apple-sauce-and-sour-cream.jpeg?auto=compress&cs=tinysrgb&w=300")
+    no-repeat center center/cover;
+  border-radius: 5px;
+  width: 25vw;
+  height: 25vh;
+}
+
+.grid-six-image .grid-gradient {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 25vw;
+  height: 25vh;
+  border-radius: 5px;
+  transition: var(--gradient-remove);
+}
+
+.grid-six-image .grid-gradient:hover {
+  background-color: rgba(0, 0, 0, 0);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
