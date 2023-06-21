@@ -68,10 +68,10 @@ app.listen(3000, function () {
   console.log("Server started on port 3000");
 });
 
-// This will give a truncate feauture
+// Use substring to cut the length of words from start to end and return the new string or return the old string if it has less than 100 characters
 function truncateString(originalString) {
   if (originalString.length > 100) {
-    return originalString.substring(0, 100) + " ...";
+    return originalString.substring(0, 100) + " ... <a href='#'>Read More<a>";
   } else {
     return originalString;
   }
