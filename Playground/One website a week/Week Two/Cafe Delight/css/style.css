@@ -5,7 +5,12 @@ font-family: 'Montserrat', sans-serif;*/
 
 :root {
   --gradient-remove: background-color 0.8s ease-in-out;
-  --header-color: #383129;
+  --primary-color: #625649;
+  --darkest: #0d0c0a;
+  --dark: #383129;
+  --medium: #625649;
+  --light: #8d7b68;
+  --lightest: #b7a087;
 }
 
 * {
@@ -49,7 +54,6 @@ body {
   text-decoration: none;
   margin: 10px;
   font-weight: bold;
-  color: var(--header-color);
 }
 .nav-list-item:last-child {
   margin-right: 20px;
@@ -64,7 +68,6 @@ body {
 .container-one .left-side h1 {
   font-size: 44pt;
   font-family: "Grand Hotel", cursive;
-  color: var(--header-color);
 }
 
 .container-one .left-side p {
@@ -86,7 +89,6 @@ body {
   font-size: 44pt;
   font-family: "Grand Hotel", cursive;
   text-align: center;
-  color: var(--header-color);
 }
 
 .container-two .bottom-grid {
@@ -241,11 +243,8 @@ body {
   transform: translateX(-50%);
   padding: 8px 12px;
   font-size: 16px;
-  background-color: transparent;
   border-radius: 5px;
   border: transparent;
-  background-color: #000;
-  color: #fff;
 }
 
 .container-three {
@@ -268,7 +267,6 @@ body {
   font-size: 32pt;
   padding: 70px 0;
   text-align: center;
-  color: var(--header-color);
 }
 
 .container-three .bottom-side {
@@ -328,7 +326,6 @@ body {
   font-size: 44pt;
   text-align: center;
   width: 100%;
-  color: var(--header-color);
 }
 
 .event-images {
@@ -369,7 +366,6 @@ body {
 .container-five h1 {
   font-family: "Grand Hotel", cursive;
   font-size: 44pt;
-  color: var(--header-color);
 }
 
 .name-input input {
@@ -378,7 +374,6 @@ body {
   width: 100%;
   margin: 5px;
   padding: 5px;
-  border: 2px solid #000;
 }
 
 .email-input input {
@@ -387,7 +382,6 @@ body {
   width: 100%;
   margin: 5px;
   padding: 5px;
-  border: 2px solid #000;
 }
 
 .message textarea {
@@ -396,7 +390,6 @@ body {
   width: 100%;
   margin: 5px;
   padding: 5px;
-  border: 2px solid #000;
 }
 
 .contact-btn {
@@ -409,8 +402,6 @@ body {
   border: transparent;
   margin-top: 10px;
   border-radius: 5px;
-  color: #fff;
-  background-color: #000;
 }
 
 footer {
@@ -429,12 +420,10 @@ footer {
 
 .footer-list-item a {
   text-decoration: none;
-  color: #000;
   font-weight: bold;
 }
 
 footer .side-three p {
-  color: #000;
   text-align: end;
   font-weight: bold;
 }
