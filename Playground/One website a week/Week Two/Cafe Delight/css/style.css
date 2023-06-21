@@ -9,8 +9,7 @@ font-family: 'Montserrat', sans-serif;*/
   --darkest: #0d0c0a;
   --dark: #383129;
   --medium: #625649;
-  --light: #8d7b68;
-  --lightest: #b7a087;
+  --primary-gradient: rgba(98, 86, 73, 0.7);
 }
 
 * {
@@ -29,20 +28,16 @@ body {
 .navbar {
   display: block;
   width: 100%;
-  padding: 40px;
 }
 
 .navbar .logo {
   position: absolute;
   width: 20vw;
-  padding: 10px;
-  margin-bottom: 10px;
 }
 
 .navbar-ul {
   display: flex;
   justify-content: flex-end;
-  margin-top: 45px;
 }
 
 .nav-list-item {
@@ -52,15 +47,12 @@ body {
 
 .nav-list-item a {
   text-decoration: none;
-  margin: 10px;
   font-weight: bold;
 }
 .nav-list-item:last-child {
-  margin-right: 20px;
 }
 
 .container-one {
-  padding: 40px;
   justify-content: space-between;
   display: flex;
 }
@@ -71,7 +63,6 @@ body {
 }
 
 .container-one .left-side p {
-  margin-right: 12px;
 }
 
 .container-one .right-side .image {
@@ -82,7 +73,6 @@ body {
 }
 
 .container-two {
-  padding: 40px;
 }
 
 .container-two .top h1 {
@@ -109,7 +99,7 @@ body {
 }
 
 .grid-one-image .grid-gradient {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-gradient);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -132,7 +122,7 @@ body {
 }
 
 .grid-two-image .grid-gradient {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-gradient);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -155,7 +145,7 @@ body {
 }
 
 .grid-three-image .grid-gradient {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-gradient);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -178,7 +168,7 @@ body {
 }
 
 .grid-four-image .grid-gradient {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-gradient);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -201,7 +191,7 @@ body {
 }
 
 .grid-five-image .grid-gradient {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-gradient);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -224,7 +214,7 @@ body {
 }
 
 .grid-six-image .grid-gradient {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--primary-gradient);
   width: 25vw;
   height: 25vh;
   border-radius: 5px;
@@ -248,7 +238,6 @@ body {
 }
 
 .container-three {
-  padding: 40px;
 }
 
 .top-side {
@@ -258,7 +247,6 @@ body {
 
 .container-three .top-side .description {
   max-width: 50%;
-  margin-top: 40px;
 }
 
 .container-three .top-side .new-home {
@@ -270,7 +258,6 @@ body {
 }
 
 .container-three .bottom-side {
-  margin-top: 40px;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 30%);
@@ -284,7 +271,6 @@ body {
 
 .bottom-side .card-body {
   text-align: center;
-  padding: 0 10px;
 }
 
 .card-one .card-image {
@@ -318,7 +304,6 @@ body {
 }
 
 .container-four {
-  padding: 40px;
 }
 
 .container-four .top-side .events {
@@ -372,7 +357,6 @@ body {
   font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   width: 100%;
-  margin: 5px;
   padding: 5px;
 }
 
@@ -380,7 +364,6 @@ body {
   font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   width: 100%;
-  margin: 5px;
   padding: 5px;
 }
 
@@ -388,7 +371,6 @@ body {
   font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   width: 100%;
-  margin: 5px;
   padding: 5px;
 }
 
@@ -406,7 +388,6 @@ body {
 
 footer {
   position: relative;
-  padding: 40px;
   width: 100%;
   height: 200px;
   display: flex;
