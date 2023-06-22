@@ -520,4 +520,96 @@ footer {
   .container-five h1 {
     font-size: 38pt;
   }
+
+  .name-input {
+    margin: 5px 0;
+  }
+
+  .email-input {
+    margin: 5px 0;
+  }
+
+  .message {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .logo {
+    margin-left: 40pt;
+  }
+
+  .navbar-ul:last-child {
+    margin-right: 40pt;
+  }
+
+  .container-one .right-side .image {
+    height: 40vh;
+  }
+
+  .container-one .left-side .short-description {
+    padding: 0 60pt;
+  }
+
+  .container-three .top-side {
+    padding: 0 50pt;
+    margin-bottom: 50pt;
+  }
+
+  .container-four {
+    margin-bottom: 50pt;
+  }
+
+  .container-five .form-control {
+    width: 100%;
+  }
+
+  .form-control .name-input {
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form-control .email-input {
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .form-control .message {
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .side-one ul {
+    list-style-type: none;
+    font-size: 14pt;
+  }
+
+  .side-one .footer-list-item a {
+    text-decoration: none;
+  }
+
+  .side-two {
+    display: flex;
+  }
+
+  .side-two .icon {
+    cursor: pointer;
+    margin: 0 10pt;
+    font-size: 28pt;
+    padding-top: 20%;
+    color: var(--primary-color);
+  }
+
+  .side-three p {
+    font-size: 14pt;
+    margin-right: 20pt;
+  }
 }
