@@ -56,9 +56,11 @@ body {
 
 .container-one {
   display: block;
+  margin-bottom: 50pt;
 }
 
 .container-one .left-side h1 {
+  margin-top: 50pt;
   font-size: 32pt;
   font-family: "Grand Hotel", cursive;
   text-align: center;
@@ -73,6 +75,10 @@ body {
     no-repeat center center/cover;
   width: 100vw;
   height: 30vh;
+}
+
+.container-two {
+  margin-bottom: 50pt;
 }
 
 .container-two .top h1 {
@@ -237,6 +243,7 @@ body {
 
 .container-three {
   display: block;
+  margin-bottom: 50pt;
 }
 
 .container-three .top-side .new-home {
@@ -291,6 +298,10 @@ body {
   font-family: "Grand Hotel", cursive;
   font-size: 32pt;
   text-align: center;
+}
+
+.container-four {
+  margin-bottom: 50pt;
 }
 
 .container-four h4 {
@@ -494,6 +505,10 @@ footer {
     border-radius: 5px;
   }
 
+  .container-three {
+    margin-bottom: 50pt;
+  }
+
   .container-three .top-side .new-home {
     font-size: 38pt;
     padding: 0 50pt;
@@ -534,7 +549,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 1000px) {
   .logo {
     margin-left: 40pt;
   }
