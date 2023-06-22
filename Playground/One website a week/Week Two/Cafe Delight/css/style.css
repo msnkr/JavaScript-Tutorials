@@ -38,13 +38,13 @@ body {
 }
 
 .navbar-ul {
-  display: flex;
   justify-content: flex-end;
 }
 
 .nav-list-item {
   list-style-type: none;
   font-size: 14pt;
+  text-align: end;
 }
 
 .nav-list-item a {

@@ -1,0 +1,7 @@
+ul {
+  align-items: end;
+}
+
+li a {
+  display: flex;
+}
