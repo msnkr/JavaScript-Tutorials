@@ -61,7 +61,7 @@ body {
 
 .container-one .left-side h1 {
   margin-top: 50pt;
-  font-size: 32pt;
+  font-size: 38pt;
   font-family: "Grand Hotel", cursive;
   text-align: center;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 .container-two .top h1 {
-  font-size: 32pt;
+  font-size: 38pt;
   font-family: "Grand Hotel", cursive;
   text-align: center;
 }
@@ -243,12 +243,11 @@ body {
 
 .container-three {
   display: block;
-  margin-bottom: 50pt;
 }
 
 .container-three .top-side .new-home {
   font-family: "Grand Hotel", cursive;
-  font-size: 32pt;
+  font-size: 38pt;
   text-align: center;
   padding: 0 30pt;
 }
@@ -272,6 +271,7 @@ body {
 
 .bottom-side .card-body {
   text-align: center;
+  border: none;
 }
 
 .card-one .card-image {
@@ -296,12 +296,18 @@ body {
 
 .container-four .top-side .events {
   font-family: "Grand Hotel", cursive;
-  font-size: 32pt;
+  font-size: 38pt;
   text-align: center;
+  margin-top: 50pt;
+  margin-bottom: 50pt;
 }
 
 .container-four {
   margin-bottom: 50pt;
+}
+
+.events {
+  margin: 0;
 }
 
 .container-four h4 {
@@ -344,7 +350,7 @@ body {
 
 .container-five h1 {
   font-family: "Grand Hotel", cursive;
-  font-size: 32pt;
+  font-size: 38pt;
   text-align: center;
 }
 
@@ -626,5 +632,143 @@ footer {
   .side-three p {
     font-size: 14pt;
     margin-right: 20pt;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .container-one {
+    margin-top: 100pt;
+  }
+
+  .container-one .left-side h1 {
+    font-size: 100pt;
+    margin-bottom: 20pt;
+  }
+
+  .container-one .right-side .image {
+    height: 70vh;
+  }
+
+  .container-one .left-side {
+    padding: 0 20%;
+  }
+
+  .container-two .top h1 {
+    font-size: 80pt;
+  }
+
+  .container-two .bottom-grid {
+    grid-template-columns: repeat(3, 20%);
+    grid-gap: 10pt;
+  }
+
+  .bottom-grid .grid-one .grid-one-image {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .grid-one-image .grid-gradient {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .grid-one-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+
+  .grid-two-image .grid-gradient {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .bottom-grid .grid-two .grid-two-image {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .grid-two-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+
+  .grid-three-image .grid-gradient {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .bottom-grid .grid-three .grid-three-image {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .grid-three-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+
+  .grid-four-image .grid-gradient {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .bottom-grid .grid-four .grid-four-image {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .grid-four-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+
+  .grid-five-image .grid-gradient {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .bottom-grid .grid-five .grid-five-image {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .grid-five-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+
+  .grid-six-image .grid-gradient {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .bottom-grid .grid-six .grid-six-image {
+    width: 20vw;
+    height: 30vh;
+  }
+
+  .grid-six-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 20vw;
+    height: 30vh;
+    border-radius: 5px;
+  }
+
+  .container-three .top-side .new-home {
+    font-size: 80pt;
+  }
+
+  .container-three .top-side .description {
+    padding: 0 20%;
   }
 }
