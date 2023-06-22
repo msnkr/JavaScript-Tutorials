@@ -43,7 +43,8 @@ app.get("/compose", (req, res) => {
 app.post("/compose", (req, res) => {
   var newPosts = {
     title: req.body.title,
-    body: req.body.body,
+    body: truncateString(req.body.body),
+    fullBody: req.body.body,
   };
 
   posts.push(newPosts);
