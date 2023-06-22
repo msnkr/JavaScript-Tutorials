@@ -43,8 +43,8 @@ app.get("/compose", (req, res) => {
 app.post("/compose", (req, res) => {
   var newPosts = {
     title: req.body.title,
-    body: truncateString(req.body.body),
-    fullBody: req.body.body,
+    body: req.body.body,
+    homeBody: truncateString(req.body.body),
   };
 
   posts.push(newPosts);
@@ -53,16 +53,18 @@ app.post("/compose", (req, res) => {
 
 app.get("/posts/:postId", (req, res) => {
   const requestedTitle = _.lowerCase(req.params.postId);
+  let storedTitle = {};
 
   posts.forEach((post) => {
-    const storedTitle = _.lowerCase(post.title);
-
-    if (requestedTitle === storedTitle) {
-      res.render("post", { post: post });
-    } else {
-      res.send("Not found");
+    if (requestedTitle == _.lowerCase(post.title)) {
+      storedTitle = {
+        title: post.title,
+        body: post.body,
+      };
     }
   });
+
+  res.render("post", { post: storedTitle });
 });
 
 app.listen(3000, function () {
@@ -72,7 +74,7 @@ app.listen(3000, function () {
 // Use substring to cut the length of words from start to end and return the new string or return the old string if it has less than 100 characters
 function truncateString(originalString) {
   if (originalString.length > 100) {
-    return originalString.substring(0, 100) + " ... <a href='#'>Read More<a>";
+    return originalString.substring(0, 100) + `<a href="#">Read More</a>`;
   } else {
     return originalString;
   }
