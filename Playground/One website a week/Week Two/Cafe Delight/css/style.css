@@ -33,25 +33,25 @@ body {
 }
 
 .navbar .logo {
+  margin-top: 15pt;
   position: absolute;
-  width: 20vw;
+  width: 50vw;
 }
 
 .navbar-ul {
-  justify-content: flex-end;
+  float: none;
 }
 
 .nav-list-item {
   list-style-type: none;
   font-size: 14pt;
   text-align: end;
+  margin-right: 20pt;
 }
 
 .nav-list-item a {
   text-decoration: none;
   font-weight: bold;
-}
-.nav-list-item:last-child {
 }
 
 .container-one {
@@ -243,6 +243,7 @@ body {
   font-family: "Grand Hotel", cursive;
   font-size: 32pt;
   text-align: center;
+  padding: 0 30pt;
 }
 
 .container-three .top-side .description {
@@ -371,4 +372,152 @@ body {
 
 footer {
   display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    margin-bottom: 20pt;
+  }
+
+  .navbar .logo {
+    width: 30vw;
+  }
+
+  .navbar-ul {
+    display: flex;
+    float: right;
+  }
+
+  .nav-list-item {
+    margin: 30pt 10pt;
+  }
+
+  .container-one .left-side h1 {
+    font-size: 50pt;
+  }
+
+  .container-one .right-side .image {
+    height: 30vh;
+  }
+
+  .container-two .top h1 {
+    font-size: 50pt;
+  }
+
+  .bottom-grid .grid-one .grid-one-image {
+    height: 25vh;
+  }
+
+  .grid-one-image .grid-gradient {
+    height: 25vh;
+  }
+
+  .grid-one-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 40vw;
+    height: 25vh;
+    border-radius: 5px;
+  }
+
+  .grid-two-image .grid-gradient {
+    height: 25vh;
+  }
+
+  .bottom-grid .grid-two .grid-two-image {
+    height: 25vh;
+  }
+
+  .grid-two-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 40vw;
+    height: 25vh;
+    border-radius: 5px;
+  }
+
+  .grid-three-image .grid-gradient {
+    height: 25vh;
+  }
+
+  .bottom-grid .grid-three .grid-three-image {
+    height: 25vh;
+  }
+
+  .grid-three-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 40vw;
+    height: 25vh;
+    border-radius: 5px;
+  }
+
+  .grid-four-image .grid-gradient {
+    height: 25vh;
+  }
+
+  .bottom-grid .grid-four .grid-four-image {
+    height: 25vh;
+  }
+
+  .grid-four-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 40vw;
+    height: 25vh;
+    border-radius: 5px;
+  }
+
+  .grid-five-image .grid-gradient {
+    height: 25vh;
+  }
+
+  .bottom-grid .grid-five .grid-five-image {
+    height: 25vh;
+  }
+
+  .grid-five-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 40vw;
+    height: 25vh;
+    border-radius: 5px;
+  }
+
+  .grid-six-image .grid-gradient {
+    height: 25vh;
+  }
+
+  .bottom-grid .grid-six .grid-six-image {
+    height: 25vh;
+  }
+
+  .grid-six-image .grid-gradient:hover {
+    background-color: rgba(0, 0, 0, 0);
+    width: 40vw;
+    height: 25vh;
+    border-radius: 5px;
+  }
+
+  .container-three .top-side .new-home {
+    font-size: 38pt;
+    padding: 0 50pt;
+  }
+
+  .card-image {
+    height: 25vh;
+  }
+
+  .container-four .top-side .events {
+    font-size: 38pt;
+  }
+
+  .event-image-one .image-one {
+    height: 30vh;
+    margin-bottom: 10pt;
+  }
+
+  .event-image-two .image-two {
+    height: 30vh;
+    margin-bottom: 10pt;
+  }
+
+  .container-five h1 {
+    font-size: 38pt;
+  }
 }
