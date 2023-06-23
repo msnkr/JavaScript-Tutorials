@@ -25,6 +25,7 @@ body {
   font-family: "Montserrat", sans-serif;
   text-align: start;
   max-width: 100%;
+  color: var(--dark);
 }
 
 .navbar {
@@ -95,7 +96,7 @@ body {
   grid-template-columns: repeat(2, 40%);
   grid-gap: 30px;
   justify-content: center;
-  position: relative;
+  margin-bottom: 20pt;
 }
 
 .bottom-grid .grid-one .grid-one-image {
