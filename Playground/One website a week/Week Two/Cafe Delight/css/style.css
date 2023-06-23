@@ -52,6 +52,7 @@ body {
 .nav-list-item a {
   text-decoration: none;
   font-weight: bold;
+  color: var(--primary-color);
 }
 
 .container-one {
@@ -64,6 +65,7 @@ body {
   font-size: 38pt;
   font-family: "Grand Hotel", cursive;
   text-align: center;
+  color: var(--darkest);
 }
 
 .container-one .left-side .short-description {
@@ -85,6 +87,7 @@ body {
   font-size: 38pt;
   font-family: "Grand Hotel", cursive;
   text-align: center;
+  color: var(--darkest);
 }
 
 .container-two .bottom-grid {
@@ -92,6 +95,7 @@ body {
   grid-template-columns: repeat(2, 40%);
   grid-gap: 30px;
   justify-content: center;
+  position: relative;
 }
 
 .bottom-grid .grid-one .grid-one-image {
@@ -239,6 +243,8 @@ body {
   border: transparent;
   margin-left: 50%;
   transform: translateX(-50%);
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 .container-three {
@@ -250,6 +256,7 @@ body {
   font-size: 38pt;
   text-align: center;
   padding: 0 30pt;
+  color: var(--darkest);
 }
 
 .container-three .top-side .description {
@@ -263,6 +270,10 @@ body {
   grid-gap: 30px;
 }
 
+.card {
+  border: none;
+}
+
 .card-image {
   width: 40vw;
   height: 15vh;
@@ -272,6 +283,7 @@ body {
 .bottom-side .card-body {
   text-align: center;
   border: none;
+  color: var(--dark);
 }
 
 .card-one .card-image {
@@ -310,7 +322,8 @@ body {
   margin: 0;
 }
 
-.container-four h4 {
+.container-four h1 {
+  color: var(--darkest);
   margin: 0;
 }
 
@@ -341,6 +354,10 @@ body {
   text-align: center;
 }
 
+.event-images p {
+  color: var(--dark);
+}
+
 .container-five {
   display: flex;
   flex-direction: column;
@@ -352,13 +369,26 @@ body {
   font-family: "Grand Hotel", cursive;
   font-size: 38pt;
   text-align: center;
+  color: var(--darkest);
 }
 
+.form-control {
+  border: none;
+}
+
+.form-control input {
+  border: 2px solid var(--medium);
+}
+
+.form-control textarea {
+  border: 2px solid var(--medium);
+}
 .name-input input {
   font-family: "Montserrat", sans-serif;
   border-radius: 4px;
   width: 100%;
   padding: 5px;
+  margin: 5pt 0;
 }
 
 .email-input input {
@@ -366,6 +396,7 @@ body {
   border-radius: 4px;
   width: 100%;
   padding: 5px;
+  margin: 5pt 0;
 }
 
 .message textarea {
@@ -373,6 +404,7 @@ body {
   border-radius: 4px;
   width: 100%;
   padding: 5px;
+  margin: 5pt 0;
 }
 
 .contact-btn {
@@ -385,10 +417,16 @@ body {
   border: transparent;
   margin-top: 10px;
   border-radius: 5px;
+  background-color: var(--primary-color);
+  color: #fff;
 }
 
 footer {
   display: none;
+}
+
+.footer-list-item a {
+  color: var(--primary-color);
 }
 
 @media screen and (min-width: 600px) {
@@ -411,6 +449,10 @@ footer {
 
   .container-one .left-side h1 {
     font-size: 50pt;
+  }
+
+  .container-one .left-side .short-description {
+    padding: 0 50pt;
   }
 
   .container-one .right-side .image {
@@ -520,6 +562,10 @@ footer {
     padding: 0 50pt;
   }
 
+  .container-three .top-side .description {
+    padding: 0 50pt;
+  }
+
   .card-image {
     height: 25vh;
   }
@@ -540,6 +586,10 @@ footer {
 
   .container-five h1 {
     font-size: 38pt;
+  }
+
+  .container-five .form-control {
+    width: 80vw;
   }
 
   .name-input {
@@ -582,6 +632,7 @@ footer {
   }
 
   .container-five .form-control {
+    border: none;
     width: 100%;
   }
 
@@ -635,7 +686,7 @@ footer {
   }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width: 1200px) {
   .container-one {
     margin-top: 100pt;
   }
@@ -664,103 +715,103 @@ footer {
 
   .bottom-grid .grid-one .grid-one-image {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .grid-one-image .grid-gradient {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .grid-one-image .grid-gradient:hover {
     background-color: rgba(0, 0, 0, 0);
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     border-radius: 5px;
   }
 
   .grid-two-image .grid-gradient {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .bottom-grid .grid-two .grid-two-image {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .grid-two-image .grid-gradient:hover {
     background-color: rgba(0, 0, 0, 0);
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     border-radius: 5px;
   }
 
   .grid-three-image .grid-gradient {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .bottom-grid .grid-three .grid-three-image {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .grid-three-image .grid-gradient:hover {
     background-color: rgba(0, 0, 0, 0);
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     border-radius: 5px;
   }
 
   .grid-four-image .grid-gradient {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .bottom-grid .grid-four .grid-four-image {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .grid-four-image .grid-gradient:hover {
     background-color: rgba(0, 0, 0, 0);
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     border-radius: 5px;
   }
 
   .grid-five-image .grid-gradient {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .bottom-grid .grid-five .grid-five-image {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .grid-five-image .grid-gradient:hover {
     background-color: rgba(0, 0, 0, 0);
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     border-radius: 5px;
   }
 
   .grid-six-image .grid-gradient {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .bottom-grid .grid-six .grid-six-image {
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
   }
 
   .grid-six-image .grid-gradient:hover {
     background-color: rgba(0, 0, 0, 0);
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     border-radius: 5px;
   }
 
@@ -770,5 +821,44 @@ footer {
 
   .container-three .top-side .description {
     padding: 0 20%;
+  }
+
+  .card-image {
+    height: 40vh;
+  }
+
+  .container-four .top-side .events {
+    font-size: 80pt;
+  }
+
+  .event-images {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .event-image-one .image-one {
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .event-image-two .image-two {
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .container-five {
+    margin: 50pt 0;
+  }
+
+  .container-five h1 {
+    font-size: 80pt;
+  }
+
+  .form-control {
+    padding: 0 20pt;
+  }
+
+  footer {
+    margin-bottom: -50pt;
   }
 }
