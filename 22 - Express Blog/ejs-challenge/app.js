@@ -44,7 +44,7 @@ app.post("/compose", (req, res) => {
   var newPosts = {
     title: req.body.title,
     body: req.body.body,
-    homeBody: truncateString(req.body.body),
+    homeBody: truncateString(req.body.body, _.lowerCase(req.body.title)),
   };
 
   posts.push(newPosts);
@@ -72,9 +72,12 @@ app.listen(3000, function () {
 });
 
 // Use substring to cut the length of words from start to end and return the new string or return the old string if it has less than 100 characters
-function truncateString(originalString) {
+function truncateString(originalString, title) {
   if (originalString.length > 100) {
-    return originalString.substring(0, 100) + `<a href="#">Read More</a>`;
+    return (
+      originalString.substring(0, 100) +
+      `<a href="/posts/${title}">Read More</a>`
+    );
   } else {
     return originalString;
   }
