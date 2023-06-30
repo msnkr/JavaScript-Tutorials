@@ -13,6 +13,9 @@
   align-items: center;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
+  font-size: 18pt;
+  padding: 0 24pt;
+  margin-bottom: 48pt;
 }
 
 .navbar-logo img {
@@ -28,7 +31,7 @@
 
 .navbar-ul a {
   color: black;
-  font-size: 16pt;
+  font-size: 22pt;
   text-decoration: none;
   margin: 0 8pt;
 }
@@ -55,19 +58,20 @@
 
 .container-left h1 {
   font-family: "Montserrat", sans-serif;
+  font-size: 48pt;
 }
 
 .container-right .hero-image {
   background: url("https://images.pexels.com/photos/276508/pexels-photo-276508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
   width: 50vw;
-  height: 30vh;
+  height: 50vh;
 }
 
 .hero-gradient {
   background-color: rgba(0, 0, 0, 0.2);
   width: 50vw;
-  height: 30vh;
+  height: 50vh;
 }
 
 .cards {
@@ -76,7 +80,7 @@
 }
 
 .card {
-  margin: 0 16pt;
+  margin: 0 22pt;
 }
 
 .card a {
