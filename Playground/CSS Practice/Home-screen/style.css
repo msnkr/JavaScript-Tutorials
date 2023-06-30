@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Open+Sans&display=swap");
+
+/* font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif; */
 * {
   box-sizing: border-box;
 }
@@ -8,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Open Sans", sans-serif;
 }
 
 .navbar-logo img {
@@ -30,13 +35,14 @@
 
 .container-one {
   display: flex;
+  margin-bottom: 48pt;
 }
 
 .container-left {
   padding: 16pt;
   margin: 0;
   align-items: start;
-  text-shadow: 0 1pt 16pt rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1pt 16pt rgba(0, 0, 0, 0.1);
 }
 
 .container-left button {
@@ -44,6 +50,11 @@
   color: white;
   padding: 6pt 12pt;
   border: none;
+  cursor: pointer;
+}
+
+.container-left h1 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .container-right .hero-image {
@@ -53,7 +64,27 @@
   height: 30vh;
 }
 
+.hero-gradient {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 50vw;
+  height: 30vh;
+}
+
 .cards {
   display: flex;
   padding: 0 16pt;
+}
+
+.card {
+  margin: 0 16pt;
+}
+
+.card a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+}
+
+.next i {
+  font-weight: bolder;
 }
