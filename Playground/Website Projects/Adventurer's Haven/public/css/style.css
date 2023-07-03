@@ -13,7 +13,15 @@ body {
   display: flex;
   padding: 0 40pt;
   flex-direction: column;
-  margin-bottom: 500pt;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 8pt 12pt;
+  border: none;
+  font-weight: bold;
 }
 
 .navbar {
@@ -28,6 +36,7 @@ body {
   text-decoration: none;
   border-bottom: 2px solid black;
   margin: 0 8pt;
+  font-weight: bold;
 }
 
 .navbar-logo img {
@@ -45,13 +54,6 @@ body {
   width: 50%;
   padding: 0 18pt;
   text-shadow: 0 2pt 20pt rgba(0, 0, 0, 0.4);
-}
-
-.btn {
-  background-color: black;
-  color: white;
-  padding: 8pt 12pt;
-  border: none;
 }
 
 .container-one .left-side h1 {
@@ -77,7 +79,7 @@ body {
   background: url("https://images.pexels.com/photos/930685/pexels-photo-930685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
   width: 100vw;
-  height: 50vh;
+  height: 70vh;
   margin-left: -40pt;
   position: absolute;
   top: 0;
@@ -94,11 +96,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8pt;
-  box-shadow: 0 8pt 4pt rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8pt 12pt rgba(0, 0, 0, 0.4);
 }
 
 .container-two .text {
   font-size: 16pt;
   text-align: center;
-  padding: 16pt;
+  padding: 40pt;
+  padding-bottom: 8pt;
+}
+
+.container-two .btn {
+  margin: 0 50%;
+  transform: translateX(-50%);
 }
