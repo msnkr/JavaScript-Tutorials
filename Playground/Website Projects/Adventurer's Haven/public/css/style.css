@@ -114,6 +114,7 @@ body {
 .container-three {
   position: relative;
   top: 60vh;
+  margin-bottom: 80pt;
 }
 
 .container-three h1 {
@@ -122,8 +123,55 @@ body {
 
 .card {
   margin: 0;
+  box-shadow: 0 2pt 20pt rgba(0, 0, 0, 0.4);
+  padding: 20pt;
+  margin: 16pt;
+  border-radius: 8pt;
 }
 
 .card h4 {
   margin: 8pt 0;
+}
+
+.card h4 a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 2px solid black;
+}
+
+.container-four {
+  margin-bottom: 80pt;
+}
+
+.images {
+  position: relative;
+  top: 60vh;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.image {
+  width: 25vw;
+  height: 50vh;
+  margin-bottom: 80pt;
+}
+
+.image-one {
+  background: url("https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&w=300")
+    no-repeat center center/cover;
+}
+
+.image-two {
+  background: url("https://images.pexels.com/photos/1047051/pexels-photo-1047051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.image-three {
+  background: url("https://images.pexels.com/photos/999093/pexels-photo-999093.jpeg?auto=compress&cs=tinysrgb&w=300")
+    no-repeat center center/cover;
+}
+
+.image-four {
+  background: url("https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
 }
