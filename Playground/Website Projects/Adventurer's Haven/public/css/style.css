@@ -76,10 +76,10 @@ body {
 }
 
 .container-two .main-image {
-  background: url("https://images.pexels.com/photos/930685/pexels-photo-930685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+  background: url("https://images.pexels.com/photos/1070492/pexels-photo-1070492.jpeg")
     no-repeat center center/cover;
   width: 100vw;
-  height: 70vh;
+  height: 60vh;
   margin-left: -40pt;
   position: absolute;
   top: 0;
@@ -96,17 +96,34 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8pt;
-  box-shadow: 0 8pt 12pt rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16pt 16pt rgba(0, 0, 0, 0.4);
 }
 
 .container-two .text {
   font-size: 16pt;
   text-align: center;
-  padding: 40pt;
-  padding-bottom: 8pt;
+  padding: 20pt;
+  padding-bottom: 16pt;
 }
 
 .container-two .btn {
   margin: 0 50%;
   transform: translateX(-50%);
+}
+
+.container-three {
+  position: relative;
+  top: 60vh;
+}
+
+.container-three h1 {
+  padding-top: 80pt;
+}
+
+.card {
+  margin: 0;
+}
+
+.card h4 {
+  margin: 8pt 0;
 }
