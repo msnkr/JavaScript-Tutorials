@@ -209,21 +209,3 @@ body {
   border-top-right-radius: 8pt;
   border-bottom-right-radius: 8pt;
 }
-
-.gallery-middle {
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  height: 50pt;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 16pt 16pt rgba(16, 25, 17, 0.7);
-}
-
-.gallery-middle .btn {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
