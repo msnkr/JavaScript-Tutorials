@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Oswald&display=swap");
 
+:root {
+  --primary: #609966;
+  --darkest: #101911;
+  --dark: #2b442d;
+  --light: #7bc382;
+  --lightest: #95ee9f;
+}
+
 /* font-family: 'Lora', serif;
 font-family: 'Oswald', sans-serif; */
 
@@ -7,41 +15,58 @@ font-family: 'Oswald', sans-serif; */
   box-sizing: border-box;
 }
 
+h1,
+h4 {
+  color: var(--darkest);
+}
+
 body {
   font-family: "Oswald", sans-serif;
+  color: var(--dark);
   margin: 0;
   display: flex;
   padding: 0 40pt;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .btn {
   cursor: pointer;
-  background-color: black;
+  background-color: var(--darkest);
   color: white;
   padding: 8pt 12pt;
   border: none;
   font-weight: bold;
+  background-color: var(--primary);
 }
 
 .navbar {
   display: flex;
   margin-top: 24pt;
   justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-list a {
   font-size: 16pt;
-  color: black;
+  color: var(--darkest);
   text-decoration: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--darkest);
   margin: 0 8pt;
   font-weight: bold;
 }
 
+.navbar-list a:last-of-type {
+  border-bottom: none;
+  border: 2px solid var(--primary);
+  padding: 4pt 8pt;
+  border-radius: 8pt;
+  color: var(--primary);
+}
+
 .navbar-logo img {
-  width: 100pt;
-  height: 40pt;
+  width: 200pt;
+  height: 80pt;
 }
 
 .container-one {
@@ -53,7 +78,7 @@ body {
 .container-one .left-side {
   width: 50%;
   padding: 0 18pt;
-  text-shadow: 0 2pt 20pt rgba(0, 0, 0, 0.4);
+  text-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.3);
 }
 
 .container-one .left-side h1 {
@@ -67,7 +92,8 @@ body {
   width: 90vw;
   height: 50vh;
   margin-right: -40pt;
-  border-radius: 8pt;
+  border-top-left-radius: 8pt;
+  border-bottom-left-radius: 8pt;
 }
 
 .container-two {
@@ -96,7 +122,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8pt;
-  box-shadow: 0 16pt 16pt rgba(0, 0, 0, 0.4);
+  box-shadow: 0 16pt 16pt rgba(16, 25, 17, 0.7);
 }
 
 .container-two .text {
@@ -123,7 +149,7 @@ body {
 
 .card {
   margin: 0;
-  box-shadow: 0 2pt 20pt rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.3);
   padding: 20pt;
   margin: 16pt;
   border-radius: 8pt;
@@ -134,9 +160,9 @@ body {
 }
 
 .card h4 a {
-  color: black;
+  color: var(--darkest);
   text-decoration: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--darkest);
 }
 
 .container-four {
@@ -146,19 +172,25 @@ body {
 .images {
   position: relative;
   top: 60vh;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
+  display: flex;
 }
 
 .image {
-  width: 25vw;
-  height: 50vh;
+  width: 25%;
+  height: 60vh;
   margin-bottom: 80pt;
+  transition: width 1s ease-in-out;
+}
+
+.image.active {
+  width: 80%;
 }
 
 .image-one {
-  background: url("https://images.pexels.com/photos/1078983/pexels-photo-1078983.jpeg?auto=compress&cs=tinysrgb&w=300")
+  background: url("https://images.pexels.com/photos/7645826/pexels-photo-7645826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
+  border-top-left-radius: 8pt;
+  border-bottom-left-radius: 8pt;
 }
 
 .image-two {
@@ -167,11 +199,31 @@ body {
 }
 
 .image-three {
-  background: url("https://images.pexels.com/photos/999093/pexels-photo-999093.jpeg?auto=compress&cs=tinysrgb&w=300")
+  background: url("https://images.pexels.com/photos/2863625/pexels-photo-2863625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
 .image-four {
   background: url("https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
+  border-top-right-radius: 8pt;
+  border-bottom-right-radius: 8pt;
+}
+
+.gallery-middle {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 50pt;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 16pt 16pt rgba(16, 25, 17, 0.7);
+}
+
+.gallery-middle .btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
