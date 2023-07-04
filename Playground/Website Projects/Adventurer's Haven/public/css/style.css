@@ -167,6 +167,7 @@ body {
 
 .container-four {
   margin-bottom: 80pt;
+  position: relative;
 }
 
 .images {
@@ -208,4 +209,28 @@ body {
     no-repeat center center/cover;
   border-top-right-radius: 8pt;
   border-bottom-right-radius: 8pt;
+}
+
+footer {
+  margin-top: 40vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40vh;
+}
+
+footer .side-one {
+  position: relative;
+  padding-right: 50%;
+  font-size: 14pt;
+}
+
+footer .side-three {
+  font-size: 16pt;
+}
+
+.side-three a {
+  color: var(--darkest);
+  text-decoration: none;
+  border-bottom: 2px solid var(--darkest);
 }
