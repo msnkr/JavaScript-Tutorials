@@ -214,23 +214,18 @@ body {
 footer {
   margin-top: 40vh;
   position: relative;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 40vh;
 }
 
-footer .side-one {
-  position: relative;
-  padding-right: 50%;
-  font-size: 14pt;
+.container-footer-1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
 }
 
-footer .side-three {
-  font-size: 16pt;
-}
-
-.side-three a {
+.navigation-links a {
+  display: block;
   color: var(--darkest);
-  text-decoration: none;
-  border-bottom: 2px solid var(--darkest);
+  font-size: 16pt;
+  margin: 0;
 }
