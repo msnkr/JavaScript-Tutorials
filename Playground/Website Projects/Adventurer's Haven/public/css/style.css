@@ -212,20 +212,10 @@ body {
 }
 
 footer {
-  margin-top: 40vh;
+  margin-top: 50vh;
   position: relative;
-  margin-bottom: 40vh;
-}
-
-.container-footer-1 {
+  padding: 40pt 0;
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.navigation-links a {
-  display: block;
-  color: var(--darkest);
-  font-size: 16pt;
-  margin: 0;
+  flex-direction: column;
+  align-items: center;
 }
