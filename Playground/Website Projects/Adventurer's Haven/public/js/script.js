@@ -1,4 +1,7 @@
 const images = document.querySelectorAll(".image");
+const calcImage = document.querySelectorAll(".calc-image");
+
+const options = [];
 
 // Events
 images.forEach((image) => {
@@ -8,5 +11,17 @@ images.forEach((image) => {
 
   image.addEventListener("mouseout", (e) => {
     e.target.classList.remove("active");
+  });
+});
+
+calcImage.forEach((image) => {
+  image.addEventListener("mouseover", () => {
+    let paragraphText = image.querySelector(".calc-text");
+    paragraphText.classList.add("active");
+  });
+
+  image.addEventListener("mouseout", () => {
+    let paragraphText = image.querySelector(".calc-text");
+    paragraphText.classList.remove("active");
   });
 });
