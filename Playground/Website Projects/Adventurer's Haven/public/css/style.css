@@ -137,6 +137,11 @@ body {
   transform: translateX(-50%);
 }
 
+.container-two .btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .container-three {
   position: relative;
   top: 60vh;
@@ -240,4 +245,26 @@ footer {
   font-size: 16pt;
   border-bottom: 2px solid #000;
   color: #000;
+}
+
+.container-calculator-1 {
+  margin-top: 80pt;
+  position: relative;
+}
+
+.container-calculator-1 .calculator-images {
+  width: 25vw;
+  height: 25vh;
+  border-radius: 8pt;
+  display: flex;
+}
+
+.container-calculator-1 .calculator-images .everest {
+  background: url("https://images.pexels.com/photos/4454855/pexels-photo-4454855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.container-calculator-1 .calculator-images .barrier-reef {
+  background: url("https://images.pexels.com/photos/3390587/pexels-photo-3390587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+    no-repeat center center/cover;
 }
