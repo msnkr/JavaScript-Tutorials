@@ -308,3 +308,15 @@ footer {
   background: url("https://images.pexels.com/photos/16769950/pexels-photo-16769950/free-photo-of-a-train-to-machu-picchu-riding-in-the-valley.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
     no-repeat center center/cover;
 }
+
+.create-dest {
+  display: block;
+}
+
+.adventure {
+  display: block;
+}
+
+.adventure .dest {
+  margin: 0 8pt;
+}

@@ -1,7 +1,7 @@
 <%- include("partials/navbar") -%>
 <body>
     <div class="container-calculator-1">
-        <h4>Choose your destination</h4>
+        <h4>Choose one of our predefined destination</h4>
         <div class="calculator-images">
             <div class="calc-image everest">
                 <p class="calc-text">Mount Everest Base Camp</p>
@@ -19,7 +19,16 @@
         <h4>Or create your next destination</h4>
     </div>
     <div class="create-dest">
-        
+        <h4>What would you like to do? </h4>    
+
+        <div class="adventure">
+            <% adventures.forEach(adventure => { %>
+                <div class="dest">
+                    <label for="<%= adventure %>"><%= adventure %></label>
+                    <input type="checkbox" name="<%= adventure %>" id="<%= adventure %>">
+                </div>
+            <% }) %>
+        </div>
     </div>
 </body>
 <%- include("partials/footer") -%>
