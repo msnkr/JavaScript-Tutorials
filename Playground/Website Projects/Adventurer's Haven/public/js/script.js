@@ -1,5 +1,6 @@
 const images = document.querySelectorAll(".image");
 const calcImage = document.querySelectorAll(".calc-image");
+const showMoreBtn = document.querySelectorAll(".show-items");
 
 // Events
 images.forEach((image) => {
