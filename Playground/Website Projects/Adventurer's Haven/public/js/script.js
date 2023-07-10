@@ -1,8 +1,6 @@
 const images = document.querySelectorAll(".image");
 const calcImage = document.querySelectorAll(".calc-image");
 
-const options = [];
-
 // Events
 images.forEach((image) => {
   image.addEventListener("mouseover", (e) => {

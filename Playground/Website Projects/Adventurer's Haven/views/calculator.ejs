@@ -1,34 +1,8 @@
 <%- include("partials/navbar") -%>
 <body>
-    <div class="container-calculator-1">
-        <h4>Choose one of our predefined destination</h4>
-        <div class="calculator-images">
-            <div class="calc-image everest">
-                <p class="calc-text">Mount Everest Base Camp</p>
-            </div>
-            <div class="calc-image barrier-reef">
-                <p class="calc-text">Great Barrier Reef</p>
-            </div>
-            <div class="calc-image patagonia">
-                <p class="calc-text">Patagonia</p>
-            </div>
-            <div class="calc-image machu-pichu">
-                <p class="calc-text">Machu Pichu</p>
-            </div>
-        </div>
-        <h4>Or create your next destination</h4>
-    </div>
-    <div class="create-dest">
-        <h4>What would you like to do? </h4>    
-
-        <div class="adventure">
-            <% adventures.forEach(adventure => { %>
-                <div class="dest">
-                    <label for="<%= adventure %>"><%= adventure %></label>
-                    <input type="checkbox" name="<%= adventure %>" id="<%= adventure %>">
-                </div>
-            <% }) %>
-        </div>
+    <h4>Try our pre-picked adventures recommended by our trusty guides</h4>
+    <div class="adventures">
+        
     </div>
 </body>
 <%- include("partials/footer") -%>
