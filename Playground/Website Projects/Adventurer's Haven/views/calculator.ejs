@@ -2,7 +2,19 @@
 <body>
     <h4>Try our pre-picked adventures recommended by our trusty guides</h4>
     <div class="adventures">
-        
+       <div class="adventure-name">
+        <% adventures.forEach(adventure=> { %>
+            <div class="adventure-image">
+                <%= adventure.image %>
+            </div>
+            <h4><%= adventure.name %></h4>
+            <ul>
+                <% adventure.activity.forEach(activity => { %>
+                    <li><%= activity %></li>
+                <% }) %>
+            </ul>
+        <% }) %>
+       </div>
     </div>
 </body>
 <%- include("partials/footer") -%>
