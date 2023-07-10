@@ -1,3 +1,18 @@
 <%- include("partials/navbar") -%>
-<body></body>
+<body>
+  <div class="container-2">
+    <h4>Try one of our predefined holidays</h4>
+    <% adventures.forEach(adventure => { %>
+    <h4><%= adventure.name %> <i class="arrow bi bi-arrow-down"></i></h4>
+    <div class="adventure-info">
+      <img class="hidden" src="<%= adventure.image %>" alt="" srcset="" />
+    </div>
+    <ul class="adventure-list">
+      <% adventure.forEach(listItem => { %>
+      <li class="adventure-list-item"><%= listItem.activity %></li>
+      <% }) %>
+    </ul>
+    <% }) %>
+  </div>
+</body>
 <%- include("partials/footer") -%>

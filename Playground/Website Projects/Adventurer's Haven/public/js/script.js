@@ -1,6 +1,6 @@
 const images = document.querySelectorAll(".image");
 const calcImage = document.querySelectorAll(".calc-image");
-const showMoreBtn = document.querySelectorAll(".show-items");
+const arrowBtn = document.querySelectorAll(".arrow");
 
 // Events
 images.forEach((image) => {
@@ -22,5 +22,14 @@ calcImage.forEach((image) => {
   image.addEventListener("mouseout", () => {
     let paragraphText = image.querySelector(".calc-text");
     paragraphText.classList.remove("active");
+  });
+});
+
+arrowBtn.forEach((arrow) => {
+  arrow.addEventListener("click", (event) => {
+    let arrowElement = event.target;
+    let imgElement =
+      arrowElement.parentNode.nextElementSibling.querySelector("img");
+    imgElement.classList.toggle("hidden");
   });
 });
