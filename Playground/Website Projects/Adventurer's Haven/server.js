@@ -5,7 +5,6 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-
 const holidayDestinations = [
   {
     name: "Santorini, Greece",
@@ -14,9 +13,10 @@ const holidayDestinations = [
       "Volcano Hike and Hot Springs",
       "Wine Tasting Tour",
       "Exploring Oia Village",
-      "Water Sports at Perissa Beach"
+      "Water Sports at Perissa Beach",
     ],
-    image: "https://images.pexels.com/photos/16771738/pexels-photo-16771738/free-photo-of-beautiful-thira-on-the-greek-island-santorini.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image:
+      "https://images.pexels.com/photos/16771738/pexels-photo-16771738/free-photo-of-beautiful-thira-on-the-greek-island-santorini.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Bali, Indonesia",
@@ -25,9 +25,10 @@ const holidayDestinations = [
       "Ubud Monkey Forest",
       "Tanah Lot Temple Visit",
       "Tegalalang Rice Terraces",
-      "Snorkeling in Menjangan Island"
+      "Snorkeling in Menjangan Island",
     ],
-    image: "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400"
+    image:
+      "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   {
     name: "Paris, France",
@@ -36,9 +37,10 @@ const holidayDestinations = [
       "Louvre Museum Tour",
       "Seine River Cruise",
       "Montmartre Walking Tour",
-      "Day Trip to Palace of Versailles"
+      "Day Trip to Palace of Versailles",
     ],
-    image: "https://images.pexels.com/photos/12160606/pexels-photo-12160606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image:
+      "https://images.pexels.com/photos/12160606/pexels-photo-12160606.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Maldives",
@@ -47,9 +49,10 @@ const holidayDestinations = [
       "Dolphin Watching",
       "Island Hopping",
       "Spa and Wellness Retreat",
-      "Scenic Seaplane Flight"
+      "Scenic Seaplane Flight",
     ],
-    image: "https://images.pexels.com/photos/2880801/pexels-photo-2880801.jpeg?auto=compress&cs=tinysrgb&w=400"
+    image:
+      "https://images.pexels.com/photos/2880801/pexels-photo-2880801.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   {
     name: "New York City, USA",
@@ -58,9 +61,10 @@ const holidayDestinations = [
       "Times Square Exploration",
       "Central Park Bike Ride",
       "Statue of Liberty Cruise",
-      "Museum of Modern Art Visit"
+      "Museum of Modern Art Visit",
     ],
-    image: "https://images.pexels.com/photos/17424949/pexels-photo-17424949/free-photo-of-manhattan-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image:
+      "https://images.pexels.com/photos/17424949/pexels-photo-17424949/free-photo-of-manhattan-at-night.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Tokyo, Japan",
@@ -69,9 +73,10 @@ const holidayDestinations = [
       "Shinjuku Gyoen National Garden",
       "Tokyo Disneyland or DisneySea",
       "Tsukiji Fish Market Visit",
-      "Harajuku Shopping and Street Food"
+      "Harajuku Shopping and Street Food",
     ],
-    image: "https://images.pexels.com/photos/5466393/pexels-photo-5466393.jpeg?auto=compress&cs=tinysrgb&w=400"
+    image:
+      "https://images.pexels.com/photos/5466393/pexels-photo-5466393.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   {
     name: "Rome, Italy",
@@ -80,9 +85,10 @@ const holidayDestinations = [
       "Vatican City and Sistine Chapel Visit",
       "Trevi Fountain Experience",
       "Roman Forum Exploration",
-      "Piazza Navona and Pantheon Visit"
+      "Piazza Navona and Pantheon Visit",
     ],
-    image: "https://images.pexels.com/photos/3848420/pexels-photo-3848420.jpeg?auto=compress&cs=tinysrgb&w=400"
+    image:
+      "https://images.pexels.com/photos/3848420/pexels-photo-3848420.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   {
     name: "Cape Town, South Africa",
@@ -91,9 +97,10 @@ const holidayDestinations = [
       "Cape Peninsula Tour",
       "Robben Island Visit",
       "Wine Tasting in Stellenbosch",
-      "Boulders Beach Penguin Colony"
+      "Boulders Beach Penguin Colony",
     ],
-    image: "https://images.pexels.com/photos/9324233/pexels-photo-9324233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image:
+      "https://images.pexels.com/photos/9324233/pexels-photo-9324233.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Rio de Janeiro, Brazil",
@@ -102,9 +109,10 @@ const holidayDestinations = [
       "Sugarloaf Mountain Cable Car Ride",
       "Copacabana Beach Relaxation",
       "Tijuca Forest Jeep Tour",
-      "Samba Dancing Experience"
+      "Samba Dancing Experience",
     ],
-    image: "https://images.pexels.com/photos/10254834/pexels-photo-10254834.jpeg?auto=compress&cs=tinysrgb&w=400"
+    image:
+      "https://images.pexels.com/photos/10254834/pexels-photo-10254834.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   {
     name: "Sydney, Australia",
@@ -113,10 +121,11 @@ const holidayDestinations = [
       "Sydney Opera House Tour",
       "Bondi to Coogee Coastal Walk",
       "Taronga Zoo Visit",
-      "Darling Harbour Cruise"
+      "Darling Harbour Cruise",
     ],
-    image: "https://images.pexels.com/photos/1680249/pexels-photo-1680249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-  }
+    image:
+      "https://images.pexels.com/photos/1680249/pexels-photo-1680249.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
 ];
 
 app.get("/", (req, res) => {
@@ -124,7 +133,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/calculator", (req, res) => {
-  res.render("calculator", {adventures: holidayDestinations});
+  res.render("calculator", { adventures: holidayDestinations });
 });
 
 app.listen(3000, () => console.log("running"));
