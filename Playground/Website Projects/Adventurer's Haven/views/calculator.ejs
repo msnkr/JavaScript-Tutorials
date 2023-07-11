@@ -5,7 +5,9 @@
     <div class="adventure">
       <% adventures.forEach(adventure => { %>
       <div class="adventure-2">
-        <h4><%= adventure.name %> <i class="arrow bi bi-arrow-down"></i></h4>
+        <h4>
+          <%= adventure.name %> <i class="arrow hidden bi bi-arrow-down"></i>
+        </h4>
         <div class="adventure-info">
           <img class="hidden" src="<%= adventure.image %>" alt="" srcset="" />
         </div>
