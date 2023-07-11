@@ -24,15 +24,3 @@ calcImage.forEach((image) => {
     paragraphText.classList.remove("active");
   });
 });
-
-arrowBtn.forEach((arrow) => {
-  arrow.addEventListener("click", (event) => {
-    let arrowElement = event.target;
-    let imgElement =
-      arrowElement.parentNode.nextElementSibling.querySelector("img");
-    imgElement.classList.toggle("hidden");
-    let ulElement =
-      arrowElement.parentNode.nextElementSibling.nextElementSibling;
-    ulElement.classList.toggle("hidden");
-  });
-});
