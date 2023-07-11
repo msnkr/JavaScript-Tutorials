@@ -31,5 +31,8 @@ arrowBtn.forEach((arrow) => {
     let imgElement =
       arrowElement.parentNode.nextElementSibling.querySelector("img");
     imgElement.classList.toggle("hidden");
+    let ulElement =
+      arrowElement.parentNode.nextElementSibling.nextElementSibling;
+    ulElement.classList.toggle("hidden");
   });
 });
