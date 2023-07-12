@@ -4,92 +4,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-
-const activitiesList = [
-  "Taking a scenic helicopter ride",
-  "Taking a hot air balloon ride",
-  "Exploring local markets",
-  "Shopping for unique crafts",
-  "Shopping for souvenirs",
-  "Going on a wine tour",
-  "Going on a brewery tour",
-  "Tasting local beverages",
-  "Taking a cooking class",
-  "Learning how to prepare local cuisine",
-  "Visiting botanical gardens",
-  "Enjoying nature walks",
-  "Attending a sports event",
-  "Participating in recreational activities like golf",
-  "Participating in recreational activities like tennis",
-  "Going on a wildlife safari",
-  "Going on a nature excursion",
-  "Observing native animals",
-  "Visiting historical sites",
-  "Learning about the destination's heritage",
-  "Participating in a cultural exchange program",
-  "Participating in a homestay",
-  "Immersing in the local culture",
-  "Going on a photography tour",
-  "Capturing stunning landscapes",
-  "Capturing stunning architecture",
-  "Participating in a yoga retreat",
-  "Participating in a meditation retreat",
-  "Rejuvenating and finding inner peace",
-  "Exploring underwater wonders through snorkeling",
-  "Exploring underwater wonders through diving expeditions",
-  "Attending local music concerts",
-  "Attending theater performances",
-  "Attending dance shows",
-  "Engaging in adrenaline-pumping activities like skydiving",
-  "Engaging in adrenaline-pumping activities like canyoning",
-  "Engaging in adrenaline-pumping activities like rock climbing",
-  "Taking a scenic train ride",
-  "Taking a scenic boat ride",
-  "Enjoying breathtaking views along the way",
-  "Visiting theme parks",
-  "Enjoying thrilling rides",
-  "Enjoying entertainment",
-  "Participating in water-based activities like jet skiing",
-  "Participating in water-based activities like parasailing",
-  "Participating in water-based activities like paddleboarding",
-  "Going on a road trip",
-  "Exploring multiple destinations",
-  "Exploring scenic routes",
-  "Joining a guided hiking tour",
-  "Joining a guided trekking tour",
-  "Discovering remote and beautiful trails",
-  "Attending local festivals",
-  "Experiencing the vibrant atmosphere",
-  "Taking a cruise",
-  "Taking a sailing trip",
-  "Exploring coastal destinations",
-  "Exploring island destinations",
-  "Engaging in winter sports like snowboarding",
-  "Engaging in winter sports like skiing",
-  "Engaging in winter sports like snowshoeing",
-  "Going on a camping adventure",
-  "Going on a glamping adventure",
-  "Connecting with nature",
-  "Taking a spa day",
-  "Indulging in wellness activities",
-  "Indulging in wellness treatments",
-  "Visiting famous film locations",
-  "Visiting famous TV show locations",
-  "Adding a touch of pop culture",
-  "Exploring caves through guided tours",
-  "Exploring underground formations through guided tours",
-  "Participating in a language course",
-  "Participating in cultural workshops",
-  "Learning something new",
-  "Going on a fishing trip",
-  "Chartering a boat for deep-sea fishing",
-  "Attending cooking demonstrations",
-  "Attending food festivals",
-  "Savoring local delicacies",
-  "Engaging in volunteer work",
-  "Engaging in community service",
-  "Giving back to the destination",
-];
+const activites = [];
 
 const holidayDest = [
   {
@@ -244,12 +159,20 @@ const holidayDest = [
   },
 ];
 
+holidayDest.forEach((holiday) => {
+  holiday.activities.forEach((activity) => {
+    if (!activites.includes(activity)) {
+      activites.push(activity);
+    }
+  });
+});
+
 app.get("/", (req, res) => {
   res.render("home");
 });
 
 app.get("/calculator", (req, res) => {
-  res.render("calculator", { activities: activitiesList });
+  res.render("calculator", { activites: activites });
 });
 
 app.listen(3000, () => console.log("running"));
