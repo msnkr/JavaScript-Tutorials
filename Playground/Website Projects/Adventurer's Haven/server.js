@@ -7,7 +7,9 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
+const options = [];
 const activities = [];
 const holidayDest = [
   {
@@ -170,9 +172,9 @@ holidayDest.forEach((holiday) => {
   });
 });
 
-app.post("/submit", (req, res) => {
-  const options = req.body.options;
-  console.log(options);
+app.post("/calculator", (req, res) => {
+  options.push(req.body.options);
+  res.redirect("calculator");
 });
 
 app.get("/", (req, res) => {
@@ -180,7 +182,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/calculator", (req, res) => {
-  res.render("calculator", { activities: activities });
+  res.render("calculator", { activities: activities, options: options });
 });
 
 app.listen(3000, () => console.log("running"));
