@@ -5,9 +5,11 @@
       Select the activities you would like to try and we'll match them with the
       locations we offer
     </h4>
-    <% activites.forEach(activity => { %>
-      <label for=""><%= activity %></label>
-      <input type="checkbox" name="" id="">
+    <% activities.forEach(activity => { %>
+      <div class="activity">
+        <label for=""><%= activity %></label>
+        <input type="checkbox" name="" id="">
+      </div>
     <% }) %>
 </body>
 <%- include("partials/footer") -%>

@@ -4,7 +4,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-const activites = [];
+const activities = [];
 
 const holidayDest = [
   {
@@ -161,8 +161,8 @@ const holidayDest = [
 
 holidayDest.forEach((holiday) => {
   holiday.activities.forEach((activity) => {
-    if (!activites.includes(activity)) {
-      activites.push(activity);
+    if (!activities.includes(activity)) {
+      activities.push(activity);
     }
   });
 });
@@ -172,7 +172,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/calculator", (req, res) => {
-  res.render("calculator", { activites: activites });
+  res.render("calculator", { activities: activities });
 });
 
 app.listen(3000, () => console.log("running"));
