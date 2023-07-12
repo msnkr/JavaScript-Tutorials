@@ -266,3 +266,12 @@ footer {
   border-radius: 8pt;
   margin: 4pt;
 }
+
+.activity label {
+  margin-right: 4pt;
+}
+
+.container-2 .btn {
+  display: block;
+  margin-top: 20pt;
+}

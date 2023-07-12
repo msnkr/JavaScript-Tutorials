@@ -1,11 +1,14 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-const activities = [];
 
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const activities = [];
 const holidayDest = [
   {
     country: "Paris, France",
@@ -165,6 +168,11 @@ holidayDest.forEach((holiday) => {
       activities.push(activity);
     }
   });
+});
+
+app.post("/submit", (req, res) => {
+  const options = req.body.options;
+  console.log(options);
 });
 
 app.get("/", (req, res) => {

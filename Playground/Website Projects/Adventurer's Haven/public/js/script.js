@@ -1,6 +1,6 @@
 const images = document.querySelectorAll(".image");
 const calcImage = document.querySelectorAll(".calc-image");
-const arrowBtn = document.querySelectorAll(".arrow");
+const calcBtn = document.querySelector(".calc-btn");
 
 // Events
 images.forEach((image) => {
