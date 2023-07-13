@@ -1,15 +1,3 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-
-const app = express();
-
-app.set("view engine", "ejs");
-app.use(express.static("public"));
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-const activities = [];
 const holidayDest = [
   {
     country: "Paris, France",
@@ -162,42 +150,13 @@ const holidayDest = [
     ],
   },
 ];
-const newDest = [];
 
-holidayDest.forEach((holiday) => {
-  holiday.activities.forEach((activity) => {
-    if (!activities.includes(activity)) {
-      activities.push(activity);
+const options = ["Attending theater performances", "Hiking in nature reserves"];
+
+holidayDest.forEach((destination) => {
+  options.forEach((option) => {
+    if (destination.activities.includes(option)) {
+      console.log(destination);
     }
   });
 });
-
-function lookForOpt(holidayActivities) {
-  holidayDest.forEach((destination) => {
-    holidayActivities.forEach((activity) => {
-      if (destination.activities.includes(activity)) {
-        newDest.push(destination);
-      }
-    });
-  });
-}
-
-app.get("/options", (req, res) => {
-  console.log(newDest);
-  res.render("options", { options: newDest });
-});
-
-app.post("/calculator", (req, res) => {
-  lookForOpt(req.body.options);
-  res.redirect("options");
-});
-
-app.get("/", (req, res) => {
-  res.render("home");
-});
-
-app.get("/calculator", (req, res) => {
-  res.render("calculator", { activities: activities });
-});
-
-app.listen(3000, () => console.log("running"));

@@ -9,14 +9,10 @@
       <form action="/calculator" method="post">
         <div class="activity">
         <label for="<%= activity %>"><%= activity %></label>
-        <input type="checkbox" name="options" id="<%= activity %>">
+        <input type="checkbox" name="options" value="<%= activity %>" id="<%= activity %>">
       </div>
     <% }) %>
     <button class="btn calc-btn" type="submit" id>Search</button>
       </form>
-
-      <% options.forEach(option => { %>
-        <p><%= option %></p>
-      <% }) %>
 </body>
 <%- include("partials/footer") -%>
