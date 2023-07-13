@@ -162,8 +162,10 @@ const holidayDest = [
     ],
   },
 ];
-const newDest = [];
 
+let destOptions = [];
+
+// Remove duplicate destination activities
 holidayDest.forEach((holiday) => {
   holiday.activities.forEach((activity) => {
     if (!activities.includes(activity)) {
@@ -172,30 +174,23 @@ holidayDest.forEach((holiday) => {
   });
 });
 
-function lookForOpt(holidayActivities) {
-  holidayDest.forEach((destination) => {
-    holidayActivities.forEach((activity) => {
-      if (destination.activities.includes(activity)) {
-        newDest.push(destination);
-      }
-    });
-  });
-}
-
+// View your selected options
 app.get("/options", (req, res) => {
-  console.log(newDest);
-  res.render("options", { options: newDest });
+  res.render("options");
 });
 
+// Get data from calculator for your options
 app.post("/calculator", (req, res) => {
-  lookForOpt(req.body.options);
+  destOptions.push(req.body.options);
   res.redirect("options");
 });
 
+// Home
 app.get("/", (req, res) => {
   res.render("home");
 });
 
+// Calculate Page
 app.get("/calculator", (req, res) => {
   res.render("calculator", { activities: activities });
 });
