@@ -165,6 +165,9 @@ const holidayDest = [
 
 let destOptions = [];
 
+// Check destOptions against holidayDest and filter destinations
+//
+
 // Remove duplicate destination activities
 holidayDest.forEach((holiday) => {
   holiday.activities.forEach((activity) => {
@@ -176,12 +179,14 @@ holidayDest.forEach((holiday) => {
 
 // View your selected options
 app.get("/options", (req, res) => {
+  console.log(optionsList.country);
   res.render("options");
 });
 
 // Get data from calculator for your options
 app.post("/calculator", (req, res) => {
   destOptions.push(req.body.options);
+  filterDest(destOptions);
   res.redirect("options");
 });
 

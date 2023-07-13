@@ -1,3 +1,4 @@
-<% options.forEach(option => { %>
-<p><%= option.activity %></p>
-<% }) %>
+<%- include("partials/navbar") %> <% optionsList.forEach(option => { %>
+<h4><%= option.country %></h4>
+
+<% }) %> <%- include("partials/footer") %>
