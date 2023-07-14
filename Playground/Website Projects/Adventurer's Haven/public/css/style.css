@@ -275,3 +275,14 @@ footer {
   display: block;
   margin-top: 20pt;
 }
+
+.your-options {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.your-options h4 {
+  color: var(--primary);
+}

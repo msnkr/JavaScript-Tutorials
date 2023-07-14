@@ -1,10 +1,17 @@
 <%- include("partials/navbar") %>
 <h4>Your chosen options are:</h4>
-<% destOptions.forEach(option => { %>
-<div class="options">
-  <h4><%= option.country %></h4>
-  <% option.activities.forEach(activity => { %>
-  <p><%= activity %></p>
-  <% }) %>
+<div class="your-options">
+  <% destOptions.forEach(option => { %>
+  <div class="options">
+    <h4><%= option.country %></h4>
+    <% option.activities.forEach(activity => { %>
+    <div class="options-activity">
+      <p><%= activity %></p>
+    </div>
+    <% }) %>
+    <div class="option-image">
+      <img src="<%= option.image %>" alt="" />
+    </div>
+  </div>
 </div>
 <% }) %> <%- include("partials/footer") %>

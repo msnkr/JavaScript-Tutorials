@@ -20,6 +20,8 @@ const holidayDest = [
       "Attending theater performances",
       "Taking a scenic boat ride",
     ],
+    image:
+      "https://images.pexels.com/photos/16934112/pexels-photo-16934112/free-photo-of-panorama-or-paris-with-orthodox-church-and-sacre-coeur-basilica.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Rome, Italy",
@@ -30,6 +32,8 @@ const holidayDest = [
       "Participating in a cultural exchange program",
       "Attending local music concerts",
     ],
+    image:
+      "https://images.pexels.com/photos/3722811/pexels-photo-3722811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Barcelona, Spain",
@@ -40,6 +44,8 @@ const holidayDest = [
       "Attending local festivals",
       "Enjoying nature walks",
     ],
+    image:
+      "https://images.pexels.com/photos/16983976/pexels-photo-16983976/free-photo-of-building-of-la-sagrada-familia.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Bali, Indonesia",
@@ -50,6 +56,8 @@ const holidayDest = [
       "Taking a cooking class",
       "Going on a wildlife safari",
     ],
+    image:
+      "https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Santorini, Greece",
@@ -60,6 +68,8 @@ const holidayDest = [
       "Capturing stunning landscapes",
       "Enjoying nature walks",
     ],
+    image:
+      "https://images.pexels.com/photos/3264723/pexels-photo-3264723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "New York City, USA",
@@ -70,6 +80,8 @@ const holidayDest = [
       "Taking a scenic helicopter ride",
       "Participating in recreational activities like tennis",
     ],
+    image:
+      "https://images.pexels.com/photos/5034340/pexels-photo-5034340.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Tokyo, Japan",
@@ -80,6 +92,8 @@ const holidayDest = [
       "Attending local music concerts",
       "Taking a photography tour",
     ],
+    image:
+      "https://images.pexels.com/photos/3800117/pexels-photo-3800117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Phuket, Thailand",
@@ -90,6 +104,8 @@ const holidayDest = [
       "Going on a nature excursion",
       "Taking a cooking class",
     ],
+    image:
+      "https://images.pexels.com/photos/8599621/pexels-photo-8599621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Prague, Czech Republic",
@@ -100,6 +116,8 @@ const holidayDest = [
       "Attending theater performances",
       "Joining a guided walking tour",
     ],
+    image:
+      "https://images.pexels.com/photos/14455695/pexels-photo-14455695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Machu Picchu, Peru",
@@ -110,6 +128,8 @@ const holidayDest = [
       "Capturing stunning landscapes",
       "Participating in a cultural exchange program",
     ],
+    image:
+      "https://images.pexels.com/photos/3727260/pexels-photo-3727260.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Cairo, Egypt",
@@ -120,6 +140,8 @@ const holidayDest = [
       "Attending local music concerts",
       "Participating in a cultural exchange program",
     ],
+    image:
+      "https://images.pexels.com/photos/3243027/pexels-photo-3243027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Phnom Penh, Cambodia",
@@ -130,6 +152,8 @@ const holidayDest = [
       "Attending local festivals",
       "Taking a boat tour on the Mekong River",
     ],
+    image:
+      "https://images.pexels.com/photos/9939690/pexels-photo-9939690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Seychelles",
@@ -140,6 +164,8 @@ const holidayDest = [
       "Hiking in nature reserves",
       "Indulging in wellness activities",
     ],
+    image:
+      "https://images.pexels.com/photos/11645028/pexels-photo-11645028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Istanbul, Turkey",
@@ -150,6 +176,8 @@ const holidayDest = [
       "Attending local music concerts",
       "Indulging in local cuisine",
     ],
+    image:
+      "https://images.pexels.com/photos/16982831/pexels-photo-16982831/free-photo-of-tourists-walking-in-istanbul-old-town.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     country: "Venice, Italy",
@@ -160,6 +188,8 @@ const holidayDest = [
       "Attending theater performances",
       "Capturing stunning architecture",
     ],
+    image:
+      "https://images.pexels.com/photos/2954558/pexels-photo-2954558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 
@@ -168,6 +198,7 @@ let yourHoliday = [];
 
 // Check destOptions against holidayDest and filter destinations
 function filterDest(options) {
+  console.log(options);
   const findOptions = options[0];
   findOptions.forEach((option) => {
     holidayDest.forEach((holiday) => {
@@ -194,6 +225,7 @@ app.get("/options", (req, res) => {
 
 // Get data from calculator for your options
 app.post("/calculator", (req, res) => {
+  destOptions = [];
   destOptions.push(req.body.options);
   filterDest(destOptions);
   res.redirect("options");
