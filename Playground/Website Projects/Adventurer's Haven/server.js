@@ -164,9 +164,19 @@ const holidayDest = [
 ];
 
 let destOptions = [];
+let yourHoliday = [];
 
 // Check destOptions against holidayDest and filter destinations
-//
+function filterDest(options) {
+  const findOptions = options[0];
+  findOptions.forEach((option) => {
+    holidayDest.forEach((holiday) => {
+      if (holiday.activities.includes(option)) {
+        yourHoliday.push(holiday);
+      }
+    });
+  });
+}
 
 // Remove duplicate destination activities
 holidayDest.forEach((holiday) => {
@@ -179,8 +189,7 @@ holidayDest.forEach((holiday) => {
 
 // View your selected options
 app.get("/options", (req, res) => {
-  console.log(optionsList.country);
-  res.render("options");
+  res.render("options", { destOptions: yourHoliday });
 });
 
 // Get data from calculator for your options
