@@ -1,10 +1,12 @@
 <%- include("partials/navbar") %>
-<h4>Your chosen options are:</h4>
-<% destOptions.forEach(option => { %>
-<div class="options">
-  <h4><%= option.country %></h4>
-  <% option.activities.forEach(activity => { %>
-  <p><%= activity %></p>
-  <% }) %>
+<div class="container-options">
+  <h4>Your chosen options are:</h4>
+  <% destOptions.forEach(option => { %>
+  <div class="options">
+    <h4><%= option.country %></h4>
+    <% option.activities.forEach(activity => { %>
+    <p><%= activity %></p>
+    <% }) %>
+  </div>
 </div>
 <% }) %> <%- include("partials/footer") %>

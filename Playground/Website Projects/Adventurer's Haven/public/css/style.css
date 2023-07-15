@@ -274,4 +274,16 @@ footer {
 .container-2 .btn {
   display: block;
   margin-top: 20pt;
+  width: 100%;
+}
+
+.options {
+  margin: 20pt 0;
+  border: 2px solid var(--primary);
+  width: 250px;
+  padding: 20pt;
+}
+
+.options p {
+  margin: 0;
 }

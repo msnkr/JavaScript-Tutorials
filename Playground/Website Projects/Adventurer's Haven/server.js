@@ -209,4 +209,4 @@ app.get("/calculator", (req, res) => {
   res.render("calculator", { activities: activities });
 });
 
-app.listen(3000, () => console.log("running"));
+app.listen(3000, () => console.log("https:localhost:3000"));
