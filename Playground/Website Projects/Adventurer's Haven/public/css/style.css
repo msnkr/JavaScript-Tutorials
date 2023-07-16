@@ -75,6 +75,10 @@ body {
   height: 80pt;
 }
 
+.hamburger {
+  display: none;
+}
+
 .container-one {
   margin-top: 80pt;
   display: flex;
@@ -308,6 +312,7 @@ footer {
   .navbar-list a:last-child {
     width: 100%;
   }
+
 
   .container-one {
     display: block;
