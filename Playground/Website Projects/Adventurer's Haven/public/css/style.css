@@ -287,3 +287,60 @@ footer {
 .options p {
   margin: 0;
 }
+
+@media screen and (max-width:800px) {
+  .navbar-list a {
+    display: block;
+    border: 2px solid transparent;
+    text-align: end;
+    margin: 8pt 0;
+    width: 100%;
+  }
+
+  .navbar-list a:hover {
+    border-bottom: 2px solid transparent;
+  }
+
+  .navbar-list a:last-child {
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .navbar-list a:last-child {
+    width: 100%;
+  }
+
+  .container-one {
+    display: block;
+  }
+
+  .container-one .left-side {
+    width: 100%;
+    padding: 0 18pt;
+    text-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.3);
+  }
+  
+  .container-one .left-side h1 {
+    font-size: 24pt;
+    font-family: "Lora", serif;
+  }
+  
+  .container-one .right-side {
+    background: url("https://images.pexels.com/photos/1738622/pexels-photo-1738622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+      no-repeat center center/cover;
+    width: 90vw;
+    height: 50vh;
+    border-radius: 8pt;
+    margin-left: -10pt;
+  }
+
+  .container-one .btn {
+    cursor: pointer;
+    background-color: var(--darkest);
+    color: white;
+    padding: 8pt 12pt;
+    border: none;
+    font-weight: bold;
+    background-color: var(--primary);
+    margin-bottom: 20pt;
+  }
+}
