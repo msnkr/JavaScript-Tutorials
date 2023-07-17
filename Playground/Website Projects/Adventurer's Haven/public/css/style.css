@@ -281,15 +281,23 @@ footer {
   width: 100%;
 }
 
+.your-options {
+  background-color: rebeccapurple;
+}
+
 .options {
   margin: 20pt 0;
-  border: 2px solid var(--primary);
-  width: 250px;
+  width: 400px;
   padding: 20pt;
 }
 
 .options p {
   margin: 0;
+}
+
+.option-image img {
+  width: 20vw;
+  margin-top: 8pt;
 }
 
 @media screen and (max-width: 800px) {
@@ -299,6 +307,7 @@ footer {
     text-align: end;
     margin: 8pt 0;
     width: 100%;
+    font-size: 12pt;
   }
 
   .navbar-list a:hover {
@@ -346,5 +355,12 @@ footer {
     font-weight: bold;
     background-color: var(--primary);
     margin-bottom: 20pt;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar-list a {
+    font-size: 11pt;
+    margin: 4pt;
   }
 }
