@@ -195,6 +195,10 @@ const holidayDest = [
 
 let destOptions = [];
 let yourHoliday = [];
+let anotherList = [];
+
+// Filter again for duplicates in yourHoliday
+function anotherFilter(yourHoliday) {}
 
 // Check destOptions against holidayDest and filter destinations
 function filterDest(options) {
@@ -207,6 +211,7 @@ function filterDest(options) {
       }
     });
   });
+  anotherFilter(yourHoliday);
 }
 
 // Remove duplicate destination activities
@@ -220,7 +225,7 @@ holidayDest.forEach((holiday) => {
 
 // View your selected options
 app.get("/options", (req, res) => {
-  res.render("options", { destOptions: yourHoliday });
+  res.render("options", { destOptions: anotherList });
 });
 
 // Get data from calculator for your options
@@ -238,7 +243,10 @@ app.get("/", (req, res) => {
 
 // Calculate Page
 app.get("/calculator", (req, res) => {
+  yourHoliday = [];
+  destOptions = [];
+
   res.render("calculator", { activities: activities });
 });
 
-app.listen(3000, () => console.log("running"));
+app.listen(3000, () => console.log("https:localhost:3000"));
