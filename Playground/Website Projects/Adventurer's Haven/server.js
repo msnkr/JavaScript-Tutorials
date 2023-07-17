@@ -195,10 +195,14 @@ const holidayDest = [
 
 let destOptions = [];
 let yourHoliday = [];
-// let anotherList = [];
+let anotherList = [];
 
 // Filter again for duplicates in yourHoliday
-// function anotherFilter(yourHoliday) {}
+function anotherFilter(yourHoliday) {
+  yourHoliday.forEach((holiday) => {
+    console.log(holiday);
+  });
+}
 
 // Check destOptions against holidayDest and filter destinations
 function filterDest(options) {
@@ -210,7 +214,7 @@ function filterDest(options) {
       }
     });
   });
-  // anotherFilter(yourHoliday);
+  anotherFilter(yourHoliday);
 }
 
 // Remove duplicate destination activities
