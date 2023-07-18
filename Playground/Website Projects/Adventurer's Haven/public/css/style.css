@@ -327,12 +327,23 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 8pt;
-  height: 200vh;
+  height: 250vh;
 }
 
 .item {
   max-width: 100%;
   height: 400pt;
+}
+
+.gallery-item-gradient {
+  max-width: 100%;
+  height: 400pt;
+  background-color: rgba(16, 25, 17, 0.7);
+  transition: background-color 0.8s ease-in-out;
+}
+
+.gallery-item-gradient:hover {
+  background-color: rgba(16, 25, 17, 0);
 }
 
 .gallery-item-1 {
@@ -356,37 +367,62 @@ footer {
 }
 
 .gallery-item-6 {
-  background: url("https://images.pexels.com/photos/13905317/pexels-photo-13905317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+  background: url("https://images.pexels.com/photos/17048931/pexels-photo-17048931/free-photo-of-view-of-the-fatih-sultan-mehmet-bridge-over-the-bosphorus-strait-in-istanbul-turkey.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
 .gallery-item-7 {
-  background: url("https://images.pexels.com/photos/13905322/pexels-photo-13905322.jpeg?auto=compress&cs=tinysrgb&w=400")
+  background: url("https://images.pexels.com/photos/17024980/pexels-photo-17024980/free-photo-of-taxi-on-street-with-galata-tower-behind.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
 .gallery-item-8 {
-  background: url("https://images.pexels.com/photos/8599621/pexels-photo-8599621.jpeg?auto=compress&cs=tinysrgb&w=400")
+  background: url("https://images.pexels.com/photos/17043643/pexels-photo-17043643/free-photo-of-buildings-on-sea-shore-in-istanbul.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
 .gallery-item-9 {
-  background: url("https://images.pexels.com/photos/12100193/pexels-photo-12100193.jpeg?auto=compress&cs=tinysrgb&w=400")
+  background: url("https://images.pexels.com/photos/17027038/pexels-photo-17027038/free-photo-of-cityscape-of-istanbul-turkey.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
 .gallery-item-10 {
-  background: url("https://images.pexels.com/photos/10313735/pexels-photo-10313735.jpeg?auto=compress&cs=tinysrgb&w=400")
+  background: url("https://images.pexels.com/photos/1029021/pexels-photo-1029021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
 .gallery-item-11 {
-  background: url("https://images.pexels.com/photos/2930357/pexels-photo-2930357.jpeg?auto=compress&cs=tinysrgb&w=400")
+  background: url("https://images.pexels.com/photos/3264735/pexels-photo-3264735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
 .gallery-item-12 {
-  background: url("https://images.pexels.com/photos/323311/pexels-photo-323311.jpeg?auto=compress&cs=tinysrgb&w=400")
+  background: url("https://images.pexels.com/photos/7026306/pexels-photo-7026306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-13 {
+  background: url("https://images.pexels.com/photos/17077796/pexels-photo-17077796/free-photo-of-palazzo-pesaro-papafava-in-venice.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-14 {
+  background: url("https://images.pexels.com/photos/705782/pexels-photo-705782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-15 {
+  background: url("https://images.pexels.com/photos/161101/venice-church-gondola-italy-161101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-16 {
+  background: url("https://images.pexels.com/photos/5074420/pexels-photo-5074420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-17 {
+  background: url("https://images.pexels.com/photos/1666018/pexels-photo-1666018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     no-repeat center center/cover;
 }
 
@@ -486,5 +522,12 @@ footer {
   .options {
     width: 40vw;
     padding: 16pt;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-container {
+    grid-template-columns: 1fr 1fr;
+    height: 550vh;
   }
 }
