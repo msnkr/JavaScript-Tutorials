@@ -370,8 +370,19 @@ footer {
     margin-bottom: 20pt;
   }
 
+  .your-options {
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 8pt;
+    margin: 0;
+  }
+
+  .options {
+    width: 40vw;
+    padding: 16pt;
+  }
+
   .option-image {
-    width: 20vw;
+    width: 30vw;
     height: 10vh;
     margin-top: 8pt;
   }
@@ -381,5 +392,22 @@ footer {
   .navbar-list a {
     font-size: 11pt;
     margin: 4pt;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-one .right-side {
+    margin-left: -20pt;
+  }
+
+  .your-options {
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 8pt;
+    margin: 0;
+  }
+
+  .options {
+    width: 40vw;
+    padding: 16pt;
   }
 }
