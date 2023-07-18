@@ -322,6 +322,74 @@ footer {
   border-radius: 8pt;
 }
 
+.gallery-container {
+  margin-top: 80pt;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8pt;
+  height: 200vh;
+}
+
+.item {
+  max-width: 100%;
+  height: 400pt;
+}
+
+.gallery-item-1 {
+  background: url("https://images.pexels.com/photos/16978835/pexels-photo-16978835/free-photo-of-place-de-la-republique-in-paris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-2 {
+  background: url("https://images.pexels.com/photos/16946260/pexels-photo-16946260/free-photo-of-eiffel-tower-in-paris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-3 {
+  background: url("https://images.pexels.com/photos/16934179/pexels-photo-16934179/free-photo-of-aerial-panorama-of-rooftops-in-paris.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-5 {
+  background: url("https://images.pexels.com/photos/16934181/pexels-photo-16934181/free-photo-of-low-angle-shot-of-eiffel-tower-seen-through-tree-branches-paris-france.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-6 {
+  background: url("https://images.pexels.com/photos/13905317/pexels-photo-13905317.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+}
+
+.gallery-item-7 {
+  background: url("https://images.pexels.com/photos/13905322/pexels-photo-13905322.jpeg?auto=compress&cs=tinysrgb&w=400")
+    no-repeat center center/cover;
+}
+
+.gallery-item-8 {
+  background: url("https://images.pexels.com/photos/8599621/pexels-photo-8599621.jpeg?auto=compress&cs=tinysrgb&w=400")
+    no-repeat center center/cover;
+}
+
+.gallery-item-9 {
+  background: url("https://images.pexels.com/photos/12100193/pexels-photo-12100193.jpeg?auto=compress&cs=tinysrgb&w=400")
+    no-repeat center center/cover;
+}
+
+.gallery-item-10 {
+  background: url("https://images.pexels.com/photos/10313735/pexels-photo-10313735.jpeg?auto=compress&cs=tinysrgb&w=400")
+    no-repeat center center/cover;
+}
+
+.gallery-item-11 {
+  background: url("https://images.pexels.com/photos/2930357/pexels-photo-2930357.jpeg?auto=compress&cs=tinysrgb&w=400")
+    no-repeat center center/cover;
+}
+
+.gallery-item-12 {
+  background: url("https://images.pexels.com/photos/323311/pexels-photo-323311.jpeg?auto=compress&cs=tinysrgb&w=400")
+    no-repeat center center/cover;
+}
+
 @media screen and (max-width: 800px) {
   .navbar-list a {
     display: block;

@@ -226,6 +226,11 @@ holidayDest.forEach((holiday) => {
   });
 });
 
+// Gallery Tab
+app.get("/gallery", (req, res) => {
+  res.render("gallery");
+});
+
 // View your selected options
 app.get("/options", (req, res) => {
   res.render("options", { destOptions: yourHoliday });
