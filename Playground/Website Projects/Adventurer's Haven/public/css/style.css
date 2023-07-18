@@ -97,7 +97,7 @@ body {
 }
 
 .container-one .right-side {
-  background: url("https://images.pexels.com/photos/1738622/pexels-photo-1738622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+  background: url("https://images.pexels.com/photos/3512846/pexels-photo-3512846.jpeg")
     no-repeat center center/cover;
   width: 90vw;
   height: 50vh;
@@ -235,6 +235,11 @@ body {
   padding: 16pt;
 }
 
+.gallery-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
 footer {
   margin-top: 50vh;
   position: relative;
@@ -336,10 +341,22 @@ footer {
 }
 
 .gallery-item-gradient {
+  position: relative;
   max-width: 100%;
   height: 400pt;
   background-color: rgba(16, 25, 17, 0.7);
   transition: background-color 0.8s ease-in-out;
+}
+
+.gallery-item-gradient p {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  transform: translateX(-25%);
+  text-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.7);
+  font-size: 18pt;
+  text-align: center;
 }
 
 .gallery-item-gradient:hover {
@@ -464,7 +481,7 @@ footer {
   }
 
   .container-one .right-side {
-    background: url("https://images.pexels.com/photos/1738622/pexels-photo-1738622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    background: url("https://images.pexels.com/photos/3512846/pexels-photo-3512846.jpeg")
       no-repeat center center/cover;
     width: 90vw;
     height: 50vh;
