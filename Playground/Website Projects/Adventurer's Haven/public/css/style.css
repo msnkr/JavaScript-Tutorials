@@ -180,9 +180,10 @@ body {
 }
 
 .card h4 a {
-  color: var(--darkest);
+  color: var(--primary);
   text-decoration: none;
-  border-bottom: 2px solid var(--darkest);
+  border-bottom: 2px solid var(--primary);
+  cursor: pointer;
 }
 
 .container-four {
@@ -337,7 +338,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 8pt;
-  height: 250vh;
+  height: 350vh;
 }
 
 .item {
@@ -451,6 +452,53 @@ footer {
     no-repeat center center/cover;
 }
 
+.container-about {
+  padding: 0 80pt;
+  margin-bottom: -180pt;
+}
+
+.about-first-section {
+  margin-bottom: 80pt;
+}
+
+.about-image {
+  margin-left: -120pt;
+  background: url("https://images.pexels.com/photos/8021278/pexels-photo-8021278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
+  width: 100vw;
+  height: 400pt;
+}
+
+.about-second-section h1 {
+  margin-top: 80pt;
+}
+
+.about-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about-item {
+  padding: 30pt;
+  width: 250pt;
+  height: 250pt;
+  box-shadow: 1pt 4pt 16pt rgba(16, 25, 17, 0.7);
+  border-radius: 8pt;
+  margin-bottom: 16pt;
+}
+
+.icon {
+  font-size: 24pt;
+  color: var(--darkest);
+}
+
+.bi-brightness-alt-low-fill {
+  font-size: 32pt;
+}
+
+.about-third-section {
+  margin-top: 80pt;
+}
+
 @media screen and (max-width: 800px) {
   .navbar-list a {
     display: block;
@@ -530,6 +578,9 @@ footer {
   .navbar-list a {
     font-size: 11pt;
     margin: 4pt;
+  }
+  .gallery-item-gradient p {
+    font-size: 12pt;
   }
 }
 

@@ -226,6 +226,11 @@ holidayDest.forEach((holiday) => {
   });
 });
 
+// Guides tab
+app.get("/guide", (req, res) => {
+  res.render("guide");
+});
+
 // About tab
 app.get("/about", (req, res) => {
   res.render("about");
