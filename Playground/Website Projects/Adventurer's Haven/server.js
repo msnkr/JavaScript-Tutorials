@@ -318,11 +318,6 @@ let yourHoliday = [];
 // let anotherList = [];
 
 // Filter again for duplicates in yourHoliday
-// function anotherFilter(yourHoliday) {
-//   yourHoliday.forEach((holiday) => {
-//     console.log(holiday);
-//   });
-// }
 
 // Check destOptions against holidayDest and filter destinations
 function filterDest(options) {
@@ -360,6 +355,8 @@ app.get("/about", (req, res) => {
 app.get("/gallery", (req, res) => {
   res.render("gallery");
 });
+
+// View detail about your option
 
 // View your selected options
 app.get("/options", (req, res) => {
