@@ -1,0 +1,99 @@
+:root {
+  --black: #191825;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 40pt;
+  margin: 0;
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 24pt;
+}
+
+.countdown {
+  margin-bottom: 24pt;
+}
+
+.countdown-answers {
+  background-color: black;
+  width: 120pt;
+  height: 120pt;
+  border-radius: 50%;
+  position: relative;
+}
+
+.countdown-number {
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mode {
+  margin-bottom: 16pt;
+}
+
+.question {
+  margin-bottom: 16pt;
+}
+
+.is-true {
+  margin-bottom: 16pt;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  background-color: black;
+  padding: 8pt 16pt;
+  border: none;
+  margin: 0 8pt;
+  border-radius: 4pt;
+}
+
+.container.hidden {
+  display: none;
+}
+
+.modal-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.congrats {
+  margin-bottom: 24pt;
+}
+
+.modal-container h4 {
+  margin-bottom: 16pt;
+}
+
+.modal-container h2 {
+  margin-bottom: 16pt;
+}
+
+.modal-container .buttons {
+  margin-bottom: 40pt;
+}
+
+.modal-container.hidden {
+  display: none;
+}
