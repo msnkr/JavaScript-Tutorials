@@ -191,6 +191,126 @@ const holidayDest = [
     image:
       "https://images.pexels.com/photos/2954558/pexels-photo-2954558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
+  {
+    country: "Zurich, Switzerland",
+    activities: [
+      "Exploring local markets",
+      "Visiting historical sites",
+      "Taking a scenic boat ride",
+      "Participating in cultural workshops",
+      "Enjoying nature walks",
+    ],
+    image:
+      "https://images.pexels.com/photos/14456692/pexels-photo-14456692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    country: "Auckland, New Zealand",
+    activities: [
+      "Exploring local markets",
+      "Visiting historical sites",
+      "Going on a wine tour",
+      "Taking a scenic helicopter ride",
+      "Hiking in national parks",
+    ],
+    image:
+      "https://images.pexels.com/photos/7250790/pexels-photo-7250790.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    country: "Berlin, Germany",
+    activities: [
+      "Exploring local markets",
+      "Visiting historical sites",
+      "Participating in cultural workshops",
+      "Attending local music concerts",
+      "Taking a boat tour on the Spree River",
+    ],
+    image:
+      "https://images.pexels.com/photos/2917871/pexels-photo-2917871.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    country: "Budapest, Hungary",
+    activities: [
+      "Exploring local markets",
+      "Visiting historical sites",
+      "Taking a scenic boat ride",
+      "Enjoying thermal baths",
+      "Attending local festivals",
+    ],
+    image:
+      "https://images.pexels.com/photos/2350351/pexels-photo-2350351.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    country: "Cape Verde",
+    activities: [
+      "Relaxing on beautiful beaches",
+      "Snorkeling or diving in clear waters",
+      "Exploring volcanic landscapes",
+      "Taking a boat tour to neighboring islands",
+      "Indulging in local cuisine",
+    ],
+    image:
+      "https://images.pexels.com/photos/259447/pexels-photo-259447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    country: "Edinburgh, Scotland",
+    activities: [
+      "Exploring local markets",
+      "Visiting historical sites",
+      "Attending theater performances",
+      "Taking a scenic train ride",
+      "Joining a ghost tour",
+    ],
+    image:
+      "https://images.pexels.com/photos/12121851/pexels-photo-12121851.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    country: "Iceland",
+    activities: [
+      "Exploring geysers and hot springs",
+      "Visiting glaciers and ice caves",
+      "Going on a whale-watching tour",
+      "Taking a scenic helicopter ride",
+      "Catching the Northern Lights",
+    ],
+    image:
+      "https://images.pexels.com/photos/3617500/pexels-photo-3617500.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    country: "Kyoto, Japan",
+    activities: [
+      "Exploring local markets",
+      "Visiting historical sites",
+      "Participating in a traditional tea ceremony",
+      "Attending cultural festivals",
+      "Enjoying cherry blossom viewing",
+    ],
+    image:
+      "https://images.pexels.com/photos/356629/pexels-photo-356629.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    country: "Marrakesh, Morocco",
+    activities: [
+      "Exploring local markets",
+      "Visiting historical sites",
+      "Taking a camel ride in the desert",
+      "Attending local music concerts",
+      "Enjoying Moroccan cuisine",
+    ],
+    image:
+      "https://images.pexels.com/photos/13811606/pexels-photo-13811606.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
+  {
+    country: "Zanzibar, Tanzania",
+    activities: [
+      "Relaxing on white sandy beaches",
+      "Snorkeling or diving in coral reefs",
+      "Visiting spice plantations",
+      "Taking a boat tour to Prison Island",
+      "Exploring Stone Town",
+    ],
+    image:
+      "https://images.pexels.com/photos/2949825/pexels-photo-2949825.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  },
 ];
 
 let destOptions = [];

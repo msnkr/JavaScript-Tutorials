@@ -463,7 +463,8 @@ footer {
 
 .about-image {
   margin-left: -120pt;
-  background: url("https://images.pexels.com/photos/8021278/pexels-photo-8021278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
+  background: url("https://images.pexels.com/photos/8021278/pexels-photo-8021278.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+    no-repeat center center/cover;
   width: 100vw;
   height: 400pt;
 }
@@ -472,9 +473,9 @@ footer {
   margin-top: 80pt;
 }
 
-.about-items{
+.about-items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .about-item {
@@ -579,8 +580,14 @@ footer {
     font-size: 11pt;
     margin: 4pt;
   }
+
   .gallery-item-gradient p {
     font-size: 12pt;
+  }
+
+  .about-items {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16pt;
   }
 }
 
