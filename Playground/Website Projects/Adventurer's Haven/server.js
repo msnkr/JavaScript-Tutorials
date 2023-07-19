@@ -370,6 +370,11 @@ app.post("/calculator", (req, res) => {
   res.redirect("options");
 });
 
+// Book your holiday
+app.get("/book", (req, res) => {
+  res.render("book");
+});
+
 // Home
 app.get("/", (req, res) => {
   res.render("home");

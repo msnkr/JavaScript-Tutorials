@@ -306,6 +306,7 @@ footer {
 }
 
 .your-options {
+  position: relative;
   justify-content: space-evenly;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -314,6 +315,7 @@ footer {
 }
 
 .options {
+  position: relative;
   box-shadow: 1pt 4pt 16pt rgba(16, 25, 17, 0.7);
   margin: 20pt 0;
   width: 100%;
@@ -336,6 +338,18 @@ footer {
   height: 100%;
   object-fit: cover;
   border-radius: 8pt;
+}
+
+.options-icon {
+  cursor: pointer;
+  font-size: 16pt;
+  position: absolute;
+  top: 30pt;
+  right: 20pt;
+}
+
+.options-icon a {
+  color: var(--primary);
 }
 
 .gallery-container {
