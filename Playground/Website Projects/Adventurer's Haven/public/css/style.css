@@ -247,7 +247,7 @@ body {
 }
 
 footer {
-  margin-top: 50vh;
+  margin-top: 40vh;
   position: relative;
   padding: 40pt 0;
   display: flex;
@@ -283,9 +283,13 @@ footer {
   justify-content: start;
 }
 
+.container-2 .btn {
+  margin-bottom: -200pt;
+}
+
 .activity {
   display: inline-flex;
-  border: 1px solid var(--primary);
+  box-shadow: 1pt 4pt 4pt rgba(16, 25, 17, 0.7);
   padding: 4pt;
   border-radius: 8pt;
   margin: 4pt;
@@ -304,14 +308,15 @@ footer {
 .your-options {
   justify-content: space-evenly;
   display: grid;
-  grid-template-columns: repeat(3, 25%);
-  grid-gap: 32pt;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 24pt;
+  margin-bottom: -200pt;
 }
 
 .options {
   box-shadow: 1pt 4pt 16pt rgba(16, 25, 17, 0.7);
   margin: 20pt 0;
-  width: 25vw;
+  width: 100%;
   padding: 20pt;
   border-radius: 8pt;
 }
@@ -321,7 +326,7 @@ footer {
 }
 
 .option-image {
-  width: 20vw;
+  width: 100%;
   height: 30vh;
   margin-top: 8pt;
 }
@@ -338,13 +343,14 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 8pt;
-  height: 350vh;
+  height: 250vh;
 }
 
 .item {
   max-width: 100%;
   height: 400pt;
   border-radius: 8pt;
+  box-shadow: 1pt 4pt 16pt rgba(16, 25, 17, 0.7);
 }
 
 .gallery-item-gradient {
@@ -556,22 +562,15 @@ footer {
     background-color: var(--primary);
     margin-bottom: 20pt;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .left-side h2 {
+    font-size: 14pt;
+  }
 
   .your-options {
-    grid-template-columns: repeat(2, 50%);
-    grid-gap: 8pt;
-    margin: 0;
-  }
-
-  .options {
-    width: 40vw;
-    padding: 16pt;
-  }
-
-  .option-image {
-    width: 30vw;
-    height: 10vh;
-    margin-top: 8pt;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -579,6 +578,14 @@ footer {
   .navbar-list a {
     font-size: 11pt;
     margin: 4pt;
+  }
+
+  .your-options {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .left-side h2 {
+    font-size: 12pt;
   }
 
   .gallery-item-gradient p {
@@ -594,17 +601,6 @@ footer {
 @media screen and (max-width: 700px) {
   .container-one .right-side {
     margin-left: -20pt;
-  }
-
-  .your-options {
-    grid-template-columns: repeat(2, 50%);
-    grid-gap: 8pt;
-    margin: 0;
-  }
-
-  .options {
-    width: 40vw;
-    padding: 16pt;
   }
 }
 
