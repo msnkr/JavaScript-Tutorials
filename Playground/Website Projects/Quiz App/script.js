@@ -20,9 +20,12 @@ function isAnswerCorrect(answer) {
 
 function updateDom(data) {
   modeElem.innerHTML = data.difficulty;
+  modeElem.style.textTransform = "capitalize";
+
   questionElem.innerHTML = data.question;
   countdownElem.innerHTML = count;
   correctAnswer = data.correct_answer;
+
   console.log(correctAnswer);
 }
 

@@ -1,5 +1,8 @@
 :root {
-  --black: #191825;
+  --darkest: #461959;
+  --dark: #7a316f;
+  --light: #cd6688;
+  --lightest: #aed8cc;
 }
 
 * {
@@ -7,8 +10,13 @@
   margin: 0;
 }
 
+body {
+  height: 100svh;
+  background-color: var(--darkest);
+}
+
 .container {
-  color: var(--black);
+  color: var(--light);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +37,7 @@
 }
 
 .countdown-answers {
-  background-color: black;
+  background-color: var(--lightest);
   width: 120pt;
   height: 120pt;
   border-radius: 50%;
@@ -37,8 +45,8 @@
 }
 
 .countdown-number {
+  color: var(--darkest);
   position: absolute;
-  color: #fff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -50,6 +58,7 @@
 
 .question {
   margin-bottom: 16pt;
+  color: var(--lightest);
 }
 
 .is-true {
@@ -59,10 +68,11 @@
 
 button {
   cursor: pointer;
-  color: #fff;
-  background-color: black;
+  color: var(--darkest);
+  background-color: var(--lightest);
   padding: 8pt 16pt;
   border: none;
   margin: 0 8pt;
   border-radius: 4pt;
+  font-weight: bold;
 }
