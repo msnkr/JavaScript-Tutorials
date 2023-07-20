@@ -5,32 +5,45 @@ let questionElem = document.querySelector(".is-true");
 const trueBtn = document.querySelector(".true");
 const falseBtn = document.querySelector(".false");
 
-let difficulty = "easy";
-let questionList = [];
 let count = 0;
+let correctAnswer;
 
-function updateDom(question, count) {
-  modeElem.innerHTML = question.difficulty;
-  questionElem.innerHTML = question.question;
+function isAnswerCorrect(answer) {
+  if (correctAnswer == answer) {
+    count++;
+    getQuestions();
+  } else {
+    count = 0;
+    getQuestions();
+  }
+}
+
+function updateDom(data) {
+  modeElem.innerHTML = data.difficulty;
+  questionElem.innerHTML = data.question;
   countdownElem.innerHTML = count;
+  correctAnswer = data.correct_answer;
+  console.log(correctAnswer);
 }
 
-function showQuestion(questionList, count) {
-  let question = questionList[count];
-  updateDom(question, count);
-}
-
-async function getQuestions(difficulty) {
+async function getQuestions() {
   const response = await fetch(
-    `https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty}&type=boolean`
+    "https://opentdb.com/api.php?amount=1&type=boolean"
   );
   const jsonData = await response.json();
-  questionList = jsonData.results;
-  showQuestion(questionList, count);
+  let questionData = jsonData.results;
+  updateDom(questionData[0]);
 }
 
-getQuestions(difficulty);
+// Events
+trueBtn.addEventListener("click", () => {
+  let answer = "True";
+  isAnswerCorrect(answer);
+});
 
-// Get all questions and answers from api.
-// start the count at 0, if the count ++ then the question gets increased too. Otherwise clear the count, get a new list of questions and start again.
-// When all 10 questions are answered. Increase the difficulty and ask another 10 questions on a higher difficulty.
+falseBtn.addEventListener("click", () => {
+  let answer = "False";
+  isAnswerCorrect(answer);
+});
+
+getQuestions();
