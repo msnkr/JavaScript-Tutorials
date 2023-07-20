@@ -9,15 +9,15 @@ let difficulty = "easy";
 let questionList = [];
 let count = 0;
 
-function updateDom(question) {
+function updateDom(question, count) {
   modeElem.innerHTML = question.difficulty;
   questionElem.innerHTML = question.question;
   countdownElem.innerHTML = count;
 }
 
-function showQuestion(questionsList, count) {
+function showQuestion(questionList, count) {
   let question = questionList[count];
-  updateDom(question);
+  updateDom(question, count);
 }
 
 async function getQuestions(difficulty) {
@@ -30,7 +30,7 @@ async function getQuestions(difficulty) {
 }
 
 getQuestions(difficulty);
+
 // Get all questions and answers from api.
-// Create a object that takes the question and the answer and pushes it to the list.
 // start the count at 0, if the count ++ then the question gets increased too. Otherwise clear the count, get a new list of questions and start again.
 // When all 10 questions are answered. Increase the difficulty and ask another 10 questions on a higher difficulty.
