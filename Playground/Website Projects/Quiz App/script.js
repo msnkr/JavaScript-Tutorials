@@ -1,10 +1,12 @@
 let countdownElem = document.querySelector(".countdown-number");
 let modeElem = document.querySelector(".mode");
 let questionElem = document.querySelector(".is-true");
+let highScore = document.querySelector(".high-score");
 
 const trueBtn = document.querySelector(".true");
 const falseBtn = document.querySelector(".false");
 
+let highestScore = 0;
 let count = 0;
 let correctAnswer;
 
@@ -13,6 +15,9 @@ function isAnswerCorrect(answer) {
     count++;
     getQuestions();
   } else {
+    if (highestScore < count) {
+      highestScore = count;
+    }
     count = 0;
     getQuestions();
   }
@@ -25,6 +30,7 @@ function updateDom(data) {
   questionElem.innerHTML = data.question;
   countdownElem.innerHTML = count;
   correctAnswer = data.correct_answer;
+  highScore.innerHTML = highestScore;
 
   console.log(correctAnswer);
 }
