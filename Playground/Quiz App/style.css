@@ -15,13 +15,38 @@ body {
   background-color: var(--darkest);
 }
 
+.select-difficulty {
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  padding: 0 40pt;
+  margin: 0;
+  position: relative;
+}
+
+.select-difficulty .btn {
+  margin: 8pt;
+  width: 200pt;
+}
+
+.select-difficulty.hidden {
+  display: none;
+}
+
+.container.hidden {
+  display: none;
+}
+
 .container {
   color: var(--light);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 100svh;
   padding: 0 40pt;
   margin: 0;
   position: relative;
