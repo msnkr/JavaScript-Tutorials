@@ -28,11 +28,13 @@ function hideUnhideContainers() {
   container.classList.toggle("hidden");
 }
 
-function isAnswerCorrect(answer, difficulty) {
+function isAnswerCorrect(answer, difficulty, e) {
   if (correctAnswer == answer) {
     count++;
+    e.target.classList.add("correct");
     getQuestions(difficulty);
   } else {
+    e.target.classList.add("incorrect");
     if (highestScore < count) {
       highestScore = count;
     }
@@ -64,14 +66,14 @@ async function getQuestions(difficulty) {
 }
 
 // Events
-trueBtn.addEventListener("click", () => {
+trueBtn.addEventListener("click", (e) => {
   let answer = "True";
-  isAnswerCorrect(answer, difficulty);
+  isAnswerCorrect(answer, difficulty, e);
 });
 
-falseBtn.addEventListener("click", () => {
+falseBtn.addEventListener("click", (e) => {
   let answer = "False";
-  isAnswerCorrect(answer, difficulty);
+  isAnswerCorrect(answer, difficulty, e);
 });
 
 easyBtn.addEventListener("click", () => {
