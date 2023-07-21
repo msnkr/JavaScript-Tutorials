@@ -157,13 +157,16 @@ button {
   }
 
   .select-difficulty h1 {
-    font-size: 16pt;
+    font-size: 14pt;
   }
 
   .select-difficulty .btn {
-    width: 100pt;
+    width: 80pt;
   }
 
+  .container {
+    margin-top: -60pt;
+  }
   .heading {
     margin-bottom: 16pt;
   }
