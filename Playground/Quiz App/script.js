@@ -31,10 +31,17 @@ function hideUnhideContainers() {
 function isAnswerCorrect(answer, difficulty, e) {
   if (correctAnswer == answer) {
     count++;
-    e.target.classList.add("correct");
+
+    setInterval(() => {
+      e.target.classList.add("correct"), 1000;
+    });
+    e.target.classList.remove("correct");
     getQuestions(difficulty);
   } else {
-    e.target.classList.add("incorrect");
+    setInterval(() => {
+      e.target.classList.add("incorrect"), 1000;
+    });
+    e.target.classList.remove("incorrect");
     if (highestScore < count) {
       highestScore = count;
     }

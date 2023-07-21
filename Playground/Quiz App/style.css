@@ -123,15 +123,32 @@ button {
   border-radius: 4pt;
   font-weight: bold;
   box-shadow: 1pt 2pt 6pt rgba(0, 0, 0, 0.3);
-  transition: background-color 0.8s ease-in-out;
 }
 
 .btn.correct {
-  background-color: var(--right);
+  animation: rightButton 0.8s ease-in-out;
 }
 
 .btn.incorrect {
-  background-color: var(--wrong);
+  animation: wrongButton 0.8s ease-in-out;
+}
+
+@keyframes rightButton {
+  from {
+    background-color: var(--right);
+  }
+  to {
+    background-color: var(--lightest);
+  }
+}
+
+@keyframes wrongButton {
+  from {
+    background-color: var(--wrong);
+  }
+  to {
+    background-color: var(--lightest);
+  }
 }
 
 @media screen and (max-width: 450px) {
