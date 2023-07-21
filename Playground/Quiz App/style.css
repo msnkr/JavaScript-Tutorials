@@ -126,11 +126,11 @@ button {
 }
 
 .btn.correct {
-  animation: rightButton 0.8s ease-in-out;
+  animation: rightButton 2s ease-in-out;
 }
 
 .btn.incorrect {
-  animation: wrongButton 0.8s ease-in-out;
+  animation: wrongButton 2s ease-in-out;
 }
 
 @keyframes rightButton {
