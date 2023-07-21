@@ -36,12 +36,14 @@ function isAnswerCorrect(answer, difficulty, e) {
       e.target.classList.add("correct"), 1000;
     });
     e.target.classList.remove("correct");
+    e.target.classList.remove("incorrect");
     getQuestions(difficulty);
   } else {
     setInterval(() => {
       e.target.classList.add("incorrect"), 1000;
     });
     e.target.classList.remove("incorrect");
+    e.target.classList.remove("correct");
     if (highestScore < count) {
       highestScore = count;
     }
