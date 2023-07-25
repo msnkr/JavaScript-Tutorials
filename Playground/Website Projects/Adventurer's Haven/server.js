@@ -315,9 +315,8 @@ const holidayDest = [
 
 let destOptions = [];
 let yourHoliday = [];
-// let anotherList = [];
 
-// Filter again for duplicates in yourHoliday
+let selectedOption = "";
 
 // Check destOptions against holidayDest and filter destinations
 function filterDest(options) {
@@ -329,7 +328,6 @@ function filterDest(options) {
       }
     });
   });
-  // anotherFilter(yourHoliday);
 }
 
 // Remove duplicate destination activities
@@ -357,9 +355,13 @@ app.get("/gallery", (req, res) => {
 });
 
 // View detail about your option
+app.get("/options/:destinationOption", (req, res) => {
+  console.log();
+});
 
 // View your selected options
 app.get("/options", (req, res) => {
+  console.log(destOptions);
   res.render("options", { destOptions: yourHoliday });
 });
 
@@ -384,7 +386,6 @@ app.get("/", (req, res) => {
 app.get("/calculator", (req, res) => {
   yourHoliday = [];
   destOptions = [];
-
   res.render("calculator", { activities: activities });
 });
 
