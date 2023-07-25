@@ -586,6 +586,15 @@ footer {
   .your-options {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .about-items {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .about-item {
+    width: 200pt;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 1000px) {
