@@ -524,6 +524,12 @@ footer {
   margin-top: 80pt;
 }
 
+@media screen and (max-width: 1920px) {
+  .about-items {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .navbar-list a {
     display: block;
