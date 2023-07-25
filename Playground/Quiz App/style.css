@@ -27,7 +27,7 @@ h4 {
 }
 
 body {
-  height: 100svh;
+  height: 100vh;
   background-color: var(--darkest);
 }
 
@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100svh;
+  height: 100vh;
   padding: 0 40pt;
   margin: 0;
   position: relative;
@@ -63,7 +63,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100svh;
+  height: 100vh;
   padding: 0 40pt;
   margin: 0;
   position: relative;
@@ -111,6 +111,8 @@ body {
 .is-true {
   margin-bottom: 16pt;
   text-align: center;
+  height: 100pt;
+  padding: 8pt;
 }
 
 button {
@@ -156,6 +158,10 @@ button {
     padding: 20pt;
   }
 
+  .container {
+    max-height: 100vh;
+  }
+
   .select-difficulty h1 {
     font-size: 14pt;
   }
@@ -167,16 +173,23 @@ button {
   .container {
     margin-top: -60pt;
   }
+
   .heading {
-    margin-bottom: 16pt;
+    font-size: 16pt;
+    margin-bottom: 8pt;
   }
 
   .high-score {
-    margin-bottom: 16pt;
+    margin-bottom: 8pt;
   }
 
   .countdown {
-    margin-bottom: 16pt;
+    margin-bottom: 8pt;
+  }
+
+  .countdown-answers {
+    width: 80pt;
+    height: 80pt;
   }
 
   .mode {
@@ -189,5 +202,6 @@ button {
 
   .is-true {
     margin-bottom: 8pt;
+    width: 140%;
   }
 }
