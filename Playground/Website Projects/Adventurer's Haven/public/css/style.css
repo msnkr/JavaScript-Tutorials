@@ -6,6 +6,7 @@
   --dark: #2b442d;
   --light: #7bc382;
   --lightest: #95ee9f;
+  --box-shadow: 4pt 4pt 8pt rgba(16, 25, 17, 0.7);
 }
 
 /* font-family: 'Lora', serif;
@@ -88,7 +89,6 @@ body {
 .container-one .left-side {
   width: 50%;
   padding: 0 18pt;
-  text-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.3);
 }
 
 .container-one .left-side .btn a {
@@ -109,6 +109,10 @@ body {
   margin-right: -40pt;
   border-top-left-radius: 8pt;
   border-bottom-left-radius: 8pt;
+}
+
+.container-one .btn {
+  box-shadow: var(--box-shadow);
 }
 
 .container-two {
@@ -137,7 +141,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 8pt;
-  box-shadow: 0 16pt 16pt rgba(16, 25, 17, 0.7);
+  box-shadow: var(--box-shadow);
 }
 
 .container-two .text {
@@ -168,8 +172,7 @@ body {
 }
 
 .card {
-  margin: 0;
-  box-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.3);
+  box-shadow: var(--box-shadow);
   padding: 20pt;
   margin: 16pt;
   border-radius: 8pt;
@@ -237,8 +240,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 16pt 16pt rgba(16, 25, 17, 0.7);
   padding: 16pt;
+  box-shadow: var(--box-shadow);
 }
 
 .gallery-btn a {
@@ -289,7 +292,7 @@ footer {
 
 .activity {
   display: inline-flex;
-  box-shadow: 1pt 4pt 4pt rgba(16, 25, 17, 0.7);
+  box-shadow: 2pt 2pt 4pt rgba(16, 25, 17, 0.7);
   padding: 4pt;
   border-radius: 8pt;
   margin: 4pt;
@@ -316,7 +319,7 @@ footer {
 
 .options {
   position: relative;
-  box-shadow: 1pt 4pt 16pt rgba(16, 25, 17, 0.7);
+  box-shadow: var(--box-shadow);
   margin: 20pt 0;
   width: 100%;
   padding: 20pt;
@@ -364,7 +367,7 @@ footer {
   max-width: 100%;
   height: 400pt;
   border-radius: 8pt;
-  box-shadow: 1pt 4pt 16pt rgba(16, 25, 17, 0.7);
+  box-shadow: var(--box-shadow);
 }
 
 .gallery-item-gradient {
@@ -383,7 +386,7 @@ footer {
   top: 50%;
   right: 25%;
   transform: translateX(-25%);
-  text-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.7);
+  text-shadow: 4pt 2pt 4pt rgba(16, 25, 17, 0.3);
   font-size: 18pt;
   text-align: center;
 }
@@ -495,14 +498,15 @@ footer {
 
 .about-items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10pt;
 }
 
 .about-item {
   padding: 30pt;
   width: 250pt;
   height: 250pt;
-  box-shadow: 1pt 4pt 16pt rgba(16, 25, 17, 0.7);
+  box-shadow: var(--box-shadow);
   border-radius: 8pt;
   margin-bottom: 16pt;
 }
@@ -549,7 +553,7 @@ footer {
   .container-one .left-side {
     width: 100%;
     padding: 0 18pt;
-    text-shadow: 0 2pt 20pt rgba(16, 25, 17, 0.3);
+    text-shadow: 4pt 2pt 4pt rgba(16, 25, 17, 0.7);
   }
 
   .container-one .left-side h1 {
