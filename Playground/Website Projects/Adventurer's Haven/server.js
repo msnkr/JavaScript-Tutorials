@@ -354,14 +354,8 @@ app.get("/gallery", (req, res) => {
   res.render("gallery");
 });
 
-// View detail about your option
-app.get("/options/:destinationOption", (req, res) => {
-  console.log();
-});
-
 // View your selected options
 app.get("/options", (req, res) => {
-  console.log(destOptions);
   res.render("options", { destOptions: yourHoliday });
 });
 
@@ -374,6 +368,7 @@ app.post("/calculator", (req, res) => {
 
 // Book your holiday
 app.get("/book", (req, res) => {
+  let storedData = req.body.destinationOption;
   res.render("book");
 });
 
