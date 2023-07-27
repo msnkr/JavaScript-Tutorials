@@ -5,7 +5,9 @@
   <div class="options">
     <h4><%= option.country %></h4>
     <div class="options-icon">
-      <a href="/book"><i class="bi bi-book-fill"></i></a>
+      <a href="/book?destination=<%= option.country%>"
+        ><i class="bi bi-book-fill"></i
+      ></a>
     </div>
     <% option.activities.forEach(activity => { %>
     <div class="options-activity">

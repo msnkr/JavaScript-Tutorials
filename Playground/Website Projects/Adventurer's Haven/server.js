@@ -368,7 +368,7 @@ app.post("/calculator", (req, res) => {
 
 // Book your holiday
 app.get("/book", (req, res) => {
-  let storedData = req.body.destinationOption;
+  let bookingName = "";
   res.render("book");
 });
 
