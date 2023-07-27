@@ -657,3 +657,7 @@ footer {
   height: 400pt;
   object-fit: cover;
 }
+
+.booking-about {
+  max-width: 60%;
+}
