@@ -11,9 +11,11 @@
     <div class="booking-about">
       <h4><%= bookDest.about %></h4>
     </div>
-    <% bookDest.activities.forEach(activity => { %>
-    <p><%= activity %></p>
-    <% }) %>
+    <div class="booking-activity">
+      <% bookDest.activities.forEach(activity => { %>
+      <p><%= activity %></p>
+      <% }) %>
+    </div>
   </div>
 </div>
 <%- include("partials/footer") -%>

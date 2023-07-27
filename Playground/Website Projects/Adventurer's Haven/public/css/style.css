@@ -661,3 +661,8 @@ footer {
 .booking-about {
   max-width: 60%;
 }
+
+.booking-activity {
+  margin: 0;
+  padding: 20pt;
+}
