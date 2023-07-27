@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+var _ = require("lodash");
 
 const app = express();
 
@@ -8,7 +9,8 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-var lowerCase = require("lodash.lowercase");
+
+var array = require("lodash/array");
 
 const activities = [];
 const holidayDest = [
@@ -316,6 +318,7 @@ const holidayDest = [
 
 let destOptions = [];
 let yourHoliday = [];
+let bookDest = {};
 
 let selectedOption = "";
 
@@ -369,9 +372,17 @@ app.post("/calculator", (req, res) => {
 
 // Book your holiday
 app.get("/book", (req, res) => {
-  let bookingName = _.lowerCase(req.query.destination);
-  console.log(bookingName);
-  res.render("book");
+  let bookingName = req.query.destination;
+  holidayDest.forEach((holiday) => {
+    if (holiday.country === req.query.destination) {
+      bookDest = {
+        country: holiday.country,
+        activities: holiday.activities,
+        image: holiday.image,
+      };
+    }
+  });
+  res.render("book", { bookDest: bookDest });
 });
 
 // Home
