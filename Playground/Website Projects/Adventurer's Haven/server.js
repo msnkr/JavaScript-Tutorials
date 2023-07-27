@@ -8,6 +8,7 @@ app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+var lowerCase = require("lodash.lowercase");
 
 const activities = [];
 const holidayDest = [
@@ -368,7 +369,8 @@ app.post("/calculator", (req, res) => {
 
 // Book your holiday
 app.get("/book", (req, res) => {
-  let bookingName = "";
+  let bookingName = _.lowerCase(req.query.destination);
+  console.log(bookingName);
   res.render("book");
 });
 
