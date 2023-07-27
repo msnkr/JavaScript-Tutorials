@@ -2,20 +2,13 @@
 <div class="container-book">
   <h1>Book your destination now</h1>
   <div class="container-booking">
-    <div class="booking-image">
-      <img src="<%= bookDest.image %>" alt="" />
-    </div>
-    <div class="booking-name">
+    <div class="container-booking-top-left">
       <h1><%= bookDest.country %></h1>
-    </div>
-    <div class="booking-about">
       <h4><%= bookDest.about %></h4>
     </div>
-    <div class="booking-activity">
-      <% bookDest.activities.forEach(activity => { %>
-      <p><%= activity %></p>
-      <% }) %>
+    <div class="container-booking-top-right">
+      <img src="<%= bookDest.image %>" alt="" />
     </div>
   </div>
+  <%- include("partials/footer") -%>
 </div>
-<%- include("partials/footer") -%>

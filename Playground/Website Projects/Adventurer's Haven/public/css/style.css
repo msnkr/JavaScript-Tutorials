@@ -645,24 +645,16 @@ footer {
 }
 
 .container-book {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  margin-top: 40pt;
 }
 
-.container-book .booking-image img {
-  width: 140vw;
-  margin-left: -40pt;
+.container-booking {
+  margin-top: 40pt;
+}
+
+.container-booking-top-right img {
+  width: 100vw;
   height: 400pt;
   object-fit: cover;
-}
-
-.booking-about {
-  max-width: 60%;
-}
-
-.booking-activity {
-  margin: 0;
-  padding: 20pt;
+  margin-left: -40pt;
 }
