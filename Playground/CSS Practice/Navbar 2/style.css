@@ -1,0 +1,59 @@
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-y: hidden;
+}
+
+.navbar {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  position: relative;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    overflow-y: hidden;
+  }
+  .list-items {
+    background-color: #262626;
+    width: 30%;
+    margin-top: -20pt;
+    padding: 20pt;
+    height: 100vh;
+    list-style: none;
+    color: #fff;
+    transition: width 1s ease-in-out;
+  }
+
+  .list-items.hidden {
+    width: 0;
+    background-color: transparent;
+  }
+
+  .list-item {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+  }
+
+  .list-item.hidden {
+    opacity: 0;
+  }
+
+  .btn {
+    position: absolute;
+    top: 20pt;
+    right: 20pt;
+  }
+
+  .list-item:first-of-type {
+    margin-top: 60pt;
+  }
+
+  .list-item {
+    text-align: end;
+    margin-top: 10pt;
+    font-size: 16pt;
+  }
+}
