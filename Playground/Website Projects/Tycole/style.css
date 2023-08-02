@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.navbar {
+  position: relative;
+  padding: 24pt;
+  background-color: #262626;
+  width: 100%;
+  align-items: baseline;
+}
+
+.logo-image img {
+  width: 100pt;
+}
+
+.list-items {
+  float: right;
+  list-style: none;
+}
+
+.list-item a {
+  color: #fff;
+  text-decoration: none;
+  margin: 4pt;
+}
+
+.hamburger {
+  position: absolute;
+  top: 30pt;
+  right: 20pt;
+}
