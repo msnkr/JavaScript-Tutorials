@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@600&display=swap");
+
+/* font-family: 'Courier Prime', monospace;
+    font-family: 'Montserrat', sans-serif; */
+
+:root {
+  --darkest: #78c1f3;
+  --dark: #9be8d8;
+  --light: #e2f6ca;
+  --lightest: #f8fdcf;
+  --right: #cbffa9;
+  --wrong: #ff9b9b;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h2,
+h4 {
+  font-family: "Courier Prime", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--darkest);
+}
+
+.select-difficulty {
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 40pt;
+  margin: 0;
+  position: relative;
+}
+
+.select-difficulty .btn {
+  margin: 8pt;
+  width: 200pt;
+}
+
+.select-difficulty.hidden {
+  display: none;
+}
+
+.container.hidden {
+  display: none;
+}
+
+.container {
+  margin-top: -20pt;
+  color: var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 40pt;
+  margin: 0;
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 24pt;
+}
+
+.high-score {
+  margin-bottom: 16pt;
+}
+
+.countdown {
+  margin-bottom: 24pt;
+}
+
+.countdown-answers {
+  background-color: var(--lightest);
+  width: 100pt;
+  height: 100pt;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 1pt 2pt 8pt rgba(0, 0, 0, 0.5);
+}
+
+.countdown-number {
+  color: var(--darkest);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mode {
+  margin-bottom: 16pt;
+}
+
+.question {
+  margin-bottom: 16pt;
+  color: var(--lightest);
+}
+
+.is-true {
+  margin-bottom: 16pt;
+  text-align: center;
+  height: 100pt;
+  padding: 8pt;
+}
+
+button {
+  cursor: pointer;
+  color: var(--darkest);
+  background-color: var(--lightest);
+  padding: 8pt 16pt;
+  border: none;
+  margin: 0 8pt;
+  border-radius: 4pt;
+  font-weight: bold;
+  box-shadow: 1pt 2pt 8pt rgba(0, 0, 0, 0.5);
+}
+
+.btn.correct {
+  animation: rightButton 10s ease-in-out;
+}
+
+.btn.incorrect {
+  animation: wrongButton 10s ease-in-out;
+}
+
+@keyframes rightButton {
+  from {
+    background-color: var(--right);
+  }
+  to {
+    background-color: var(--lightest);
+  }
+}
+
+@keyframes wrongButton {
+  from {
+    background-color: var(--wrong);
+  }
+  to {
+    background-color: var(--lightest);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    padding: 20pt;
+  }
+
+  .container {
+    max-height: 100vh;
+  }
+
+  .select-difficulty h1 {
+    font-size: 14pt;
+  }
+
+  .select-difficulty .btn {
+    width: 80pt;
+  }
+
+  .container {
+    margin-top: -60pt;
+  }
+
+  .heading {
+    font-size: 16pt;
+    margin-bottom: 8pt;
+  }
+
+  .high-score {
+    margin-bottom: 8pt;
+  }
+
+  .countdown {
+    margin-bottom: 8pt;
+  }
+
+  .countdown-answers {
+    width: 80pt;
+    height: 80pt;
+  }
+
+  .mode {
+    margin-bottom: 8pt;
+  }
+
+  .question {
+    margin-bottom: 8pt;
+  }
+
+  .is-true {
+    margin-bottom: 8pt;
+    width: 140%;
+  }
+}
