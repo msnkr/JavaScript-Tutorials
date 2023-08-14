@@ -54,10 +54,53 @@ import "./App.css";
 //   return <ul>{listItems}</ul>;
 // }
 
-function handleClick() {
-  alert("You clicked me");
-}
+// function handleClick() {
+//   alert("You clicked me");
+// }
+
+// export default function App() {
+//   return <button onClick={handleClick}>Click Me</button>;
+// }
+
+// import { useState } from "react";
+
+// export default function App() {
+//   return (
+//     <div>
+//       <h1>This is a counter</h1>
+//       <MyButton />
+//       <MyButton />
+//     </div>
+//   );
+// }
+
+// function MyButton() {
+//   const [count, setCount] = useState(0);
+
+//   function handleClick() {
+//     setCount(count + 1);
+//   }
+
+//   return <button onClick={handleClick}>Clicked {count} times</button>;
+// }
+
+import { useState } from "react";
 
 export default function App() {
-  return <button onClick={handleClick}>Click Me</button>;
+  const [count, setCount] = useState(0);
+
+  function HandleClick() {
+    setCount(count + 1);
+  }
+  return (
+    <div>
+      <h1>Counter</h1>
+      <MyButton count={count} onClick={HandleClick} />
+      <MyButton count={count} onClick={HandleClick} />
+    </div>
+  );
+}
+
+function MyButton({ count, onClick }) {
+  return <button onClick={onClick}> Pressed {count} times</button>;
 }
