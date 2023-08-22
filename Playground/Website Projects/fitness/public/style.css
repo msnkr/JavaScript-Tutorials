@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.muscle-group {
+  margin: 24pt 0;
+}
+
+.muscles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 8pt;
+}
+
+.muscle {
+  padding: 16pt;
+  width: 150pt;
+  height: 150pt;
+}
+
+.chest {
+  background: url("images/chest.png") center center/cover;
+}
+
+.abs {
+  background: url("images/abs.png") center center/cover;
+}
+
+.legs {
+  background: url("images/legs.png") center center/cover;
+}
+
+.back {
+  background: url("images/back.png") center center/cover;
+}
+
+.arms {
+  background: url("images/arms.png") center center/cover;
+}
+
+.shoulders {
+  background: url("images/shoulders.png") center center/cover;
+}
