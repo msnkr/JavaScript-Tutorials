@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-  </head>
-  <body>
-    <div class="muscle-container">
-      <% muscles.forEach(muscle => { %>
-      <div class="muscle-header">
-        <h1><%- muscle.name %></h1>
-      </div>
-      <div class="muscle-short-desc">
-        <p><%- muscle.shortDesc %></p>
-      </div>
-      <% }) %>
+<%- include("partials/navbar") -%>
+
+<body>
+  <div class="muscle-container">
+    <% muscles.forEach(muscle => { %>
+    <div class="muscle-header">
+      <h1><%- muscle.name %></h1>
     </div>
-  </body>
-</html>
+    <div class="muscle-short-desc">
+      <p><%- muscle.shortDesc %></p>
+    </div>
+    <% }) %>
+  </div>
+</body>

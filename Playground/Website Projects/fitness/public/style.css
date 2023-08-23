@@ -50,8 +50,8 @@ body {
   background: url("images/shoulders.png") center center/cover;
 }
 
-.muscle-header h1 {
-  color: red;
+.muscle-container {
+  padding: 8pt;
 }
 
 @media only screen and (min-width: 376px) {
