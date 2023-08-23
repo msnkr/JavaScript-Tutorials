@@ -6,9 +6,15 @@
     <title></title>
   </head>
   <body>
-    <% muscles.forEach(muscle => { %>
-    <h1><%- muscle.name %></h1>
-    <p><%- muscle.shortDesc %></p>
-    <% }) %>
+    <div class="muscle-container">
+      <% muscles.forEach(muscle => { %>
+      <div class="muscle-header">
+        <h1><%- muscle.name %></h1>
+      </div>
+      <div class="muscle-short-desc">
+        <p><%- muscle.shortDesc %></p>
+      </div>
+      <% }) %>
+    </div>
   </body>
 </html>

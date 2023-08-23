@@ -56,12 +56,32 @@ const absWorkouts = [
   },
 ];
 
+const shouldersWorkouts = [
+  {
+    name: "shoulder press",
+    shortDesc:
+      "Press weights overhead from shoulder height. Targets deltoid muscles, building shoulder strength and definition.",
+    longDesc:
+      "The shoulder press, also known as the overhead press, is a compound upper body exercise that focuses on developing the deltoid muscles. Starting with weights at shoulder level, you press them overhead until your arms are fully extended. This movement engages the anterior, lateral, and posterior deltoids, as well as the triceps and upper back muscles for stability. Shoulder presses contribute to well-rounded shoulder development, aiding in activities that involve pushing movements. Proper form is essential to prevent strain on the lower back and ensure effective muscle engagement. It's a key exercise in strength training routines aimed at building upper body strength and sculpting the shoulders.",
+  },
+  {
+    name: "lateral raises",
+    shortDesc:
+      " Lift weights to sides, targeting lateral deltoids. Enhances shoulder width and overall shoulder aesthetics.",
+    longDesc:
+      "Lateral raises are isolation exercises designed to target the lateral deltoid muscles of the shoulders. Holding weights in each hand, you lift your arms out to the sides until they are roughly parallel to the ground. This movement isolates the lateral deltoids, contributing to enhanced shoulder width and overall shoulder aesthetics. Lateral raises also assist in shoulder joint stability and can address imbalances in shoulder development. Care should be taken to use an appropriate weight and maintain controlled movements to avoid excess strain on the shoulder joints. Integrating lateral raises into your workout routine can complement compound shoulder exercises and create a balanced shoulder profile.",
+  },
+  {
+    name: "dumbell seated overhead press",
+    shortDesc:
+      "Sit, lift dumbbells overhead. Targets shoulders, triceps. Builds strength and stability. Enhances shoulder development.",
+    longDesc:
+      "The dumbbell seated overhead press is a compound upper body exercise where you sit on a bench with a backrest and lift dumbbells from shoulder height to overhead. This movement primarily targets the deltoid muscles of the shoulders and engages the triceps for assistance. As you press the weights upwards, your core and stabilizing muscles work to maintain balance and control. The seated position minimizes the use of momentum, isolating the shoulder muscles for effective strength and size gains. Dumbbell seated overhead presses are valuable for enhancing shoulder development, increasing upper body strength, and promoting overall upper body stability. Proper form is vital to prevent strain and maximize muscle engagement.",
+  },
+];
+
 app.get("/", (req, res) => {
   res.render("index");
-});
-
-app.post("/", (req, res) => {
-  console.log(req.params.id);
 });
 
 app.get("/muscles/:muscleID", (req, res) => {

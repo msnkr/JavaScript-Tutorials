@@ -50,6 +50,10 @@ body {
   background: url("images/shoulders.png") center center/cover;
 }
 
+.muscle-header h1 {
+  color: red;
+}
+
 @media only screen and (min-width: 376px) {
   body {
     height: 100vh;
