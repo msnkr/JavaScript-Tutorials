@@ -41,7 +41,7 @@ app.post("/", (req, res) => {
 
 app.get("/muscles/:muscleID", (req, res) => {
   const muscleGroup = req.params.muscleID;
-  res.render("muscle");
+  res.render("muscle", { muscles: `${muscleGroup}Workouts` });
 });
 
 app.listen(3000, () => {});
