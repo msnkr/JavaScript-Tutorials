@@ -6,6 +6,9 @@
     <title></title>
   </head>
   <body>
-    <p><%- muscles %></p>
+    <% muscles.forEach(muscle => { %>
+    <h1><%- muscle.name %></h1>
+    <p><%- muscle.shortDesc %></p>
+    <% }) %>
   </body>
 </html>
