@@ -47,22 +47,72 @@
 //   console.log(newUser);
 // }
 
+// const mongoose = require("mongoose");
+
+// main().catch((err) => console.log(err));
+
+// async function main() {
+//   await mongoose.connect("mongodb://127.0.0.1:27017/person");
+
+//   const personSchema = new mongoose.Schema({
+//     name: String,
+//     age: Number,
+//   });
+
+//   const Person = mongoose.model("Person", personSchema);
+//   const john = new Person({ name: "john", age: 37 });
+//   const peter = new Person({ name: "peter", age: 27 });
+//   const angela = new Person({ name: "angela", age: 32 });
+
+//   // Person.insertMany([john, peter, angela]);
+
+//   const peopleDB = await Person.find();
+//   peopleDB.forEach((person) => {
+//     console.log(person.name);
+//   });
+
+//   mongoose.connection.close();
+// }
+
 const mongoose = require("mongoose");
 
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/person");
+  await mongoose.connect("mongodb://127.0.0.1:27017/fruit");
 
-  const personSchema = new mongoose.Schema({
+  const fruitSchema = mongoose.Schema({
     name: String,
-    age: Number,
+    rating: Number,
+    review: String,
   });
 
-  const Person = mongoose.model("Person", personSchema);
-  const john = new Person({ name: "john", age: 37 });
-  const peter = new Person({ name: "peter", age: 27 });
-  const angela = new Person({ name: "angela", age: 32 });
+  const Fruit = mongoose.model("Fruit", fruitSchema);
+  const apple = new Fruit({
+    name: "Apple",
+    rating: 5,
+    review: "I love apples",
+  });
 
-  Person.insertMany([john, peter, angela]);
+  const orange = new Fruit({
+    name: "Orange",
+    rating: 3,
+    review: "Peeling is tough",
+  });
+
+  const peaches = new Fruit({
+    name: "Peaches",
+    rating: 4,
+    review: "Peaches and cream. Yummy",
+  });
+
+  const litchi = new Fruit({
+    name: "Litchi",
+    rating: 5,
+    review: "A bit messy but great",
+  });
+
+  // Fruit.insertMany([apple, orange, peaches, litchi]);
+
+  mongoose.connection.close();
 }
