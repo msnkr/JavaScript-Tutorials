@@ -1,8 +1,11 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const chestWorkouts = [
   {
@@ -30,6 +33,15 @@ const chestWorkouts = [
 
 app.get("/", (req, res) => {
   res.render("index");
+});
+
+app.post("/", (req, res) => {
+  console.log(req.params.id);
+});
+
+app.get("/muscles/:muscleID", (req, res) => {
+  const muscleGroup = req.params.muscleID;
+  res.render("muscle");
 });
 
 app.listen(3000, () => {});

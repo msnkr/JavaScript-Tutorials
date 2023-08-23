@@ -49,3 +49,13 @@ body {
 .shoulders {
   background: url("images/shoulders.png") center center/cover;
 }
+
+@media only screen and (min-width: 376px) {
+  body {
+    height: 100vh;
+  }
+
+  .muscles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
