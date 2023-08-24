@@ -95,43 +95,48 @@ async function main() {
   });
 
   const Fruit = mongoose.model("Fruit", fruitSchema);
-  const apple = new Fruit({
-    name: "Apple",
-    rating: 5,
-    review: "I love apples",
-  });
+  // const apple = new Fruit({
+  //   name: "Apple",
+  //   rating: 5,
+  //   review: "I love apples",
+  // });
 
-  const orange = new Fruit({
-    name: "Orange",
-    rating: 3,
-    review: "Peeling is tough",
-  });
+  // const orange = new Fruit({
+  //   name: "Orange",
+  //   rating: 3,
+  //   review: "Peeling is tough",
+  // });
 
-  const peaches = new Fruit({
-    name: "Peaches",
-    rating: 4,
-    review: "Peaches and cream. Yummy",
-  });
+  // const peaches = new Fruit({
+  //   name: "Peaches",
+  //   rating: 4,
+  //   review: "Peaches and cream. Yummy",
+  // });
 
-  const litchi = new Fruit({
-    name: "Litchi",
-    rating: 5,
-    review: "A bit messy but great",
-  });
+  // const litchi = new Fruit({
+  //   name: "Litchi",
+  //   rating: 5,
+  //   review: "A bit messy but great",
+  // });
 
-  const mango = new Fruit({
-    name: "Mango",
-    rating: 99,
-    review: "Messy but great",
-  });
+  // const mango = new Fruit({
+  //   name: "Mango",
+  //   rating: 5,
+  //   review: "Messy but great",
+  // });
 
-  await mango.save();
-  // await Fruit.insertMany([apple, orange, peaches, litchi]);
+  // const pear = new Fruit({
+  //   name: "Pear",
+  //   rating: 2,
+  //   review: "Good but not great",
+  // });
 
-  const fruitDB = await Fruit.find();
-  fruitDB.forEach((fruit) => {
-    console.log(fruit.name);
-  });
+  // await Fruit.insertMany([apple, orange, peaches, litchi, mango]);
+
+  // const fruitDB = await Fruit.find();
+  // fruitDB.forEach((fruit) => {
+  //   console.log(fruit.name);
+  // });
 
   mongoose.connection.close();
 }
