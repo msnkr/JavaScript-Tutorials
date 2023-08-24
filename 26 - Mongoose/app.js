@@ -112,7 +112,12 @@ async function main() {
     review: "A bit messy but great",
   });
 
-  // Fruit.insertMany([apple, orange, peaches, litchi]);
+  // await Fruit.insertMany([apple, orange, peaches, litchi]);
+
+  const fruitDB = await Fruit.find();
+  fruitDB.forEach((fruit) => {
+    console.log(fruit.name);
+  });
 
   mongoose.connection.close();
 }
