@@ -88,8 +88,8 @@ async function main() {
     },
     rating: {
       type: Number,
-      min: 0,
-      max: 5,
+      min: [0, "Can't be less than 0"],
+      max: [5, "Can't be more than 5"],
     },
     review: String,
   });
@@ -119,13 +119,13 @@ async function main() {
     review: "A bit messy but great",
   });
 
-  // const mango = new Fruit({
-  //   name: "Mango",
-  //   rating: 99,
-  //   review: "Messy but great",
-  // });
+  const mango = new Fruit({
+    name: "Mango",
+    rating: 99,
+    review: "Messy but great",
+  });
 
-  // await mango.save();
+  await mango.save();
   // await Fruit.insertMany([apple, orange, peaches, litchi]);
 
   const fruitDB = await Fruit.find();
