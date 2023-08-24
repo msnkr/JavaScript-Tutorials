@@ -156,16 +156,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/muscles/:muscleID", (req, res) => {
+app.get("/:muscleID", (req, res) => {
   const muscleGroup = req.params.muscleID;
   const muscleWorkout = muscleGroup.toLowerCase() + "Workouts";
   res.render("muscle", { muscles: eval(muscleWorkout) });
-});
-
-app.get("muscles/:workoutID", (req, res) => {
-  const workoutName = req.params.workoutID;
-  console.log(workoutID);
-  res.send("workout");
 });
 
 app.listen(3000, () => {});
