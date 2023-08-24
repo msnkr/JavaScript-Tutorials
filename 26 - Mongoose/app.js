@@ -82,8 +82,15 @@ async function main() {
   await mongoose.connect("mongodb://127.0.0.1:27017/fruit");
 
   const fruitSchema = mongoose.Schema({
-    name: String,
-    rating: Number,
+    name: {
+      type: String,
+      required: true,
+    },
+    rating: {
+      type: Number,
+      min: 0,
+      max: 5,
+    },
     review: String,
   });
 
@@ -112,6 +119,13 @@ async function main() {
     review: "A bit messy but great",
   });
 
+  // const mango = new Fruit({
+  //   name: "Mango",
+  //   rating: 99,
+  //   review: "Messy but great",
+  // });
+
+  // await mango.save();
   // await Fruit.insertMany([apple, orange, peaches, litchi]);
 
   const fruitDB = await Fruit.find();
