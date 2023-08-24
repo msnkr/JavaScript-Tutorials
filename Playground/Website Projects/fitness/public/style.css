@@ -54,6 +54,16 @@ body {
   padding: 8pt;
 }
 
+.muscle-header h1 {
+  text-transform: capitalize;
+}
+
+.muscle-image {
+  background-color: #26262626;
+  width: 250pt;
+  height: 100pt;
+}
+
 @media only screen and (min-width: 376px) {
   body {
     height: 100vh;

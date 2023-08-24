@@ -3,8 +3,9 @@
 <body>
   <div class="muscle-container">
     <% muscles.forEach(muscle => { %>
+    <div class="muscle-image"></div>
     <div class="muscle-header">
-      <h1><%- muscle.name %></h1>
+      <h1><a href="muscles/?"><%- muscle.name %></a></h1>
     </div>
     <div class="muscle-short-desc">
       <p><%- muscle.shortDesc %></p>

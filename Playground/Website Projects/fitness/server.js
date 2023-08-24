@@ -80,6 +80,78 @@ const shouldersWorkouts = [
   },
 ];
 
+const legsWorkouts = [
+  {
+    name: "Squat",
+    shortDesc:
+      "Full-body exercise. Bend knees, lower hips, then rise. Targets quads, hamstrings, glutes.",
+    longDesc:
+      "The squat is a foundational full-body exercise. With feet shoulder-width apart, bend your knees and lower your hips as if sitting back into a chair. Keep your back straight and chest up. Then, push through your heels to return to a standing position. Squats target the quadriceps, hamstrings, and glutes while also engaging the core and lower back muscles for stability. This compound movement is essential for building lower body strength, improving mobility, and enhancing overall lower body aesthetics.",
+  },
+  {
+    name: "Deadlift",
+    shortDesc:
+      "Hip-hinge movement. Lift barbell from floor to hips. Targets hamstrings, glutes, lower back.",
+    longDesc:
+      "The deadlift is a fundamental hip-hinge exercise that targets the hamstrings, glutes, and lower back muscles. Starting with a barbell on the ground, bend at the hips while keeping your back straight, then lift the barbell while pushing your hips forward. Deadlifts engage the posterior chain muscles and also involve the core for stability. Proper form is crucial to prevent lower back strain. Deadlifts are effective for building lower body strength, enhancing hip mobility, and supporting overall functional fitness.",
+  },
+  {
+    name: "Lunges",
+    shortDesc:
+      "Step forward, lower rear knee toward ground. Targets quads, hamstrings, glutes, improves balance.",
+    longDesc:
+      "Lunges are a versatile lower body exercise that challenges leg muscles and improves balance. Step forward with one leg and lower your rear knee toward the ground, creating 90-degree angles with both knees. Push through the front heel to return to the starting position. Lunges target the quadriceps, hamstrings, and glutes while also engaging stabilizing muscles. They help address muscle imbalances, increase leg strength, and enhance lower body stability. Variations include forward, reverse, and lateral lunges, allowing you to target different muscle fibers and add variety to your leg workout routine.",
+  },
+];
+
+const backWorkouts = [
+  {
+    name: "Pull-Ups",
+    shortDesc:
+      "Vertical pull exercise. Lift body by arms from hanging position. Targets upper back, biceps.",
+    longDesc:
+      "Pull-ups are a classic vertical pulling exercise where you lift your body by gripping a bar with palms facing away. Engaging the upper back muscles, especially the latissimus dorsi, as well as the biceps and upper arms, pull-ups promote back strength and width development. The exercise challenges your grip strength and core stability. Mastering pull-ups takes practice, and modifications like assisted pull-ups or chin-ups can be used to gradually build strength. Incorporating pull-ups into your routine enhances overall upper body strength and posture.",
+  },
+  {
+    name: "Bent-Over Rows",
+    shortDesc:
+      "Horizontal pull movement. Row weight towards hips. Targets middle back, lats, biceps.",
+    longDesc:
+      "Bent-over rows are a horizontal pulling exercise where you hinge at the hips, keeping your back straight, and row a weight towards your hips. This movement primarily targets the middle back muscles, including the latissimus dorsi, rhomboids, and trapezius. The biceps also contribute as secondary muscles. Bent-over rows enhance upper back strength, improve posture, and promote balanced muscle development. Maintaining proper form is crucial to avoid strain on the lower back. Incorporate various grip styles and rowing angles to engage different muscle fibers and maximize results.",
+  },
+  {
+    name: "T-Bar Rows",
+    shortDesc:
+      "Compound back exercise. Row weight attached to barbell. Targets lats, middle back, biceps.",
+    longDesc:
+      "T-bar rows are a compound back exercise where you attach weight to one end of a barbell and row it toward your torso. This movement effectively targets the latissimus dorsi, middle back, and biceps while also engaging stabilizing muscles. T-bar rows require a specialized T-bar row machine or a landmine attachment. Proper posture and controlled movements are essential for preventing back strain and ensuring effective muscle engagement. Incorporate T-bar rows to build upper body strength, enhance back width and thickness, and contribute to a well-rounded back profile.",
+  },
+];
+
+const armsWorkouts = [
+  {
+    name: "Bicep Curls",
+    shortDesc:
+      "Isolation exercise. Curl weight with palms facing up. Targets biceps. Enhances arm strength and definition.",
+    longDesc:
+      "Bicep curls are a classic isolation exercise that targets the biceps muscles. With palms facing up, lift a weight toward your shoulders while keeping your upper arms stationary. Bicep curls isolate and develop the front of the upper arms, contributing to arm strength and definition. Variations include using dumbbells, barbells, or cables. Proper form and controlled movements are crucial to maximize muscle engagement and prevent injury. Incorporating bicep curls in your workout routine can help create well-defined arms and complement other compound exercises for a balanced upper body.",
+  },
+  {
+    name: "Tricep Dips",
+    shortDesc:
+      "Bodyweight exercise. Lower and lift body using parallel bars. Targets triceps. Builds arm strength and tone.",
+    longDesc:
+      "Tricep dips are a bodyweight exercise that targets the triceps muscles. Using parallel bars or a dip station, lower your body by bending your elbows, then push back up. Tricep dips effectively engage the back of the upper arms, contributing to strength and toning. Variations include adjusting the intensity by changing body position or using additional weight. Proper form and controlled movements are essential to prevent strain on the shoulders or wrists. Incorporating tricep dips in your routine can help build arm strength, improve muscle definition, and enhance overall upper body aesthetics.",
+  },
+  {
+    name: "Hammer Curls",
+    shortDesc:
+      "Alternate dumbbell curls. Palms face each other. Targets biceps, forearms. Enhances arm strength and grip.",
+    longDesc:
+      "Hammer curls are an alternate dumbbell curl variation targeting the biceps and forearms. Unlike traditional curls, your palms face each other throughout the movement. This engagement of the brachialis muscle between the biceps and forearm contributes to increased arm thickness. Hammer curls also enhance forearm strength and grip. The exercise is versatile and can be performed with dumbbells, barbells, or cables. Controlled movements are vital to maximize muscle engagement and prevent wrist strain. Incorporate hammer curls to build bicep and forearm strength, create balanced arm development, and support grip functionality.",
+  },
+];
+
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -88,6 +160,12 @@ app.get("/muscles/:muscleID", (req, res) => {
   const muscleGroup = req.params.muscleID;
   const muscleWorkout = muscleGroup.toLowerCase() + "Workouts";
   res.render("muscle", { muscles: eval(muscleWorkout) });
+});
+
+app.get("muscles/:workoutID", (req, res) => {
+  const workoutName = req.params.workoutID;
+  console.log(workoutID);
+  res.send("workout");
 });
 
 app.listen(3000, () => {});
