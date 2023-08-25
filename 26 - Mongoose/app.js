@@ -95,41 +95,35 @@ async function main() {
   });
 
   const Fruit = mongoose.model("Fruit", fruitSchema);
-  // const apple = new Fruit({
-  //   name: "Apple",
-  //   rating: 5,
-  //   review: "I love apples",
-  // });
+  const apple = new Fruit({
+    name: "Apple",
+    rating: 5,
+    review: "I love apples",
+  });
 
-  // const orange = new Fruit({
-  //   name: "Orange",
-  //   rating: 3,
-  //   review: "Peeling is tough",
-  // });
+  const orange = new Fruit({
+    name: "Orange",
+    rating: 3,
+    review: "Peeling is tough",
+  });
 
-  // const peaches = new Fruit({
-  //   name: "Peaches",
-  //   rating: 4,
-  //   review: "Peaches and cream. Yummy",
-  // });
+  const peaches = new Fruit({
+    name: "Peaches",
+    rating: 4,
+    review: "Peaches and cream. Yummy",
+  });
 
-  // const litchi = new Fruit({
-  //   name: "Litchi",
-  //   rating: 5,
-  //   review: "A bit messy but great",
-  // });
+  const litchi = new Fruit({
+    name: "Litchi",
+    rating: 5,
+    review: "A bit messy but great",
+  });
 
-  // const mango = new Fruit({
-  //   name: "Mango",
-  //   rating: 5,
-  //   review: "Messy but great",
-  // });
-
-  // const pear = new Fruit({
-  //   name: "Pear",
-  //   rating: 2,
-  //   review: "Good but not great",
-  // });
+  const mango = new Fruit({
+    name: "Mango",
+    rating: 3,
+    review: "Messy but great",
+  });
 
   // await Fruit.insertMany([apple, orange, peaches, litchi, mango]);
 
@@ -137,6 +131,35 @@ async function main() {
   // fruitDB.forEach((fruit) => {
   //   console.log(fruit.name);
   // });
+
+  const personSchema = new mongoose.Schema({
+    name: String,
+    age: Number,
+    favorite_fruit: fruitSchema,
+  });
+
+  const Person = new mongoose.model("Person", personSchema);
+  const john = new Person({
+    name: "John",
+    age: 32,
+  });
+
+  // await john.save();
+  const amy = new Person({
+    name: "Amy",
+    age: 21,
+    favorite_fruit: litchi,
+  });
+
+  // await amy.save();
+
+  const updateJohn = await Person.updateOne(
+    { name: "John" },
+    { favorite_fruit: mango }
+  );
+
+  const people = await Person.find();
+  console.log(people);
 
   mongoose.connection.close();
 }
