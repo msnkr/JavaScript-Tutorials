@@ -1,5 +1,8 @@
 <%- include("partials/navbar") -%>
 
 <body>
-  <p><%- muscles %></p>
+  <% muscles.forEach(muscle => { %>
+  <p><a href="workout/<%- muscle.name %>"><%- muscle.name %></a></p>
+  <% }) %>
+
 </body>

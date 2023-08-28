@@ -131,7 +131,8 @@ app.get("/:muscleID", (req, res) => {
 
 app.get("/:muscleID/:workoutID", (req, res) => {
   const workoutID = req.params.workoutID;
-  res.render("workout", { workouts: workouts[muscleGroup] });
+
+  res.render("workout");
 });
 
 app.listen(3000, () => {});
