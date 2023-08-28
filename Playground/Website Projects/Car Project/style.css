@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding: 8pt;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar-logo {
+  background-color: #26262626;
+  width: 200px;
+  height: 100px;
+  border-radius: 4pt;
+}
+
+.navbar-btn {
+  position: absolute;
+  top: 24pt;
+  right: 24pt;
+}
+
+.navbar-list-items a {
+  display: none;
+  text-align: end;
+}
+
+.hero-container {
+  margin-top: 24pt;
+}
+
+.hero-image {
+  background-color: #26262626;
+  width: 100%;
+}
