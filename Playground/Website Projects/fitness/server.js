@@ -130,8 +130,10 @@ app.get("/:muscleID", (req, res) => {
 });
 
 app.get("/:muscleID/:workoutID", (req, res) => {
+  const muscleID = req.params.muscleID;
   const workoutID = req.params.workoutID;
 
+  // ///////////aggagggghjkadkhjfhjajlhdbghjkfkjlahbjhdfjkbs
   res.render("workout");
 });
 
