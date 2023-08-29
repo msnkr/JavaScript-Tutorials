@@ -10,7 +10,6 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   position: relative;
 }
 
@@ -34,9 +33,14 @@ body {
 
 .hero-container {
   margin-top: 24pt;
+  margin: 0;
 }
 
 .hero-image {
   background-color: #26262626;
   width: 100%;
+}
+
+.services-container {
+  margin: 0;
 }
