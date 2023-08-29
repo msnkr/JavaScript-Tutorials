@@ -1,11 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/*  */
+
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
   padding: 8pt;
+}
+
+h1 {
+  letter-spacing: -2px;
+  font-weight: bolder;
+}
+
+h3 {
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.btn {
+  background-color: blue;
+  padding: 4pt;
+  border-radius: 4pt;
+  color: #fff;
+  border: none;
 }
 
 .navbar {
@@ -24,6 +51,16 @@ body {
   position: absolute;
   top: 24pt;
   right: 24pt;
+  width: 20pt;
+  height: 20pt;
+  font-size: 16pt;
+  font-weight: bolder;
+}
+
+.navbar-btn i {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .navbar-list-items a {
