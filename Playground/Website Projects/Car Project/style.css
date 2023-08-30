@@ -45,6 +45,7 @@ p {
 .navbar {
   display: flex;
   position: relative;
+  margin-bottom: 22pt;
 }
 
 .navbar-logo {
@@ -76,11 +77,6 @@ p {
   text-align: end;
 }
 
-.hero-container {
-  margin-top: 24pt;
-  margin: 0;
-}
-
 .hero-image {
   background: url("https://images.pexels.com/photos/3807799/pexels-photo-3807799.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
     center center/cover;
@@ -88,13 +84,24 @@ p {
   height: 150pt;
 }
 
+.hero-image,
+.hero-image h1,
+.hero-image h3 {
+  margin: 0;
+}
+
 .services-container {
   margin: 0;
 }
 
+.service-color {
+  background-color: #d9fffa;
+  width: 100%;
+}
+
 .service {
   margin: 0;
-  width: 80%;
+  padding: 0 16pt;
 }
 
 .random-image {
@@ -126,6 +133,14 @@ p {
   margin: 8pt;
 }
 
+.hero-image h1 {
+  color: #fff;
+}
+
+.hero-image h3 {
+  color: #fff;
+}
+
 .contact-btn {
   width: 100pt;
   font-size: 10pt;
@@ -134,6 +149,8 @@ p {
 
 footer {
   margin-top: 24pt;
+  background-color: #d9fffa;
+  padding: 22pt 0;
 }
 
 .social-media-links {
