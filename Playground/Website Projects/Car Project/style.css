@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-/*  */
+:root {
+  --darkest: #030404;
+  --dark: #292c2e;
+  --primary: #4e5459;
+  --light: #99a4ae;
+  --lightest: #beccd8;
+}
 
 * {
   box-sizing: border-box;
@@ -16,15 +22,18 @@ body {
 h1 {
   letter-spacing: -2px;
   font-weight: bolder;
+  font-size: 22pt;
 }
 
 h3 {
   letter-spacing: -1px;
   font-weight: normal;
+  font-size: 14pt;
 }
 
 p {
   line-height: 1.5;
+  font-size: 12pt;
 }
 
 .btn {
@@ -34,6 +43,9 @@ p {
   border-radius: 4pt;
   color: #fff;
   border: none;
+  font-size: 13pt;
+  margin: 8pt;
+  width: 100pt;
 }
 
 .transparent {
@@ -84,9 +96,10 @@ p {
   height: 150pt;
 }
 
-.hero-image,
-.hero-image h1,
-.hero-image h3 {
+.transparent,
+.transparent h1,
+.transparent h3,
+.transparent.btn {
   margin: 0;
 }
 
@@ -94,14 +107,25 @@ p {
   margin: 0;
 }
 
+.services-list h3,
+.services-list p {
+  margin: 0;
+}
+
 .service-color {
-  background-color: #d9fffa;
   width: 100%;
 }
 
 .service {
   margin: 0;
   padding: 0 16pt;
+  border-bottom: 1px solid var(--lightest);
+  margin-bottom: 22pt;
+}
+
+.service p {
+  width: 200pt;
+  margin-bottom: 8pt;
 }
 
 .random-image {
@@ -129,7 +153,6 @@ p {
 
 .schedule-btn {
   width: 100pt;
-  font-size: 10pt;
   margin: 8pt;
 }
 
@@ -139,12 +162,6 @@ p {
 
 .hero-image h3 {
   color: #fff;
-}
-
-.contact-btn {
-  width: 100pt;
-  font-size: 10pt;
-  margin: 8pt;
 }
 
 footer {
